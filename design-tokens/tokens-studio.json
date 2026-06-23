@@ -1,0 +1,508 @@
+{
+  "Primitives/Value": {
+    "orange": {
+      "50": {
+        "$value": "#FFF6EA",
+        "$type": "color"
+      },
+      "200": {
+        "$value": "#FFD397",
+        "$type": "color"
+      },
+      "500": {
+        "$value": "#FFA62F",
+        "$type": "color"
+      },
+      "600": {
+        "$value": "#E5952A",
+        "$type": "color"
+      }
+    },
+    "neutral": {
+      "50": {
+        "$value": "#F7F7F9",
+        "$type": "color"
+      },
+      "100": {
+        "$value": "#F5F5F5",
+        "$type": "color"
+      },
+      "200": {
+        "$value": "#F0F0F0",
+        "$type": "color"
+      },
+      "300": {
+        "$value": "#E9E9E9",
+        "$type": "color"
+      },
+      "500": {
+        "$value": "#888888",
+        "$type": "color"
+      },
+      "600": {
+        "$value": "#999999",
+        "$type": "color"
+      },
+      "700": {
+        "$value": "#555555",
+        "$type": "color"
+      },
+      "900": {
+        "$value": "#222222",
+        "$type": "color"
+      }
+    },
+    "white": {
+      "1000": {
+        "$value": "#FFFFFF",
+        "$type": "color"
+      }
+    },
+    "green": {
+      "50": {
+        "$value": "#F0FDF4",
+        "$type": "color"
+      },
+      "900": {
+        "$value": "#14532D",
+        "$type": "color"
+      }
+    },
+    "blue": {
+      "50": {
+        "$value": "#EFF6FF",
+        "$type": "color"
+      },
+      "500": {
+        "$value": "#1890FF",
+        "$type": "color"
+      }
+    },
+    "tag": {
+      "ui-design": {
+        "fg": {
+          "$value": "#CC8524",
+          "$type": "color"
+        },
+        "bg": {
+          "$value": "#FFF6EA",
+          "$type": "color"
+        }
+      },
+      "design-exp": {
+        "fg": {
+          "$value": "#14532D",
+          "$type": "color"
+        },
+        "bg": {
+          "$value": "#F0FDF4",
+          "$type": "color"
+        }
+      },
+      "ai-frontier": {
+        "fg": {
+          "$value": "#1890FF",
+          "$type": "color"
+        },
+        "bg": {
+          "$value": "#EFF6FF",
+          "$type": "color"
+        }
+      },
+      "skill-req": {
+        "fg": {
+          "$value": "#B45309",
+          "$type": "color"
+        },
+        "bg": {
+          "$value": "#FFF6EA",
+          "$type": "color"
+        }
+      },
+      "skill-user": {
+        "fg": {
+          "$value": "#7C3AED",
+          "$type": "color"
+        },
+        "bg": {
+          "$value": "#F3E8FF",
+          "$type": "color"
+        }
+      },
+      "skill-solution": {
+        "fg": {
+          "$value": "#0891B2",
+          "$type": "color"
+        },
+        "bg": {
+          "$value": "#ECFEFF",
+          "$type": "color"
+        }
+      },
+      "skill-acceptance": {
+        "fg": {
+          "$value": "#14532D",
+          "$type": "color"
+        },
+        "bg": {
+          "$value": "#F0FDF4",
+          "$type": "color"
+        }
+      },
+      "skill-validation": {
+        "fg": {
+          "$value": "#BE185D",
+          "$type": "color"
+        },
+        "bg": {
+          "$value": "#FDF2F8",
+          "$type": "color"
+        }
+      }
+    },
+    "purple": {
+      "50": {
+        "$value": "#F3E8FF",
+        "$type": "color"
+      },
+      "600": {
+        "$value": "#7C3AED",
+        "$type": "color"
+      }
+    },
+    "cyan": {
+      "50": {
+        "$value": "#ECFEFF",
+        "$type": "color"
+      },
+      "600": {
+        "$value": "#0891B2",
+        "$type": "color"
+      }
+    },
+    "pink": {
+      "50": {
+        "$value": "#FDF2F8",
+        "$type": "color"
+      },
+      "700": {
+        "$value": "#BE185D",
+        "$type": "color"
+      }
+    },
+    "amber": {
+      "700": {
+        "$value": "#B45309",
+        "$type": "color"
+      }
+    }
+  },
+  "Color/Light": {
+    "color": {
+      "action": {
+        "bg-primary": {
+          "$value": "{orange.500}",
+          "$type": "color"
+        },
+        "bg-primary-hover": {
+          "$value": "{orange.600}",
+          "$type": "color"
+        },
+        "bg-primary-subtle": {
+          "$value": "{orange.50}",
+          "$type": "color"
+        },
+        "border-primary": {
+          "$value": "{orange.200}",
+          "$type": "color"
+        }
+      },
+      "surface": {
+        "page": {
+          "$value": "{neutral.50}",
+          "$type": "color"
+        },
+        "container": {
+          "$value": "{white.1000}",
+          "$type": "color"
+        },
+        "hero": {
+          "$value": "{neutral.100}",
+          "$type": "color"
+        }
+      },
+      "border": {
+        "default": {
+          "$value": "{neutral.300}",
+          "$type": "color"
+        },
+        "subtle": {
+          "$value": "{neutral.200}",
+          "$type": "color"
+        }
+      },
+      "text": {
+        "primary": {
+          "$value": "{neutral.900}",
+          "$type": "color"
+        },
+        "secondary": {
+          "$value": "{neutral.700}",
+          "$type": "color"
+        },
+        "tertiary": {
+          "$value": "{neutral.600}",
+          "$type": "color"
+        },
+        "muted": {
+          "$value": "{neutral.500}",
+          "$type": "color"
+        }
+      },
+      "feedback": {
+        "success": {
+          "bg": {
+            "$value": "{green.50}",
+            "$type": "color"
+          },
+          "text": {
+            "$value": "{green.900}",
+            "$type": "color"
+          }
+        },
+        "info": {
+          "bg": {
+            "$value": "{blue.50}",
+            "$type": "color"
+          },
+          "text": {
+            "$value": "{blue.500}",
+            "$type": "color"
+          }
+        }
+      },
+      "tag": {
+        "ui-design": {
+          "bg": {
+            "$value": "{tag.ui-design.bg}",
+            "$type": "color"
+          },
+          "text": {
+            "$value": "{tag.ui-design.fg}",
+            "$type": "color"
+          }
+        },
+        "design-exp": {
+          "bg": {
+            "$value": "{tag.design-exp.bg}",
+            "$type": "color"
+          },
+          "text": {
+            "$value": "{tag.design-exp.fg}",
+            "$type": "color"
+          }
+        },
+        "ai-frontier": {
+          "bg": {
+            "$value": "{tag.ai-frontier.bg}",
+            "$type": "color"
+          },
+          "text": {
+            "$value": "{tag.ai-frontier.fg}",
+            "$type": "color"
+          }
+        },
+        "skill-req": {
+          "bg": {
+            "$value": "{tag.skill-req.bg}",
+            "$type": "color"
+          },
+          "text": {
+            "$value": "{tag.skill-req.fg}",
+            "$type": "color"
+          }
+        },
+        "skill-user": {
+          "bg": {
+            "$value": "{tag.skill-user.bg}",
+            "$type": "color"
+          },
+          "text": {
+            "$value": "{tag.skill-user.fg}",
+            "$type": "color"
+          }
+        },
+        "skill-solution": {
+          "bg": {
+            "$value": "{tag.skill-solution.bg}",
+            "$type": "color"
+          },
+          "text": {
+            "$value": "{tag.skill-solution.fg}",
+            "$type": "color"
+          }
+        },
+        "skill-acceptance": {
+          "bg": {
+            "$value": "{tag.skill-acceptance.bg}",
+            "$type": "color"
+          },
+          "text": {
+            "$value": "{tag.skill-acceptance.fg}",
+            "$type": "color"
+          }
+        },
+        "skill-validation": {
+          "bg": {
+            "$value": "{tag.skill-validation.bg}",
+            "$type": "color"
+          },
+          "text": {
+            "$value": "{tag.skill-validation.fg}",
+            "$type": "color"
+          }
+        }
+      }
+    }
+  },
+  "Spacing & Shape/Value": {
+    "spacing": {
+      "2xs": {
+        "$value": "4px",
+        "$type": "dimension"
+      },
+      "xs": {
+        "$value": "8px",
+        "$type": "dimension"
+      },
+      "sm": {
+        "$value": "12px",
+        "$type": "dimension"
+      },
+      "md": {
+        "$value": "16px",
+        "$type": "dimension"
+      },
+      "lg": {
+        "$value": "24px",
+        "$type": "dimension"
+      },
+      "xl": {
+        "$value": "32px",
+        "$type": "dimension"
+      },
+      "2xl": {
+        "$value": "48px",
+        "$type": "dimension"
+      },
+      "3xl": {
+        "$value": "64px",
+        "$type": "dimension"
+      }
+    },
+    "radius": {
+      "sm": {
+        "$value": "4px",
+        "$type": "dimension"
+      },
+      "md": {
+        "$value": "8px",
+        "$type": "dimension"
+      },
+      "lg": {
+        "$value": "12px",
+        "$type": "dimension"
+      },
+      "xl": {
+        "$value": "16px",
+        "$type": "dimension"
+      }
+    },
+    "layout": {
+      "header-height": {
+        "$value": "64px",
+        "$type": "dimension"
+      },
+      "content-max-width": {
+        "$value": "900px",
+        "$type": "dimension"
+      },
+      "page-max-width": {
+        "$value": "1280px",
+        "$type": "dimension"
+      },
+      "control-height": {
+        "$value": "36px",
+        "$type": "dimension"
+      }
+    }
+  },
+  "Typography/Value": {
+    "font": {
+      "family": {
+        "sans": {
+          "$value": "Noto Sans SC",
+          "$type": "text"
+        },
+        "fallback": {
+          "$value": "PingFang SC",
+          "$type": "text"
+        }
+      }
+    },
+    "type": {
+      "body": {
+        "sm": {
+          "$value": "13px",
+          "$type": "dimension"
+        },
+        "md": {
+          "$value": "14px",
+          "$type": "dimension"
+        },
+        "lg": {
+          "$value": "16px",
+          "$type": "dimension"
+        }
+      },
+      "heading": {
+        "h2": {
+          "$value": "20px",
+          "$type": "dimension"
+        }
+      },
+      "label": {
+        "sm": {
+          "$value": "11px",
+          "$type": "dimension"
+        },
+        "md": {
+          "$value": "12px",
+          "$type": "dimension"
+        }
+      }
+    },
+    "weight": {
+      "regular": {
+        "$value": "Regular",
+        "$type": "text"
+      },
+      "medium": {
+        "$value": "Medium",
+        "$type": "text"
+      },
+      "semibold": {
+        "$value": "Semi Bold",
+        "$type": "text"
+      }
+    }
+  },
+  "$metadata": {
+    "tokenSetOrder": [
+      "Primitives/Value",
+      "Color/Light",
+      "Spacing & Shape/Value",
+      "Typography/Value"
+    ]
+  }
+}

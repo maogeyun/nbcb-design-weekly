@@ -1,0 +1,8 @@
+{
+  "name": "NBCB Design Tokens Installer",
+  "id": "nbcb-design-tokens-installer-dev",
+  "api": "1.0.0",
+  "main": "code.js",
+  "editorType": ["figma"],
+  "documentAccess": "dynamic-page"
+}

@@ -1,0 +1,436 @@
+@import "tailwindcss";
+
+:root {
+  --color-primary: #ffa62f;
+  --color-bg: #f7f7f9;
+  --color-text: #222222;
+  --color-text-secondary: #555555;
+  --app-header-height: 64px;
+  --content-max-width: 900px;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex !important;
+  }
+
+  /* 自定义顶部导航（替换原 Antd Menu 后） */
+  .desktop-nav a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  /* 旧 Antd Menu 规则保留（若其他地方仍使用 Menu） */
+  .desktop-nav .ant-menu-item .ant-menu-item-icon,
+  .desktop-nav .ant-menu-item .anticon {
+    margin-inline-end: 4px !important;
+    margin-right: 4px !important;
+  }
+
+  .desktop-nav .ant-menu-item-icon + .ant-menu-title-content,
+  .desktop-nav .ant-menu-item .ant-menu-title-content {
+    margin-inline-start: 4px !important;
+    margin-left: 4px !important;
+  }
+}
+
+.site-brand {
+  flex-shrink: 0;
+}
+
+.site-brand-logo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 40px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+@media (max-width: 767px) {
+  .mobile-tab-bar {
+    display: block !important;
+  }
+
+  .app-main-content {
+    padding-bottom: 56px !important;
+  }
+
+  .site-brand-logo {
+    max-height: 32px;
+  }
+
+  .home-hero {
+    padding: 48px 16px !important;
+  }
+
+  .home-article-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .skill-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+.home-article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 32px;
+  width: 100%;
+}
+
+.skill-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.skills-sticky-toolbar {
+  position: sticky;
+  top: var(--app-header-height);
+  z-index: 90;
+  background: transparent;
+  /* full-bleed breakout — removes narrow container sides appearing as split/divider effects when sticky */
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-bottom: none;
+  margin-top: 16px;
+  margin-bottom: 0;
+  transition: background-color 160ms ease;
+}
+
+.skills-sticky-toolbar--stuck {
+  background: var(--color-bg);
+}
+
+.search-sticky-toolbar {
+  position: sticky;
+  top: var(--app-header-height);
+  z-index: 90;
+  background: var(--color-bg);
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-bottom: none;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.search-sticky-toolbar--with-results {
+  /* layout moved to __inner; keep for any future overrides */
+  border-bottom: none;
+}
+
+/* Inner content wrapper keeps controls centered at design width */
+.search-sticky-toolbar__inner,
+.skills-sticky-toolbar__inner {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px 0 0;
+}
+
+.search-sticky-toolbar--with-results .search-sticky-toolbar__inner {
+  gap: 12px;
+  padding-bottom: 0;
+}
+
+/* 默认状态下分割线与下方内容（卡片/结果/Empty）的间距为 16px */
+.skills-page-content,
+.search-page-content {
+  margin-top: 16px;
+  padding-top: 0;
+}
+
+/* 网格本身不额外增加顶部间距（防御） */
+.skill-grid {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.skills-page-tabs.ant-tabs,
+.search-page-tabs.ant-tabs {
+  margin-bottom: 0;
+}
+
+/* 过滤型 Tabs：隐藏内容区，避免额外高度 */
+.skills-page-tabs .ant-tabs-content-holder,
+.search-page-tabs .ant-tabs-content-holder,
+.skills-page-tabs .ant-tabs-content,
+.search-page-tabs .ant-tabs-content {
+  display: none;
+}
+
+.skills-page-tabs.ant-tabs .ant-tabs-nav,
+.search-page-tabs.ant-tabs .ant-tabs-nav,
+.skills-page-tabs.ant-tabs > .ant-tabs-nav,
+.search-page-tabs.ant-tabs > .ant-tabs-nav {
+  margin-bottom: 0 !important;
+  padding-bottom: 0;
+  /* 分割线边框紧贴到 .ant-tabs-nav（实现 tab 标签与分割线无间距） */
+  border-bottom: 1px solid #e9e9e9;
+}
+
+/* 让 tab 标签更贴近底部，便于与分割线贴合 */
+.skills-page-tabs .ant-tabs-tab,
+.search-page-tabs .ant-tabs-tab {
+  padding-top: 8px;
+  padding-bottom: 6px;
+}
+
+.skills-page-tabs .ant-tabs-nav::before,
+.search-page-tabs .ant-tabs-nav::before {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .home-article-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .skill-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.skill-markdown {
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--color-text);
+}
+
+.skill-markdown h2,
+.skill-markdown h3,
+.skill-markdown h4 {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.skill-markdown h2 {
+  margin: 24px 0 12px;
+  padding-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.4;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.skill-markdown h3 {
+  margin: 16px 0 6px;
+  padding-left: 10px;
+  font-size: 14px;
+  line-height: 1.5;
+  border-left: 3px solid var(--color-primary);
+}
+
+.skill-markdown h4 {
+  margin: 12px 0 6px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.skill-markdown p {
+  margin: 0.6em 0;
+}
+
+.skill-markdown h3 + p {
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+.skill-markdown p:has(+ ul),
+.skill-markdown p:has(+ ol) {
+  margin-bottom: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+
+.skill-markdown ul,
+.skill-markdown ol {
+  margin: 8px 0 12px;
+  padding-left: 1.25em;
+}
+
+.skill-markdown li {
+  margin: 6px 0;
+  padding-left: 4px;
+  line-height: 1.65;
+}
+
+.skill-markdown li::marker {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.skill-markdown strong {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.skill-markdown code {
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.06);
+  font-size: 0.9em;
+}
+
+.skill-markdown pre {
+  margin: 1em 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.06);
+  overflow-x: auto;
+}
+
+.skill-markdown pre code {
+  padding: 0;
+  background: none;
+}
+
+.skill-markdown blockquote {
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 3px solid rgba(0, 0, 0, 0.12);
+  color: var(--color-text-secondary);
+}
+
+.skill-markdown hr {
+  margin: 1.5em 0;
+  border: none;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.skill-markdown > :first-child {
+  margin-top: 0;
+}
+
+.skill-markdown > :last-child {
+  margin-bottom: 0;
+}
+
+.skill-detail-modal .ant-modal-container {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.skill-detail-modal .ant-modal-header {
+  padding: 20px 56px 16px 24px;
+  margin-bottom: 0;
+}
+
+.skill-detail-modal .ant-modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.35;
+  letter-spacing: -0.01em;
+  padding-right: 0;
+}
+
+.skill-detail-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-detail-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 16px;
+  margin-bottom: 4px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.skill-detail-lead {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+.ant-modal-root.skill-detail-modal .ant-modal .ant-modal-close {
+  top: 16px;
+  inset-inline-end: 16px;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: none;
+  color: var(--color-text-secondary);
+  background: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.ant-modal-root.skill-detail-modal .ant-modal .ant-modal-close:hover {
+  color: var(--color-text);
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.ant-modal-root.skill-detail-modal .ant-modal .ant-modal-close:active {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.ant-modal-root.skill-detail-modal .ant-modal .ant-modal-close:focus,
+.ant-modal-root.skill-detail-modal .ant-modal .ant-modal-close:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
+
+.ant-modal-root.skill-detail-modal .ant-modal .ant-modal-close-x {
+  line-height: 1;
+}
+
+.ant-modal-root.skill-detail-modal .ant-modal .ant-modal-close-icon {
+  font-size: 14px;
+}
+
+.skill-detail-modal .ant-modal-body {
+  padding: 4px 24px 20px;
+}
+
+.skill-detail-modal .skill-markdown > p:first-child {
+  margin-top: 12px;
+}
+
+.skill-detail-modal .ant-modal-footer {
+  padding: 12px 24px 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Reduced Motion: 尊重用户系统“减少动画”设置 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
