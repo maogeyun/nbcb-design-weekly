@@ -1,0 +1,18 @@
+{
+  "data": {
+    "id": "art-c110",
+    "title": "How I Would Design AI Agents at Scale Today",
+    "original_url": "https://medium.com/@systemdesignguru/how-i-would-design-ai-agents-at-scale-today-d22ec74be2cb?source=rss------design_systems-5",
+    "source_name": "Medium · Design Systems",
+    "published_at": "2026-06-16",
+    "category": "ai_frontier",
+    "introduction": "当你的 AI 代理从能回答问题的聊天机器人，变成需要规划、调用工具、协调多个角色、记忆历史并在生产环境稳定运行的\"数字员工\"时，单纯的提示词优化已远远不够。这篇文章把 AI 代理系统设计比作从单体应用向分布式系统演进的过程，拆解了单代理瓶颈、多代理分工、事件驱动通信、多层记忆架构、延迟与成本控制、以及可观测性与容错等核心挑战。它提醒设计师：真正决定规模化成败的，往往不是模型本身，而是代理如何像分布式服务一样协作、记忆、适应并被监控。",
+    "language": "en",
+    "link_status": "link_unknown",
+    "status": "published",
+    "intro_reviewed": true,
+    "click_count": 0,
+    "issue_id": "issue-3",
+    "sort_order": 5
+  }
+}

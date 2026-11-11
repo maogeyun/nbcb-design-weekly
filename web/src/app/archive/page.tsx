@@ -8,6 +8,7 @@ import type { IssueSummary } from '@/types';
 import { CATEGORY_LABELS } from '@/lib/constants';
 import { buildAppHref } from '@/lib/app-link';
 import { brandTokens } from '@/lib/tokens';
+import { fetchPublishedIssues } from '@/lib/public-data-client';
 import { PageHeader } from '@/components/layout/PageHeader';
 
 const { Text, Paragraph } = Typography;
@@ -17,10 +18,9 @@ export default function ArchivePage() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('/api/issues')
-      .then((r) => r.json())
-      .then((json) => {
-        setIssues(json.data ?? []);
+    fetchPublishedIssues()
+      .then((data) => {
+        setIssues(data ?? []);
         setLoading(false);
       })
       .catch(() => setLoading(false));

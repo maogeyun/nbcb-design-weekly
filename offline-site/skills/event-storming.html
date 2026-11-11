@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>事件风暴 · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / 事件风暴
+    </p>
+    <span class="tag tag--requirements_analysis">需求分析</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">事件风暴</h1>
+      <p>DDD 协作工具：用橙色「领域事件」便利贴快速拉通业务流程，识别聚合、界限上下文与系统边界。</p>
+    </div>
+    
+    <div class="markdown"><p>事件风暴适合 <strong>复杂业务、遗留系统拆分、微服务划分</strong> 前的一致语言建设。焦点是“什么时候世界状态变了”，而不是先画表结构。</p>
+<h2>五步执行</h2>
+<p>1) <strong>发散领域事件</strong>：在 {domain} 时间线上贴出所有“已发生且业务在乎”的事实（过去式动词，如「订单已支付」）</p>
+<p>2) <strong>识别触发命令</strong>：什么决策/动作导致该事件？谁有权执行？</p>
+<p>3) <strong>找聚合根</strong>：哪些事件必须同一事务一致？圈成聚合，命名聚合根</p>
+<p>4) <strong>划定界限上下文（BC）</strong>：不同模型语言、不同演进速度的区域分开，标集成方式（同步/异步/反腐败层）</p>
+<p>5) <strong>输出架构方向</strong>：服务候选、消息流、待澄清争议清单，交给实现迭代</p>
+<h2>提示</h2>
+<ul>
+<li>先求广再求精；争议点用不同颜色标记，会后再决</li>
+<li>与业务、产品、研发同场，避免“技术脑补业务”</li>
+</ul></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

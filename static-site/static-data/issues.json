@@ -1,0 +1,97 @@
+{
+  "data": [
+    {
+      "id": "issue-4",
+      "issue_number": 4,
+      "title": "2026 年第 4 期",
+      "publish_date": "2026-06-30",
+      "status": "published",
+      "cover_summary": "本期设计周刊聚焦「AI 协作时代的系统化设计」。从 Agentic AI 的「Why?」解释层，到 KYC 验证中对真实所有权关系的建模；从社区 App 走向社区平台的系统思维，到 Large Design Model 对可编辑、品牌一致资产的重构；再到 AI 生成界面中的图标规范与 Claude Code 项目结构管理，这些文章共同指向一个趋势：设计师的价值不再只是产出界面，而是定义规则、组织上下文、建立信任，并让 AI 在清晰约束中成为更可靠的设计伙伴。",
+      "article_ids": [
+        "art-c302",
+        "art-c323",
+        "art-c266",
+        "art-c371",
+        "art-c317",
+        "art-c318",
+        "art-c455",
+        "art-c285",
+        "art-c344"
+      ],
+      "article_count": 9,
+      "category_counts": {
+        "ui_design": 3,
+        "design_experience": 2,
+        "ai_frontier": 4
+      }
+    },
+    {
+      "id": "issue-3",
+      "issue_number": 3,
+      "title": "2026 年第 3 期",
+      "publish_date": "2026-06-25",
+      "status": "published",
+      "cover_summary": "本周我们聚焦 AI 如何真正成为设计师的「可调度搭子」。从《自主性调节器》探讨人类对 AI 控制权的精细设计，到《RAG 简明解释》揭示检索机制背后的体验问题；从《设计系统 AI 债务》提醒我们命名与文档的隐形成本，到《AI Agents 规模化设计》拆解多代理协作的分布式思维；再到《Words of Type》夯实字体专业语言，以及《A Better Lou》展示降低认知负荷的实战案例，最后《GPT Image 2 真实项目落地》手把手演示从原型到交付的全流程。无论你是想把 AI 工具嵌入日常、还是想建立更稳健的设计系统，这期内容都能帮你把「感觉」转化为可复用的方法论。",
+      "article_ids": [
+        "art-c189",
+        "art-c156",
+        "art-c133",
+        "art-c128",
+        "art-c110"
+      ],
+      "article_count": 5,
+      "category_counts": {
+        "ui_design": 3,
+        "design_experience": 1,
+        "ai_frontier": 1
+      }
+    },
+    {
+      "id": "issue-2",
+      "issue_number": 2,
+      "title": "2026 年第 2 期",
+      "publish_date": "2026-06-20",
+      "status": "published",
+      "cover_summary": "本期周刊从五个角度切入同一个判断：AI 正在重塑设计，设计也在重塑 AI。 从把设计决策变成\"AI 可读\"的基础设施，到为长期在线的 AI 留出一块桌面\"第三屏\"；从把经验与品味封装成可复用的 Skill，到 Linear 式\"失重感设计\"如何把认知负荷降到趋近于零；再到读懂 RAG、看清设计师在信任与透明上的新责任——五篇文章共同指向一句话：AI 替代不了你的判断，但会忠实地放大它的质量。",
+      "article_ids": [
+        "art-c93",
+        "art-c126",
+        "art-c8",
+        "art-c45",
+        "art-c125"
+      ],
+      "article_count": 5,
+      "category_counts": {
+        "ui_design": 1,
+        "design_experience": 0,
+        "ai_frontier": 4
+      }
+    },
+    {
+      "id": "issue-1",
+      "issue_number": 1,
+      "title": "2026 年第 1 期",
+      "publish_date": "2026-06-13",
+      "status": "published",
+      "cover_summary": "首期周刊聚焦设计系统实践、跨团队协作经验，以及 AI 如何重塑设计工作流。精选 9 篇公开文章，助你在 15 分钟内把握本周设计圈值得跟进的话题。",
+      "article_ids": [
+        "art-001",
+        "art-002",
+        "art-003",
+        "art-004",
+        "art-005",
+        "art-006",
+        "art-007",
+        "art-008",
+        "art-009",
+        "art-c02"
+      ],
+      "article_count": 10,
+      "category_counts": {
+        "ui_design": 3,
+        "design_experience": 4,
+        "ai_frontier": 3
+      }
+    }
+  ]
+}

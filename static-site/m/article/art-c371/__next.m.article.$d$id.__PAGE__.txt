@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:"$Sreact.suspense"
+3:I[49222,["500","static/chunks/500-e2a7ab501ac40f90.js","415","static/chunks/app/m/article/%5Bid%5D/page-5aba7d40c207e840.js"],"MobileArticlePageClient"]
+4:I[90484,[],"OutletBoundary"]
+0:{"rsc":["$","$1","c",{"children":[["$","$2",null,{"children":["$","$L3",null,{"article":{"id":"art-c371","title":"用AI写代码总出问题？试试这2个Vibe Coding必备的超实用Prompt","original_url":"https://uisdc.com/vibe-coding-11","source_name":"优设网","published_at":"2026-06-30","category":"ai_frontier","introduction":"AI 写代码，正在把设计师从\"只能画方案\"推向\"可以做产品\"的新边界。但 Vibe Coding 并不是把想法丢给 AI、等它自动变成可用工具；它更像一次高速原型实验：设计师负责定义问题、拆解逻辑、判断体验，AI 负责生成与迭代。真正拉开差距的，不是会不会写代码，而是能否用第一性原理逼近本质，再用对抗式审查提前发现风险。","language":"zh","link_status":"link_unknown","status":"published","intro_reviewed":true,"click_count":0,"issue_id":"issue-4","sort_order":4},"issueId":"issue-4","issueNumber":4}]}],null,["$","$L4",null,{"children":["$","$2",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"hZQ7hwDsqTHpsAxefcyvp"}
+5:null

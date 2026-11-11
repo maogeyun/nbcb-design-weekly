@@ -1,0 +1,11 @@
+[
+  {
+    "id": "O-001",
+    "type": "interaction",
+    "status": "open",
+    "title": "精选卡片 hover 浮层未出现在 Figma 静态稿",
+    "description": "开发实现含 hover 渐变遮罩与「查看原文」按钮（FeaturedArticleCard），Figma 首页帧为静态卡片，无 hover 态说明。",
+    "region": "本期精选文章卡片",
+    "policy": "observation_default_no_deduct"
+  }
+]

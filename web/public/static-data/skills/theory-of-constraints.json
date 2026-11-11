@@ -1,0 +1,11 @@
+{
+  "data": {
+    "id": "theory-of-constraints",
+    "name": "约束理论",
+    "introduction": "用 TOC 约束理论五步聚焦法识别系统瓶颈（约束），围绕吞吐量优化（而非局部效率）提升交付速度，并用 WIP 限制暴露积压。",
+    "category": "requirements_analysis",
+    "file_path": "theory-of-constraints.md",
+    "content": "\nTOC 的核心：系统吞吐量由最弱的约束决定。优化非约束环节不会提升整体速度，反而可能制造 WIP 积压的“忙碌幻觉”。\n\n## 五步聚焦法\n\n1) **识别约束 Identify**：在 {flow} 中找积压最大/等待最长/最常阻塞他人的环节\n2) **利用约束 Exploit**：不加资源也要让约束高效运转（减少上下文切换/认知负担）\n3) **为约束让路 Subordinate**：调整其他环节节奏服务约束（非约束空闲是允许的）\n4) **提升约束 Elevate**：必要时加人/自动化/改架构，真正扩容瓶颈\n5) **重复 Repeat**：约束会迁移；消除一个立刻找下一个\n\n## 研发流程常见约束\n\n- 需求澄清与验收、设计评审\n- 代码审查（review 审查人稀缺）\n- 测试与发布审批\n- 部署与监控反馈延迟\n\n## 关键实践：WIP 限制\n\n限制并行在制品数量，能让积压与约束“浮出水面”，并缩短从需求到交付的流动时间。\n\n",
+    "has_package": false
+  }
+}

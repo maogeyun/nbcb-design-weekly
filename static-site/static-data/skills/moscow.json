@@ -1,0 +1,11 @@
+{
+  "data": {
+    "id": "moscow",
+    "name": "MoSCoW 优先级",
+    "introduction": "用 MoSCoW 将需求分为 Must/Should/Could/Won't（this time），用“如果不做会怎样”约束范围蔓延，保障按时交付。",
+    "category": "requirements_analysis",
+    "file_path": "moscow.md",
+    "content": "\nMoSCoW 的核心不是贴标签，而是逼团队回答：**不做这个会怎样？** 没有清晰的“Won’t（这次不做）”，范围蔓延就不会停止。\n\n## 四类\n\n- **Must Have**：没有它产品无法运作/无法交付核心价值（底线）\n- **Should Have**：重要但可延期，会明显影响价值\n- **Could Have**：锦上添花，有余力才做\n- **Won’t Have (this time)**：这次明确不做（不等于永远不做）\n\n## 健康分布参考\n\n- Must ~60%，Should ~20%，Could ~10%，Won’t ~10%\n- Must > 60% 通常意味着范围过大，需要重谈\n\n## 落地建议\n\n1) 先定义“this time”的时间窗口（Sprint/季度/版本）\n2) 让工程参与分类（可行性影响优先级）\n3) 输出要有关键干系人认可/签字，否则没有约束力\n4) 定期回顾 Won’t 列表，但不要随时推翻\n\n",
+    "has_package": false
+  }
+}

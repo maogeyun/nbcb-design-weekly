@@ -41,6 +41,24 @@ export const categoryTagStyles = {
   },
 } as const;
 
+export const introStatusTagStyles = {
+  reviewed: {
+    label: '已审核',
+    color: '#14532D',
+    background: '#F0FDF4',
+  },
+  pending: {
+    label: '待审核',
+    color: '#B45309',
+    background: '#FFF6EA',
+  },
+  empty: {
+    label: '未生成',
+    color: '#999999',
+    background: '#F7F7F9',
+  },
+} as const;
+
 export const skillCategoryTagStyles = {
   requirements_analysis: {
     color: '#B45309',

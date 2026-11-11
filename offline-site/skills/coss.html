@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>COSS UI · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / COSS UI
+    </p>
+    <span class="tag tag--solution_design">方案设计</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">COSS UI</h1>
+      <p>Helps implement coss UI components correctly. Use when building UIs with coss primitives (buttons, dialogs, selects, forms, menus, tabs, inputs, toasts, etc.), migrating from shadcn/Radix to coss/Base UI, composing trigger-based overlays, or troubleshooting coss component behavior. Covers imports, accessibility, Tailwind styling, and common pitfalls.</p>
+    </div>
+    
+    <div class="markdown"><h1>coss ui</h1>
+<p>coss ui is a component library built on Base UI with a shadcn-like developer experience plus a large particle catalog.</p>
+<h2>What this skill is for</h2>
+<p>Use this skill to:</p>
+<ul>
+<li>pick the right coss primitive(s) for a UI task</li>
+<li>write correct coss usage code (imports, composition, props)</li>
+<li>avoid common migration mistakes from shadcn/Radix assumptions</li>
+<li>reference particle examples to produce practical, production-like patterns</li>
+</ul>
+<h2>Source of truth</h2>
+<ul>
+<li>coss components docs: <code>apps/ui/content/docs/components/*.mdx</code></li>
+</ul>
+<p>  - <code>https://github.com/cosscom/coss/tree/main/apps/ui/content/docs/components</code></p>
+<ul>
+<li>coss particle examples: <code>apps/ui/registry/default/particles/p-*.tsx</code></li>
+</ul>
+<p>  - <code>https://github.com/cosscom/coss/tree/main/apps/ui/registry/default/particles</code></p>
+<ul>
+<li>coss particles catalog: <code>https://coss.com/ui/particles</code></li>
+<li>docs map for agents: <code>https://coss.com/ui/llms.txt</code></li>
+</ul>
+<h2>Out of scope</h2>
+<ul>
+<li>Maintaining coss monorepo internals/build pipelines.</li>
+<li>Editing registry internals unless explicitly requested.</li>
+</ul>
+<h2>Principles for agent output</h2>
+<ol>
+<li>Use existing primitives and particles first before inventing custom markup.</li>
+<li>Prefer composition over custom behavior reimplementation.</li>
+<li>Follow coss naming and APIs from docs exactly.</li>
+<li>Keep examples accessible and production-realistic.</li>
+<li>Prefer concise code that mirrors coss docs/particles conventions.</li>
+<li>Assume Tailwind CSS v4 conventions in coss examples and setup guidance.</li>
+</ol>
+<h2>Critical usage rules</h2>
+<p>Always apply before returning coss code:</p>
+<ul>
+<li>Do not invent coss APIs. Verify against component docs first.</li>
+<li>For trigger-based primitives (Dialog, Menu, Select, Popover, Tooltip), follow each primitive&#39;s documented trigger/content hierarchy and composition API; do not mix patterns across components.</li>
+<li>Preserve accessibility labels and error semantics.</li>
+<li>Consult primitive-specific guides for component invariants and edge cases.</li>
+<li>For manual install guidance, include all required dependencies and local component files referenced by imports.</li>
+<li>Prefer styled coss exports first; use <code>*Primitive</code> exports only when custom composition/styling requires it.</li>
+</ul>
+<p>Rule references (read on demand when the task touches these areas):</p>
+<ul>
+<li><code>./references/rules/styling.md</code> — Tailwind tokens, icon conventions, data-slot selectors</li>
+<li><code>./references/rules/forms.md</code> — Field composition, validation, input patterns</li>
+<li><code>./references/rules/composition.md</code> — Trigger/popup hierarchies, grouped controls</li>
+<li><code>./references/rules/migration.md</code> — shadcn/Radix to coss/Base UI migration patterns</li>
+<li><code>./references/portal-props.md</code> — optional <code>portalProps</code> on composed popups and toast providers (<code>keepMounted</code>, <code>container</code>, which surfaces support it)</li>
+</ul>
+<h2>Component discovery</h2>
+<p>All 53 primitives have dedicated reference guides at <code>./references/primitives/&lt;name&gt;.md</code>. To find the right one for a task, consult the component registry index:</p>
+<ul>
+<li><code>./references/component-registry.md</code></li>
+</ul>
+<h2>Usage workflow</h2>
+<ol>
+<li>Identify user intent (single primitive, composed flow, form flow, overlay flow, feedback flow).</li>
+<li>Consult <code>references/component-registry.md</code> to identify candidate primitives.</li>
+<li>Select primitives from coss docs first; avoid custom fallback unless needed.</li>
+<li>Check at least one particle example for practical composition patterns. Particle files live at <code>apps/ui/registry/default/particles/p-&lt;name&gt;-&lt;N&gt;.tsx</code> (e.g. <code>p-dialog-1.tsx</code>).</li>
+<li>Write minimal code using documented imports/props.</li>
+<li>Self-check accessibility and composition invariants.</li>
+</ol>
+<h2>Installation reference</h2>
+<p>See <code>./references/cli.md</code> for full install/discovery workflow.</p>
+<p>Quick CLI pattern:</p>
+<pre><code>npx shadcn@latest add @coss/&lt;component&gt;</code></pre>
+<p>Quick manual pattern:</p>
+<ul>
+<li>install dependencies listed in the component docs page</li>
+<li>copy required component file(s)</li>
+<li>update imports to match the target app alias setup</li>
+</ul>
+<h2>Primitive Guidance</h2>
+<p>Every primitive has a reference guide at <code>./references/primitives/&lt;name&gt;.md</code> with imports, minimal patterns, inline code examples, pitfalls, and particle references. Use the component registry to find the right file.</p>
+<p>High-risk primitives (read these guides first -- they have the most composition gotchas):</p>
+<ul>
+<li><code>./references/primitives/dialog.md</code> — modal overlays, form-in-dialog, responsive dialog/drawer</li>
+<li><code>./references/primitives/menu.md</code> — dropdown actions, checkbox/radio items, submenus</li>
+<li><code>./references/primitives/select.md</code> — items-first pattern, multiple, object values, groups</li>
+<li><code>./references/primitives/form.md</code> — Field composition, validation, submission</li>
+<li><code>./references/primitives/input-group.md</code> — addons, DOM order invariant, textarea layouts</li>
+<li><code>./references/primitives/toast.md</code> — toastManager (not Sonner), anchored toasts, providers</li>
+</ul>
+<h2>Output Checklist</h2>
+<p>Before returning code:</p>
+<ul>
+<li>imports and props match coss docs</li>
+<li>composition structure is valid for selected primitive(s)</li>
+<li>accessibility and explicit control types (<code>button</code>, <code>input</code>, etc.) are present</li>
+<li>migration-sensitive flows are verified (type/lint, keyboard/a11y behavior, and SSR-sensitive primitives like Select/Command)</li>
+</ul></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

@@ -15,3 +15,6 @@ web/*.tsbuildinfo
 web/next-env.d.ts
 web/data/
 web/public/uploads/
+web/public/static-data/
+/static-site/
+/offline-site/

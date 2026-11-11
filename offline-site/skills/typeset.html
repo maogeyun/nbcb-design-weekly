@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>排版优化 · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / 排版优化
+    </p>
+    <span class="tag tag--solution_design">方案设计</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">排版优化</h1>
+      <p>Improves typography by fixing font choices, hierarchy, sizing, weight, and readability so text feels intentional. Use when the user mentions fonts, type, readability, text hierarchy, sizing looks off, or wants more polished, intentional typography.</p>
+    </div>
+    
+    <div class="markdown"><p>Assess and improve typography that feels generic, inconsistent, or poorly structured — turning default-looking text into intentional, well-crafted type.</p>
+<h2>MANDATORY PREPARATION</h2>
+<p>Invoke /impeccable — it contains design principles, anti-patterns, and the <strong>Context Gathering Protocol</strong>. Follow the protocol before proceeding — if no design context exists yet, you MUST run /impeccable teach first.</p>
+<p>---</p>
+<h2>Assess Current Typography</h2>
+<p>Analyze what&#39;s weak or generic about the current type:</p>
+<ol>
+<li><strong>Font choices</strong>:</li>
+</ol>
+<p>   - Are we using invisible defaults? (Inter, Roboto, Arial, Open Sans, system defaults)</p>
+<p>   - Does the font match the brand personality? (A playful brand shouldn&#39;t use a corporate typeface)</p>
+<p>   - Are there too many font families? (More than 2-3 is almost always a mess)</p>
+<ol>
+<li><strong>Hierarchy</strong>:</li>
+</ol>
+<p>   - Can you tell headings from body from captions at a glance?</p>
+<p>   - Are font sizes too close together? (14px, 15px, 16px = muddy hierarchy)</p>
+<p>   - Are weight contrasts strong enough? (Medium vs Regular is barely visible)</p>
+<ol>
+<li><strong>Sizing &amp; scale</strong>:</li>
+</ol>
+<p>   - Is there a consistent type scale, or are sizes arbitrary?</p>
+<p>   - Does body text meet minimum readability? (16px+)</p>
+<p>   - Is the sizing strategy appropriate for the context? (Fixed <code>rem</code> scales for app UIs; fluid <code>clamp()</code> for marketing/content page headings)</p>
+<ol>
+<li><strong>Readability</strong>:</li>
+</ol>
+<p>   - Are line lengths comfortable? (45-75 characters ideal)</p>
+<p>   - Is line-height appropriate for the font and context?</p>
+<p>   - Is there enough contrast between text and background?</p>
+<ol>
+<li><strong>Consistency</strong>:</li>
+</ol>
+<p>   - Are the same elements styled the same way throughout?</p>
+<p>   - Are font weights used consistently? (Not bold in one section, semibold in another for the same role)</p>
+<p>   - Is letter-spacing intentional or default everywhere?</p>
+<p><strong>CRITICAL</strong>: The goal isn&#39;t to make text &quot;fancier&quot; — it&#39;s to make it clearer, more readable, and more intentional. Good typography is invisible; bad typography is distracting.</p>
+<h2>Plan Typography Improvements</h2>
+<p>Consult the <a href="reference/typography.md" target="_blank" rel="noopener noreferrer">typography reference</a> from the impeccable skill for detailed guidance on scales, pairing, and loading strategies.</p>
+<p>Create a systematic plan:</p>
+<ul>
+<li><strong>Font selection</strong>: Do fonts need replacing? What fits the brand/context?</li>
+<li><strong>Type scale</strong>: Establish a modular scale (e.g., 1.25 ratio) with clear hierarchy</li>
+<li><strong>Weight strategy</strong>: Which weights serve which roles? (Regular for body, Semibold for labels, Bold for headings — or whatever fits)</li>
+<li><strong>Spacing</strong>: Line-heights, letter-spacing, and margins between typographic elements</li>
+</ul>
+<h2>Improve Typography Systematically</h2>
+<h3>Font Selection</h3>
+<p>If fonts need replacing:</p>
+<ul>
+<li>Choose fonts that reflect the brand personality</li>
+<li>Pair with genuine contrast (serif + sans, geometric + humanist) — or use a single family in multiple weights</li>
+<li>Ensure web font loading doesn&#39;t cause layout shift (<code>font-display: swap</code>, metric-matched fallbacks)</li>
+</ul>
+<h3>Establish Hierarchy</h3>
+<p>Build a clear type scale:</p>
+<ul>
+<li><strong>5 sizes cover most needs</strong>: caption, secondary, body, subheading, heading</li>
+<li><strong>Use a consistent ratio</strong> between levels (1.25, 1.333, or 1.5)</li>
+<li><strong>Combine dimensions</strong>: Size + weight + color + space for strong hierarchy — don&#39;t rely on size alone</li>
+<li><strong>App UIs</strong>: Use a fixed <code>rem</code>-based type scale, optionally adjusted at 1-2 breakpoints. Fluid sizing undermines the spatial predictability that dense, container-based layouts need</li>
+<li><strong>Marketing / content pages</strong>: Use fluid sizing via <code>clamp(min, preferred, max)</code> for headings and display text. Keep body text fixed</li>
+</ul>
+<h3>Fix Readability</h3>
+<ul>
+<li>Set <code>max-width</code> on text containers using <code>ch</code> units (<code>max-width: 65ch</code>)</li>
+<li>Adjust line-height per context: tighter for headings (1.1-1.2), looser for body (1.5-1.7)</li>
+<li>Increase line-height slightly for light-on-dark text</li>
+<li>Ensure body text is at least 16px / 1rem</li>
+</ul>
+<h3>Refine Details</h3>
+<ul>
+<li>Use <code>tabular-nums</code> for data tables and numbers that should align</li>
+<li>Apply proper <code>letter-spacing</code>: slightly open for small caps and uppercase, default or tight for large display text</li>
+<li>Use semantic token names (<code>--text-body</code>, <code>--text-heading</code>), not value names (<code>--font-16</code>)</li>
+<li>Set <code>font-kerning: normal</code> and consider OpenType features where appropriate</li>
+</ul>
+<h3>Weight Consistency</h3>
+<ul>
+<li>Define clear roles for each weight and stick to them</li>
+<li>Don&#39;t use more than 3-4 weights (Regular, Medium, Semibold, Bold is plenty)</li>
+<li>Load only the weights you actually use (each weight adds to page load)</li>
+</ul>
+<p><strong>NEVER</strong>:</p>
+<ul>
+<li>Use more than 2-3 font families</li>
+<li>Pick sizes arbitrarily — commit to a scale</li>
+<li>Set body text below 16px</li>
+<li>Use decorative/display fonts for body text</li>
+<li>Disable browser zoom (<code>user-scalable=no</code>)</li>
+<li>Use <code>px</code> for font sizes — use <code>rem</code> to respect user settings</li>
+<li>Default to Inter/Roboto/Open Sans when personality matters</li>
+<li>Pair fonts that are similar but not identical (two geometric sans-serifs)</li>
+</ul>
+<h2>Verify Typography Improvements</h2>
+<ul>
+<li><strong>Hierarchy</strong>: Can you identify heading vs body vs caption instantly?</li>
+<li><strong>Readability</strong>: Is body text comfortable to read in long passages?</li>
+<li><strong>Consistency</strong>: Are same-role elements styled identically throughout?</li>
+<li><strong>Personality</strong>: Does the typography reflect the brand?</li>
+<li><strong>Performance</strong>: Are web fonts loading efficiently without layout shift?</li>
+<li><strong>Accessibility</strong>: Does text meet WCAG contrast ratios? Is it zoomable to 200%?</li>
+</ul>
+<p>Remember: Typography is the foundation of interface design — it carries the majority of information. Getting it right is the highest-leverage improvement you can make.</p></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

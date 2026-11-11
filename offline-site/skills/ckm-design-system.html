@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CKM 设计系统 · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / CKM 设计系统
+    </p>
+    <span class="tag tag--solution_design">方案设计</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">CKM 设计系统</h1>
+      <p>Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.</p>
+    </div>
+    
+    <div class="markdown"><h1>Design System</h1>
+<p>Token architecture, component specifications, systematic design, slide generation.</p>
+<h2>When to Use</h2>
+<ul>
+<li>Design token creation</li>
+<li>Component state definitions</li>
+<li>CSS variable systems</li>
+<li>Spacing/typography scales</li>
+<li>Design-to-code handoff</li>
+<li>Tailwind theme configuration</li>
+<li><strong>Slide/presentation generation</strong></li>
+</ul>
+<h2>Token Architecture</h2>
+<p>Load: <code>references/token-architecture.md</code></p>
+<h3>Three-Layer Structure</h3>
+<pre><code>Primitive (raw values)
+       ↓
+Semantic (purpose aliases)
+       ↓
+Component (component-specific)</code></pre>
+<p><strong>Example:</strong></p>
+<pre><code>/* Primitive */
+--color-blue-600: #2563EB;
+
+/* Semantic */
+--color-primary: var(--color-blue-600);
+
+/* Component */
+--button-bg: var(--color-primary);</code></pre>
+<h2>Quick Start</h2>
+<p><strong>Generate tokens:</strong></p>
+<pre><code>node scripts/generate-tokens.cjs --config tokens.json -o tokens.css</code></pre>
+<p><strong>Validate usage:</strong></p>
+<pre><code>node scripts/validate-tokens.cjs --dir src/</code></pre>
+<h2>References</h2>
+<p>| Topic | File |</p>
+<p>|-------|------|</p>
+<p>| Token Architecture | <code>references/token-architecture.md</code> |</p>
+<p>| Primitive Tokens | <code>references/primitive-tokens.md</code> |</p>
+<p>| Semantic Tokens | <code>references/semantic-tokens.md</code> |</p>
+<p>| Component Tokens | <code>references/component-tokens.md</code> |</p>
+<p>| Component Specs | <code>references/component-specs.md</code> |</p>
+<p>| States &amp; Variants | <code>references/states-and-variants.md</code> |</p>
+<p>| Tailwind Integration | <code>references/tailwind-integration.md</code> |</p>
+<h2>Component Spec Pattern</h2>
+<p>| Property | Default | Hover | Active | Disabled |</p>
+<p>|----------|---------|-------|--------|----------|</p>
+<p>| Background | primary | primary-dark | primary-darker | muted |</p>
+<p>| Text | white | white | white | muted-fg |</p>
+<p>| Border | none | none | none | muted-border |</p>
+<p>| Shadow | sm | md | none | none |</p>
+<h2>Scripts</h2>
+<p>| Script | Purpose |</p>
+<p>|--------|---------|</p>
+<p>| <code>generate-tokens.cjs</code> | Generate CSS from JSON token config |</p>
+<p>| <code>validate-tokens.cjs</code> | Check for hardcoded values in code |</p>
+<p>| <code>search-slides.py</code> | BM25 search + contextual recommendations |</p>
+<p>| <code>slide-token-validator.py</code> | Validate slide HTML for token compliance |</p>
+<p>| <code>fetch-background.py</code> | Fetch images from Pexels/Unsplash |</p>
+<h2>Templates</h2>
+<p>| Template | Purpose |</p>
+<p>|----------|---------|</p>
+<p>| <code>design-tokens-starter.json</code> | Starter JSON with three-layer structure |</p>
+<h2>Integration</h2>
+<p><strong>With brand:</strong> Extract primitives from brand colors/typography</p>
+<p><strong>With ui-styling:</strong> Component tokens → Tailwind config</p>
+<p><strong>Skill Dependencies:</strong> brand, ui-styling</p>
+<p><strong>Primary Agents:</strong> ui-ux-designer, frontend-developer</p>
+<h2>Slide System</h2>
+<p>Brand-compliant presentations using design tokens + Chart.js + contextual decision system.</p>
+<h3>Source of Truth</h3>
+<p>| File | Purpose |</p>
+<p>|------|---------|</p>
+<p>| <code>docs/brand-guidelines.md</code> | Brand identity, voice, colors |</p>
+<p>| <code>assets/design-tokens.json</code> | Token definitions (primitive→semantic→component) |</p>
+<p>| <code>assets/design-tokens.css</code> | CSS variables (import in slides) |</p>
+<p>| <code>assets/css/slide-animations.css</code> | CSS animation library |</p>
+<h3>Slide Search (BM25)</h3>
+<pre><code># Basic search (auto-detect domain)
+python scripts/search-slides.py &quot;investor pitch&quot;
+
+# Domain-specific search
+python scripts/search-slides.py &quot;problem agitation&quot; -d copy
+python scripts/search-slides.py &quot;revenue growth&quot; -d chart
+
+# Contextual search (Premium System)
+python scripts/search-slides.py &quot;problem slide&quot; --context --position 2 --total 9
+python scripts/search-slides.py &quot;cta&quot; --context --position 9 --prev-emotion frustration</code></pre>
+<h3>Decision System CSVs</h3>
+<p>| File | Purpose |</p>
+<p>|------|---------|</p>
+<p>| <code>data/slide-strategies.csv</code> | 15 deck structures + emotion arcs + sparkline beats |</p>
+<p>| <code>data/slide-layouts.csv</code> | 25 layouts + component variants + animations |</p>
+<p>| <code>data/slide-layout-logic.csv</code> | Goal → Layout + break_pattern flag |</p>
+<p>| <code>data/slide-typography.csv</code> | Content type → Typography scale |</p>
+<p>| <code>data/slide-color-logic.csv</code> | Emotion → Color treatment |</p>
+<p>| <code>data/slide-backgrounds.csv</code> | Slide type → Image category (Pexels/Unsplash) |</p>
+<p>| <code>data/slide-copy.csv</code> | 25 copywriting formulas (PAS, AIDA, FAB) |</p>
+<p>| <code>data/slide-charts.csv</code> | 25 chart types with Chart.js config |</p>
+<h3>Contextual Decision Flow</h3>
+<pre><code>1. Parse goal/context
+        ↓
+2. Search slide-strategies.csv → Get strategy + emotion beats
+        ↓
+3. For each slide:
+   a. Query slide-layout-logic.csv → layout + break_pattern
+   b. Query slide-typography.csv → type scale
+   c. Query slide-color-logic.csv → color treatment
+   d. Query slide-backgrounds.csv → image if needed
+   e. Apply animation class from slide-animations.css
+        ↓
+4. Generate HTML with design tokens
+        ↓
+5. Validate with slide-token-validator.py</code></pre>
+<h3>Pattern Breaking (Duarte Sparkline)</h3>
+<p>Premium decks alternate between emotions for engagement:</p>
+<pre><code>&quot;What Is&quot; (frustration) ↔ &quot;What Could Be&quot; (hope)</code></pre>
+<p>System calculates pattern breaks at 1/3 and 2/3 positions.</p>
+<h3>Slide Requirements</h3>
+<p><strong>ALL slides MUST:</strong></p>
+<ol>
+<li>Import <code>assets/design-tokens.css</code> - single source of truth</li>
+<li>Use CSS variables: <code>var(--color-primary)</code>, <code>var(--slide-bg)</code>, etc.</li>
+<li>Use Chart.js for charts (NOT CSS-only bars)</li>
+<li>Include navigation (keyboard arrows, click, progress bar)</li>
+<li>Center align content</li>
+<li>Focus on persuasion/conversion</li>
+</ol>
+<h3>Chart.js Integration</h3>
+<pre><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js&quot;&gt;&lt;/script&gt;
+
+&lt;canvas id=&quot;revenueChart&quot;&gt;&lt;/canvas&gt;
+&lt;script&gt;
+new Chart(document.getElementById(&#39;revenueChart&#39;), {
+    type: &#39;line&#39;,
+    data: {
+        labels: [&#39;Sep&#39;, &#39;Oct&#39;, &#39;Nov&#39;, &#39;Dec&#39;],
+        datasets: [{
+            data: [5, 12, 28, 45],
+            borderColor: &#39;#FF6B6B&#39;,  // Use brand coral
+            backgroundColor: &#39;rgba(255, 107, 107, 0.1)&#39;,
+            fill: true,
+            tension: 0.4
+        }]
+    }
+});
+&lt;/script&gt;</code></pre>
+<h3>Token Compliance</h3>
+<pre><code>/* CORRECT - uses token */
+background: var(--slide-bg);
+color: var(--color-primary);
+font-family: var(--typography-font-heading);
+
+/* WRONG - hardcoded */
+background: #0D0D0D;
+color: #FF6B6B;
+font-family: &#39;Space Grotesk&#39;;</code></pre>
+<h3>Reference Implementation</h3>
+<p>Working example with all features:</p>
+<pre><code>assets/designs/slides/claudekit-pitch-251223.html</code></pre>
+<h3>Command</h3>
+<pre><code>/slides:create &quot;10-slide investor pitch for ClaudeKit Marketing&quot;</code></pre>
+<h2>Best Practices</h2>
+<ol>
+<li>Never use raw hex in components - always reference tokens</li>
+<li>Semantic layer enables theme switching (light/dark)</li>
+<li>Component tokens enable per-component customization</li>
+<li>Use HSL format for opacity control</li>
+<li>Document every token&#39;s purpose</li>
+<li><strong>Slides must import design-tokens.css and use var() exclusively</strong></li>
+</ol></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

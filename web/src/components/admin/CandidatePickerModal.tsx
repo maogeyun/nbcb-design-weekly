@@ -5,6 +5,7 @@ import { Alert, Button, Input, Modal, Select, Space, Table, Typography } from 'a
 import { SearchOutlined } from '@ant-design/icons';
 import type { Article, ArticleCategory } from '@/types';
 import { CATEGORY_LABELS, ISSUE_MAX_ARTICLES } from '@/lib/constants';
+import { IntroStatusTag } from '@/components/admin/IntroStatusTag';
 import {
   DEFAULT_CANDIDATE_FILTERS,
   type CandidateFilterState,
@@ -12,7 +13,6 @@ import {
   type CandidateSortKey,
   filterAndSortCandidates,
   getCandidateSources,
-  introStatusLabel,
 } from '@/lib/candidate-filters';
 
 const { Text } = Typography;
@@ -211,8 +211,8 @@ export function CandidatePickerModal({
             },
             {
               title: '引言',
-              width: 72,
-              render: (_, r) => introStatusLabel(r),
+              width: 88,
+              render: (_, r) => <IntroStatusTag article={r} />,
             },
             {
               title: '操作',

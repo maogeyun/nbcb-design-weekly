@@ -1,0 +1,113 @@
+{
+  "data": {
+    "id": "issue-2",
+    "issue_number": 2,
+    "title": "2026 年第 2 期",
+    "publish_date": "2026-06-20",
+    "status": "published",
+    "cover_summary": "本期周刊从五个角度切入同一个判断：AI 正在重塑设计，设计也在重塑 AI。 从把设计决策变成\"AI 可读\"的基础设施，到为长期在线的 AI 留出一块桌面\"第三屏\"；从把经验与品味封装成可复用的 Skill，到 Linear 式\"失重感设计\"如何把认知负荷降到趋近于零；再到读懂 RAG、看清设计师在信任与透明上的新责任——五篇文章共同指向一句话：AI 替代不了你的判断，但会忠实地放大它的质量。",
+    "article_ids": [
+      "art-c93",
+      "art-c126",
+      "art-c8",
+      "art-c45",
+      "art-c125"
+    ],
+    "articles": [
+      {
+        "id": "art-c93",
+        "title": "Antigravity Design: Minimalist ve Premium Arayüzlerin Arkasındaki Teknoloji",
+        "original_url": "https://medium.com/@nasrettinaltundag29/antigravity-design-minimalist-ve-premium-aray%C3%BCzlerin-arkas%C4%B1ndaki-teknoloji-15bf922e3032?source=rss------ui_design-5",
+        "source_name": "Medium · UI Design",
+        "published_at": "2026-06-16",
+        "category": "ui_design",
+        "introduction": "浏览 Linear、Vercel、Stripe 时，元素仿佛悬浮、界面轻轻呼吸,那股说不清的\"premium\"质感，正来自一场安静的革命——Antigravity Design，失重感设计。它的目标是把认知负荷降到趋近于零：用无限留白替代拥挤，用柔和阴影与层次取代硬边框，用玻璃拟态注入纵深。而这种\"轻\"是设计与工程的合谋——backdrop-filter、弹簧动效、CSS 渐变替代重图，在美感与性能间小心走钢丝。用户要的从不是庞大菜单堆出的\"强大\"，而是干净、毫不费力的轻盈。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 3,
+        "issue_id": "issue-2",
+        "sort_order": 1
+      },
+      {
+        "id": "art-c126",
+        "title": "面向完全不懂编程的产品设计师的 RAG 简明解释",
+        "original_url": "https://medium.com/@swarnajha25/rag-simply-explained-for-product-designers-who-dont-know-coding-at-all-b15bf1066668",
+        "source_name": "Medium",
+        "published_at": "2026-06-16",
+        "category": "ai_frontier",
+        "introduction": "我们拼命研究提示词，却很少问：AI 开口之前，到底从哪\"翻\"出答案？其实你每天都在做同样的事——老板问\"为什么活跃度掉了\"，你会先扒数据、翻反馈再开口。有项技术逻辑一模一样，叫 RAG：先检索，后生成。它正是 AI\"一本正经胡说\"的解药——先调出真实文件，再据此回答。但这篇文章最想说的是：RAG 看似技术，难题却大多是体验问题。来源要不要露出、原文能否点开、不确定性如何传达、查不到时怎么收场——全是设计师的活儿。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 3,
+        "attachment": {
+          "original_name": "面向完全不懂编程的产品设计师的 RAG 简明解释 _ 作者：Swarna Jha _ 2026 年 6 月 _ Medium.pdf",
+          "stored_name": "1781591905480.pdf",
+          "url": "/uploads/articles/art-c126/1781591905480.pdf",
+          "size": 833245,
+          "mime_type": "application/pdf",
+          "uploaded_at": "2026-06-16T06:38:25.482Z"
+        },
+        "issue_id": "issue-2",
+        "sort_order": 2
+      },
+      {
+        "id": "art-c8",
+        "title": "How To Make Your Design System AI-Ready",
+        "original_url": "https://smashingmagazine.com/2026/06/how-make-design-system-ai-ready",
+        "source_name": "Smashing Magazine",
+        "published_at": "2026-06-03",
+        "category": "ai_frontier",
+        "introduction": "把设计稿丢给 AI，结果却像隔了层毛玻璃：间距错位、颜色跳出 Token、交互态凭空消失。问题不在 AI 不够聪明，而在我们从没把\"决策\"清楚地告诉它。这篇文章主张：把设计决策当作基础设施——用结构化的规范文件沉淀优先级与原则，用 Token 层收拢所有可用值，再用审计脚本兜住 AI 的越界发挥，并让规范随系统更新持续保鲜。AI 替代不了你的判断，却会放大判断的质量；你讲得越清楚，它做得越靠谱。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-2",
+        "sort_order": 3
+      },
+      {
+        "id": "art-c45",
+        "title": "从 BANG!CASE 到 AI Display：我为什么想给 AI 在桌面留一个位置",
+        "original_url": "https://sspai.com/post/110984",
+        "source_name": "少数派",
+        "published_at": "2026-06-15",
+        "category": "ai_frontier",
+        "introduction": "和 Codex、Claude Code 协作时，你很多时候不是在\"对话\"，而是在\"等待\"——等它跑完、等它卡住、等它问你要不要继续。于是你不停切窗口、瞥终端，注意力被一次次拽走。这暴露了一个被忽视的空白：桌面上缺一层介于\"主屏\"与\"通知\"之间的信息层。这篇文章记录了一次产品思考——能否做一块专门留给 AI 的\"第三块屏幕\"，让它的状态被余光感知、轻量操作触手可及。当 AI 从\"被打开的软件\"变成\"长期在线的伙伴\"，我们的界面范式，是不是也该换了？",
+        "language": "zh",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 1,
+        "issue_id": "issue-2",
+        "sort_order": 4
+      },
+      {
+        "id": "art-c125",
+        "title": "做了多个爆款Skills后，我发现它是Agent时代最大的能力商品！",
+        "original_url": "https://uisdc.com/skill-10",
+        "source_name": "uisdc.com",
+        "published_at": "2026-06-16",
+        "category": "ai_frontier",
+        "introduction": "很多人以为 AI 带来\"平权\"——人人都能写代码、做 PPT。但真相恰恰相反：Agent 不是抹平能力差距，而是在放大它。同一句指令，有人收获惊艳产出，有人只得到一堆\"AI 味\"半成品。弥合鸿沟的关键是 Skill——把专家经验、工作流与品味，封装成可分发、可复用、可迭代的能力单元。对设计师而言尤其值得玩味：做好设计 Skill，本质是把品味变成约束，让十年积累的隐性判断第一次被编码、被检查、被反复调用。",
+        "language": "zh",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 1,
+        "issue_id": "issue-2",
+        "sort_order": 5
+      }
+    ],
+    "article_count": 5,
+    "category_counts": {
+      "ui_design": 1,
+      "design_experience": 0,
+      "ai_frontier": 4
+    }
+  }
+}

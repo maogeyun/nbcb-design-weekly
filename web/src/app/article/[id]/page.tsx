@@ -1,7 +1,13 @@
 import { notFound } from 'next/navigation';
+import { Suspense } from 'react';
+import { getStaticArticleParams } from '@/lib/static-params';
 import { getIssueById, getPublishedArticleById } from '@/lib/store';
 import { BreadcrumbPageData } from '@/components/layout/BreadcrumbProvider';
 import { ArticlePageClient } from './ArticlePageClient';
+
+export function generateStaticParams() {
+  return getStaticArticleParams();
+}
 
 export default async function ArticlePage({
   params,
@@ -20,7 +26,7 @@ export default async function ArticlePage({
   }
 
   return (
-    <>
+    <Suspense>
       <BreadcrumbPageData
         data={{
           issueNumber: issue.issue_number,
@@ -33,6 +39,6 @@ export default async function ArticlePage({
         issueId={article.issue_id}
         issueNumber={issue.issue_number}
       />
-    </>
+    </Suspense>
   );
 }

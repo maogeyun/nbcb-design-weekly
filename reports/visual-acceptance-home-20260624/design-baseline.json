@@ -1,0 +1,83 @@
+{
+  "source": {
+    "platform": "figma",
+    "type": "link",
+    "url": "https://www.figma.com/design/Sd6rkUWJZoFPvjr4uAC4hn/%E6%91%B8%E9%B1%BC%E5%91%A8%E5%88%8A?node-id=4-2"
+  },
+  "frame": {
+    "name": "首页",
+    "width": 2056,
+    "height": 1230,
+    "source": "https://www.figma.com/design/Sd6rkUWJZoFPvjr4uAC4hn/%E6%91%B8%E9%B1%BC%E5%91%A8%E5%88%8A?node-id=4-2",
+    "node_id": "4:2",
+    "fill": "#F7F7F9"
+  },
+  "tokens": {
+    "colors": [
+      { "name": "colorPrimary", "hex": "#FFA62F", "source": "figma_context 4:2" },
+      { "name": "colorBgLayout", "hex": "#F7F7F9", "source": "figma_context 4:2" },
+      { "name": "colorHeroBg", "hex": "#F5F5F5", "source": "figma_context 4:58" },
+      { "name": "colorBgContainer", "hex": "#FFFFFF", "source": "figma_context 4:6,4:73" },
+      { "name": "colorBorder", "hex": "#E9E9E9", "source": "figma_context 4:6" },
+      { "name": "colorBorderSecondary", "hex": "#F0F0F0", "source": "figma_context 4:87" },
+      { "name": "colorText", "hex": "#222222", "source": "figma_context 4:28" },
+      { "name": "colorTextSecondary", "hex": "#555555", "source": "figma_context 4:69" },
+      { "name": "colorTextMuted", "hex": "#888888", "source": "figma_context 4:126" },
+      { "name": "colorTextTertiary", "hex": "#999999", "source": "figma_context 4:133" },
+      { "name": "colorPrimaryBg", "hex": "rgba(255,166,47,0.13)", "source": "figma_context 4:61" }
+    ],
+    "typography": [
+      { "name": "nav-active", "size": 14, "weight": 500, "lineHeight": 22, "color": "#FFA62F", "node": "4:19" },
+      { "name": "nav-inactive", "size": 14, "weight": 400, "lineHeight": 22, "color": "#222222", "node": "4:28" },
+      { "name": "hero-badge", "size": 12, "weight": 400, "lineHeight": 20, "color": "#FFA62F", "node": "4:62" },
+      { "name": "hero-title", "size": 38, "weight": 600, "lineHeight": 46, "color": "#222222", "node": "4:65" },
+      { "name": "hero-subtitle", "size": 16, "weight": 400, "lineHeight": 24, "color": "#555555", "node": "4:69" },
+      { "name": "section-title", "size": 30, "weight": 600, "lineHeight": 38, "color": "#222222", "node": "4:78" },
+      { "name": "section-link", "size": 14, "weight": 400, "lineHeight": 22, "color": "#FFA62F", "node": "4:81" },
+      { "name": "card-title", "size": 20, "weight": 600, "lineHeight": 30, "color": "#222222", "node": "4:91" },
+      { "name": "card-body", "size": 14, "weight": 400, "lineHeight": 21, "color": "#222222", "node": "4:95" },
+      { "name": "cta-button", "size": 16, "weight": 500, "lineHeight": 25.143, "color": "#FFFFFF", "node": "4:123" },
+      { "name": "archive-stats", "size": 12, "weight": 400, "lineHeight": 20, "color": "#888888", "node": "4:126" },
+      { "name": "footer", "size": 12, "weight": 400, "lineHeight": 18.857, "color": "#555555", "node": "4:133" }
+    ],
+    "spacing": [
+      { "name": "header-height", "value": 64, "node": "4:6" },
+      { "name": "nav-gap", "value": 28, "node": "4:12" },
+      { "name": "layout-max-width", "value": 1280, "node": "4:7" },
+      { "name": "hero-padding-y", "value": 64, "node": "4:58" },
+      { "name": "section-gap", "value": 60, "node": "4:74" },
+      { "name": "card-padding", "value": 24, "node": "4:89" },
+      { "name": "article-grid-gap", "value": 32, "node": "4:86" }
+    ],
+    "radius": [
+      { "name": "hero-badge", "value": 100, "node": "4:61" },
+      { "name": "hero-divider", "value": 2, "node": "4:71" },
+      { "name": "card", "value": 16, "node": "4:87" },
+      { "name": "cta-button", "value": 8, "node": "4:121" }
+    ],
+    "shadows": [
+      {
+        "name": "article-card",
+        "node": "4:87",
+        "value": "0px 6px 16px 0px rgba(0,0,0,0.08), 0px 3px 6px -4px rgba(0,0,0,0.12), 0px 9px 28px 8px rgba(0,0,0,0.05)"
+      }
+    ],
+    "gradients": []
+  },
+  "components": [
+    { "id": "header", "name": "Header", "node_id": "4:6", "bbox": [0, 0, 2056, 64] },
+    { "id": "hero", "name": "Hero Section", "node_id": "4:58", "bbox": [0, 64, 2056, 346] },
+    { "id": "featured", "name": "本期精选文章", "node_id": "4:75", "bbox": [388, 410, 1280, 440] },
+    { "id": "archive-cta", "name": "查看全部归档", "node_id": "4:118", "bbox": [388, 910, 1280, 116] },
+    { "id": "footer", "name": "Footer", "node_id": "4:130", "bbox": [0, 1154, 2056, 76] }
+  ],
+  "icons": [
+    { "name": "nav-book", "size": 14, "node": "4:16" },
+    { "name": "nav-folder", "size": 14, "node": "4:25" },
+    { "name": "nav-search", "size": 14, "node": "4:33" },
+    { "name": "nav-skills", "size": 14, "node": "4:41" },
+    { "name": "nav-about", "size": 14, "node": "4:49" }
+  ],
+  "extraction": "figma_context",
+  "note": "Variables empty; tokens from get_design_context node 4:2 + 4:87"
+}

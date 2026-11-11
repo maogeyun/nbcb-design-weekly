@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CKM 综合设计 · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / CKM 综合设计
+    </p>
+    <span class="tag tag--solution_design">方案设计</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">CKM 综合设计</h1>
+      <p>&quot;Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pinterest, TikTok, Threads, Google Ads.&quot;</p>
+    </div>
+    
+    <div class="markdown"><h1>Design</h1>
+<p>Unified design skill: brand, tokens, UI, logo, CIP, slides, banners, social photos, icons.</p>
+<h2>When to Use</h2>
+<ul>
+<li>Brand identity, voice, assets</li>
+<li>Design system tokens and specs</li>
+<li>UI styling with shadcn/ui + Tailwind</li>
+<li>Logo design and AI generation</li>
+<li>Corporate identity program (CIP) deliverables</li>
+<li>Presentations and pitch decks</li>
+<li>Banner design for social media, ads, web, print</li>
+<li>Social photos for Instagram, Facebook, LinkedIn, Twitter, Pinterest, TikTok</li>
+</ul>
+<h2>Sub-skill Routing</h2>
+<p>| Task | Sub-skill | Details |</p>
+<p>|------|-----------|---------|</p>
+<p>| Brand identity, voice, assets | <code>brand</code> | External skill |</p>
+<p>| Tokens, specs, CSS vars | <code>design-system</code> | External skill |</p>
+<p>| shadcn/ui, Tailwind, code | <code>ui-styling</code> | External skill |</p>
+<p>| Logo creation, AI generation | Logo (built-in) | <code>references/logo-design.md</code> |</p>
+<p>| CIP mockups, deliverables | CIP (built-in) | <code>references/cip-design.md</code> |</p>
+<p>| Presentations, pitch decks | Slides (built-in) | <code>references/slides.md</code> |</p>
+<p>| Banners, covers, headers | Banner (built-in) | <code>references/banner-sizes-and-styles.md</code> |</p>
+<p>| Social media images/photos | Social Photos (built-in) | <code>references/social-photos-design.md</code> |</p>
+<p>| SVG icons, icon sets | Icon (built-in) | <code>references/icon-design.md</code> |</p>
+<h2>Logo Design (Built-in)</h2>
+<p>55+ styles, 30 color palettes, 25 industry guides. Gemini Nano Banana models.</p>
+<h3>Logo: Generate Design Brief</h3>
+<pre><code>python3 ~/.claude/skills/design/scripts/logo/search.py &quot;tech startup modern&quot; --design-brief -p &quot;BrandName&quot;</code></pre>
+<h3>Logo: Search Styles/Colors/Industries</h3>
+<pre><code>python3 ~/.claude/skills/design/scripts/logo/search.py &quot;minimalist clean&quot; --domain style
+python3 ~/.claude/skills/design/scripts/logo/search.py &quot;tech professional&quot; --domain color
+python3 ~/.claude/skills/design/scripts/logo/search.py &quot;healthcare medical&quot; --domain industry</code></pre>
+<h3>Logo: Generate with AI</h3>
+<p><strong>ALWAYS</strong> generate output logo images with white background.</p>
+<pre><code>python3 ~/.claude/skills/design/scripts/logo/generate.py --brand &quot;TechFlow&quot; --style minimalist --industry tech
+python3 ~/.claude/skills/design/scripts/logo/generate.py --prompt &quot;coffee shop vintage badge&quot; --style vintage</code></pre>
+<p><strong>IMPORTANT:</strong> When scripts fail, try to fix them directly.</p>
+<p>After generation, <strong>ALWAYS</strong> ask user about HTML preview via <code>AskUserQuestion</code>. If yes, invoke <code>/ui-ux-pro-max</code> for gallery.</p>
+<h2>CIP Design (Built-in)</h2>
+<p>50+ deliverables, 20 styles, 20 industries. Gemini Nano Banana (Flash/Pro).</p>
+<h3>CIP: Generate Brief</h3>
+<pre><code>python3 ~/.claude/skills/design/scripts/cip/search.py &quot;tech startup&quot; --cip-brief -b &quot;BrandName&quot;</code></pre>
+<h3>CIP: Search Domains</h3>
+<pre><code>python3 ~/.claude/skills/design/scripts/cip/search.py &quot;business card letterhead&quot; --domain deliverable
+python3 ~/.claude/skills/design/scripts/cip/search.py &quot;luxury premium elegant&quot; --domain style
+python3 ~/.claude/skills/design/scripts/cip/search.py &quot;hospitality hotel&quot; --domain industry
+python3 ~/.claude/skills/design/scripts/cip/search.py &quot;office reception&quot; --domain mockup</code></pre>
+<h3>CIP: Generate Mockups</h3>
+<pre><code># With logo (RECOMMENDED)
+python3 ~/.claude/skills/design/scripts/cip/generate.py --brand &quot;TopGroup&quot; --logo /path/to/logo.png --deliverable &quot;business card&quot; --industry &quot;consulting&quot;
+
+# Full CIP set
+python3 ~/.claude/skills/design/scripts/cip/generate.py --brand &quot;TopGroup&quot; --logo /path/to/logo.png --industry &quot;consulting&quot; --set
+
+# Pro model (4K text)
+python3 ~/.claude/skills/design/scripts/cip/generate.py --brand &quot;TopGroup&quot; --logo logo.png --deliverable &quot;business card&quot; --model pro
+
+# Without logo
+python3 ~/.claude/skills/design/scripts/cip/generate.py --brand &quot;TechFlow&quot; --deliverable &quot;business card&quot; --no-logo-prompt</code></pre>
+<p>Models: <code>flash</code> (default, <code>gemini-2.5-flash-image</code>), <code>pro</code> (<code>gemini-3-pro-image-preview</code>)</p>
+<h3>CIP: Render HTML Presentation</h3>
+<pre><code>python3 ~/.claude/skills/design/scripts/cip/render-html.py --brand &quot;TopGroup&quot; --industry &quot;consulting&quot; --images /path/to/cip-output</code></pre>
+<p><strong>Tip:</strong> If no logo exists, use Logo Design section above first.</p>
+<h2>Slides (Built-in)</h2>
+<p>Strategic HTML presentations with Chart.js, design tokens, copywriting formulas.</p>
+<p>Load <code>references/slides-create.md</code> for the creation workflow.</p>
+<h3>Slides: Knowledge Base</h3>
+<p>| Topic | File |</p>
+<p>|-------|------|</p>
+<p>| Creation Guide | <code>references/slides-create.md</code> |</p>
+<p>| Layout Patterns | <code>references/slides-layout-patterns.md</code> |</p>
+<p>| HTML Template | <code>references/slides-html-template.md</code> |</p>
+<p>| Copywriting | <code>references/slides-copywriting-formulas.md</code> |</p>
+<p>| Strategies | <code>references/slides-strategies.md</code> |</p>
+<h2>Banner Design (Built-in)</h2>
+<p>22 art direction styles across social, ads, web, print. Uses <code>frontend-design</code>, <code>ai-artist</code>, <code>ai-multimodal</code>, <code>chrome-devtools</code> skills.</p>
+<p>Load <code>references/banner-sizes-and-styles.md</code> for complete sizes and styles reference.</p>
+<h3>Banner: Workflow</h3>
+<ol>
+<li><strong>Gather requirements</strong> via <code>AskUserQuestion</code> — purpose, platform, content, brand, style, quantity</li>
+<li><strong>Research</strong> — Activate <code>ui-ux-pro-max</code>, browse Pinterest for references</li>
+<li><strong>Design</strong> — Create HTML/CSS banner with <code>frontend-design</code>, generate visuals with <code>ai-artist</code>/<code>ai-multimodal</code></li>
+<li><strong>Export</strong> — Screenshot to PNG at exact dimensions via <code>chrome-devtools</code></li>
+<li><strong>Present</strong> — Show all options side-by-side, iterate on feedback</li>
+</ol>
+<h3>Banner: Quick Size Reference</h3>
+<p>| Platform | Type | Size (px) |</p>
+<p>|----------|------|-----------|</p>
+<p>| Facebook | Cover | 820 x 312 |</p>
+<p>| Twitter/X | Header | 1500 x 500 |</p>
+<p>| LinkedIn | Personal | 1584 x 396 |</p>
+<p>| YouTube | Channel art | 2560 x 1440 |</p>
+<p>| Instagram | Story | 1080 x 1920 |</p>
+<p>| Instagram | Post | 1080 x 1080 |</p>
+<p>| Google Ads | Med Rectangle | 300 x 250 |</p>
+<p>| Website | Hero | 1920 x 600-1080 |</p>
+<h3>Banner: Top Art Styles</h3>
+<p>| Style | Best For |</p>
+<p>|-------|----------|</p>
+<p>| Minimalist | SaaS, tech |</p>
+<p>| Bold Typography | Announcements |</p>
+<p>| Gradient | Modern brands |</p>
+<p>| Photo-Based | Lifestyle, e-com |</p>
+<p>| Geometric | Tech, fintech |</p>
+<p>| Glassmorphism | SaaS, apps |</p>
+<p>| Neon/Cyberpunk | Gaming, events |</p>
+<h3>Banner: Design Rules</h3>
+<ul>
+<li>Safe zones: critical content in central 70-80%</li>
+<li>One CTA per banner, bottom-right, min 44px height</li>
+<li>Max 2 fonts, min 16px body, ≥32px headline</li>
+<li>Text under 20% for ads (Meta penalizes)</li>
+<li>Print: 300 DPI, CMYK, 3-5mm bleed</li>
+</ul>
+<h2>Icon Design (Built-in)</h2>
+<p>15 styles, 12 categories. Gemini 3.1 Pro Preview generates SVG text output.</p>
+<h3>Icon: Generate Single Icon</h3>
+<pre><code>python3 ~/.claude/skills/design/scripts/icon/generate.py --prompt &quot;settings gear&quot; --style outlined
+python3 ~/.claude/skills/design/scripts/icon/generate.py --prompt &quot;shopping cart&quot; --style filled --color &quot;#6366F1&quot;
+python3 ~/.claude/skills/design/scripts/icon/generate.py --name &quot;dashboard&quot; --category navigation --style duotone</code></pre>
+<h3>Icon: Generate Batch Variations</h3>
+<pre><code>python3 ~/.claude/skills/design/scripts/icon/generate.py --prompt &quot;cloud upload&quot; --batch 4 --output-dir ./icons</code></pre>
+<h3>Icon: Multi-size Export</h3>
+<pre><code>python3 ~/.claude/skills/design/scripts/icon/generate.py --prompt &quot;user profile&quot; --sizes &quot;16,24,32,48&quot; --output-dir ./icons</code></pre>
+<h3>Icon: Top Styles</h3>
+<p>| Style | Best For |</p>
+<p>|-------|----------|</p>
+<p>| outlined | UI interfaces, web apps |</p>
+<p>| filled | Mobile apps, nav bars |</p>
+<p>| duotone | Marketing, landing pages |</p>
+<p>| rounded | Friendly apps, health |</p>
+<p>| sharp | Tech, fintech, enterprise |</p>
+<p>| flat | Material design, Google-style |</p>
+<p>| gradient | Modern brands, SaaS |</p>
+<p><strong>Model:</strong> <code>gemini-3.1-pro-preview</code> — text-only output (SVG is XML text). No image generation API needed.</p>
+<h2>Social Photos (Built-in)</h2>
+<p>Multi-platform social image design: HTML/CSS → screenshot export. Uses <code>ui-ux-pro-max</code>, <code>brand</code>, <code>design-system</code>, <code>chrome-devtools</code> skills.</p>
+<p>Load <code>references/social-photos-design.md</code> for sizes, templates, best practices.</p>
+<h3>Social Photos: Workflow</h3>
+<ol>
+<li><strong>Orchestrate</strong> — <code>project-management</code> skill for TODO tasks; parallel subagents for independent work</li>
+<li><strong>Analyze</strong> — Parse prompt: subject, platforms, style, brand context, content elements</li>
+<li><strong>Ideate</strong> — 3-5 concepts, present via <code>AskUserQuestion</code></li>
+<li><strong>Design</strong> — <code>/ckm:brand</code> → <code>/ckm:design-system</code> → randomly invoke <code>/ck:ui-ux-pro-max</code> OR <code>/ck:frontend-design</code>; HTML per idea × size</li>
+<li><strong>Export</strong> — <code>chrome-devtools</code> or Playwright screenshot at exact px (2x deviceScaleFactor)</li>
+<li><strong>Verify</strong> — Use Chrome MCP or <code>chrome-devtools</code> skill to visually inspect exported designs; fix layout/styling issues and re-export</li>
+<li><strong>Report</strong> — Summary to <code>plans/reports/</code> with design decisions</li>
+<li><strong>Organize</strong> — Invoke <code>assets-organizing</code> skill to sort output files and reports</li>
+</ol>
+<h3>Social Photos: Key Sizes</h3>
+<p>| Platform | Size (px) | Platform | Size (px) |</p>
+<p>|----------|-----------|----------|-----------|</p>
+<p>| IG Post | 1080×1080 | FB Post | 1200×630 |</p>
+<p>| IG Story | 1080×1920 | X Post | 1200×675 |</p>
+<p>| IG Carousel | 1080×1350 | LinkedIn | 1200×627 |</p>
+<p>| YT Thumb | 1280×720 | Pinterest | 1000×1500 |</p>
+<h2>Workflows</h2>
+<h3>Complete Brand Package</h3>
+<ol>
+<li><strong>Logo</strong> → <code>scripts/logo/generate.py</code> → Generate logo variants</li>
+<li><strong>CIP</strong> → <code>scripts/cip/generate.py --logo ...</code> → Create deliverable mockups</li>
+<li><strong>Presentation</strong> → Load <code>references/slides-create.md</code> → Build pitch deck</li>
+</ol>
+<h3>New Design System</h3>
+<ol>
+<li><strong>Brand</strong> (brand skill) → Define colors, typography, voice</li>
+<li><strong>Tokens</strong> (design-system skill) → Create semantic token layers</li>
+<li><strong>Implement</strong> (ui-styling skill) → Configure Tailwind, shadcn/ui</li>
+</ol>
+<h2>References</h2>
+<p>| Topic | File |</p>
+<p>|-------|------|</p>
+<p>| Design Routing | <code>references/design-routing.md</code> |</p>
+<p>| Logo Design Guide | <code>references/logo-design.md</code> |</p>
+<p>| Logo Styles | <code>references/logo-style-guide.md</code> |</p>
+<p>| Logo Colors | <code>references/logo-color-psychology.md</code> |</p>
+<p>| Logo Prompts | <code>references/logo-prompt-engineering.md</code> |</p>
+<p>| CIP Design Guide | <code>references/cip-design.md</code> |</p>
+<p>| CIP Deliverables | <code>references/cip-deliverable-guide.md</code> |</p>
+<p>| CIP Styles | <code>references/cip-style-guide.md</code> |</p>
+<p>| CIP Prompts | <code>references/cip-prompt-engineering.md</code> |</p>
+<p>| Slides Create | <code>references/slides-create.md</code> |</p>
+<p>| Slides Layouts | <code>references/slides-layout-patterns.md</code> |</p>
+<p>| Slides Template | <code>references/slides-html-template.md</code> |</p>
+<p>| Slides Copy | <code>references/slides-copywriting-formulas.md</code> |</p>
+<p>| Slides Strategy | <code>references/slides-strategies.md</code> |</p>
+<p>| Banner Sizes &amp; Styles | <code>references/banner-sizes-and-styles.md</code> |</p>
+<p>| Social Photos Guide | <code>references/social-photos-design.md</code> |</p>
+<p>| Icon Design Guide | <code>references/icon-design.md</code> |</p>
+<h2>Scripts</h2>
+<p>| Script | Purpose |</p>
+<p>|--------|---------|</p>
+<p>| <code>scripts/logo/search.py</code> | Search logo styles, colors, industries |</p>
+<p>| <code>scripts/logo/generate.py</code> | Generate logos with Gemini AI |</p>
+<p>| <code>scripts/logo/core.py</code> | BM25 search engine for logo data |</p>
+<p>| <code>scripts/cip/search.py</code> | Search CIP deliverables, styles, industries |</p>
+<p>| <code>scripts/cip/generate.py</code> | Generate CIP mockups with Gemini |</p>
+<p>| <code>scripts/cip/render-html.py</code> | Render HTML presentation from CIP mockups |</p>
+<p>| <code>scripts/cip/core.py</code> | BM25 search engine for CIP data |</p>
+<p>| <code>scripts/icon/generate.py</code> | Generate SVG icons with Gemini 3.1 Pro |</p>
+<h2>Setup</h2>
+<pre><code>export GEMINI_API_KEY=&quot;your-key&quot;  # https://aistudio.google.com/apikey
+pip install google-genai pillow</code></pre>
+<h2>Integration</h2>
+<p><strong>External sub-skills:</strong> brand, design-system, ui-styling</p>
+<p><strong>Related Skills:</strong> frontend-design, ui-ux-pro-max, ai-multimodal, chrome-devtools</p></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

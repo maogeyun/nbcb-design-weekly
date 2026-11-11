@@ -1,0 +1,77 @@
+{
+  "data": {
+    "id": "issue-4",
+    "issue_number": 4,
+    "title": "2026 年第 4 期",
+    "publish_date": "2026-06-30",
+    "status": "published",
+    "cover_summary": "本期设计周刊聚焦「AI 协作时代的系统化设计」。从 Agentic AI 的「Why?」解释层，到 KYC 验证中对真实所有权关系的建模；从社区 App 走向社区平台的系统思维，到 Large Design Model 对可编辑、品牌一致资产的重构；再到 AI 生成界面中的图标规范与 Claude Code 项目结构管理，这些文章共同指向一个趋势：设计师的价值不再只是产出界面，而是定义规则、组织上下文、建立信任，并让 AI 在清晰约束中成为更可靠的设计伙伴。",
+    "article_ids": [
+      "art-c302",
+      "art-c323",
+      "art-c266",
+      "art-c371",
+      "art-c317",
+      "art-c318",
+      "art-c455",
+      "art-c285",
+      "art-c344"
+    ],
+    "article_count": 9,
+    "category_counts": {
+      "ui_design": 3,
+      "design_experience": 2,
+      "ai_frontier": 4
+    },
+    "preview_articles": [
+      {
+        "id": "art-c302",
+        "title": "Agentic AI Transparency: Why Every AI Decision Now Needs a “Why?” Button",
+        "original_url": "https://medium.com/@iizzathisharah/agentic-ai-transparency-why-every-ai-decision-now-needs-a-why-button-2d40947b619b?source=rss------ui_design-5",
+        "source_name": "Medium · UI Design",
+        "published_at": "2026-06-22",
+        "category": "ai_frontier",
+        "introduction": "当 AI 不再只是被动回答问题，而是开始替我们自主执行任务时，用户凭什么信任它？一旦 AI 拥有行动力，它交付的不再是单一答案，而是一连串黑盒决策后的结果，信任裂缝由此产生。为此，产品界面正围绕一个原则被重新设计：永远别让用户追问「它为什么这么做」。一个小小的「Why?」按钮或一行具体说明，这层「解释层」正成为 Agentic 时代的新基础设施，更是建立信任、满足合规与支持纠错的底线。真正赢得用户的不是最聪明的 AI，而是敢于摊开思考过程的 AI。设计师的新命题已然确立：如何让「解释」既克制具体，又始终与用户的「控制权」相伴而生。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-4",
+        "sort_order": 1
+      },
+      {
+        "id": "art-c323",
+        "title": "The Large Design Model: Why Brands Need Design AI, Not Just Image AI",
+        "original_url": "https://medium.com/@aisivigeo/the-large-design-model-why-brands-need-design-ai-not-just-image-ai-93c16b8f0c7c?source=rss------ai_design-5",
+        "source_name": "Medium · AI Design",
+        "published_at": "2026-06-22",
+        "category": "ai_frontier",
+        "introduction": "当 AI 图像工具能在几秒内生成漂亮画面时，设计师真正要追问的不是「它会不会画」，而是「它懂不懂设计」。品牌需要的往往不是一张扁平图片，而是可编辑、可复用、符合品牌规范，并能适配多渠道与多语言场景的设计资产。Large Design Model 的价值正在于此：它把设计视为结构化沟通，而不是像素生成。文字层级、版式关系、品牌组件、CTA 与视觉系统不再被压成一张图，而成为可调整的设计文件。对设计师而言，AI 的下一站不是替代创意，而是成为理解目标、组织信息、维护一致性的设计伙伴。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-4",
+        "sort_order": 2
+      },
+      {
+        "id": "art-c266",
+        "title": "用AI生成的图标不高级？试试这10个大厂设计师私藏图标库！",
+        "original_url": "https://uisdc.com/pick-your-icons",
+        "source_name": "优设网",
+        "published_at": "2026-06-21",
+        "category": "ai_frontier",
+        "introduction": "当 AI 已经能快速生成界面时，真正拉开质感差距的，往往不是大布局，而是图标这种「小零件」。如果不加约束，AI 很容易混用不同风格的图标：线宽不一、圆角不同、语义勉强，页面立刻显得像临时拼装。对设计师来说，提示词不该只写「加几个图标」，而要明确图标库、引入方式、尺寸、颜色与替代规则。图标选择看似细节，实则是视觉一致性、设计系统意识和 AI 协作质量的集中体现。",
+        "language": "zh",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-4",
+        "sort_order": 3
+      }
+    ]
+  }
+}

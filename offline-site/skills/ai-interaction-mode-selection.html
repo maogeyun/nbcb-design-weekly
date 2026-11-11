@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI 交互模式选择 · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / AI 交互模式选择
+    </p>
+    <span class="tag tag--solution_design">方案设计</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">AI 交互模式选择</h1>
+      <p>Select an AI interaction mode (human-led, assistive, delegated, or defer) for a product scenario using a simple scoring model (Suit/SROI) and threshold rules. Use when the user asks how to choose AI interaction mode, decide between human vs AI vs agent, evaluate scenario suitability, or mentions Suit/SROI/ROI/风险/可控性/意图/数据标准/成熟度.</p>
+    </div>
+    
+    <div class="markdown"><h1>AI 交互模式选择（基于 Suit / SROI 数据模型）</h1>
+<p>把“某个业务场景该用什么 AI 交互模式”从拍脑袋变成可复用的<strong>评分 + 判定</strong>流程。</p>
+<h2>适用时机（触发）</h2>
+<p>当用户在做以下任一问题时使用本 skill：</p>
+<ul>
+<li>选择/评估某个“场景”适合做 <strong>人工主导 / 辅助 / 委托</strong> 哪种 AI 交互模式</li>
+<li>想要用<strong>数据模型</strong>（可控性、风险、意图、频率、数据标准度、AI 成熟度）来决策</li>
+<li>想做一张“场景打分表 / 象限图”，并给出模式结论与下一步落地建议</li>
+</ul>
+<h2>交互模式定义（输出时必须对齐）</h2>
+<h3>人工主导型</h3>
+<ul>
+<li><strong>定义</strong>：AI 提供信息/分析/提示；<strong>人类决策并执行</strong>，以原有操作界面为主，AI 仅辅助完成某项任务。</li>
+<li><strong>典型任务</strong>：访问控制与权限、隐私与合规、风险与合规管理、合约/法务审查等。</li>
+</ul>
+<h3>辅助型</h3>
+<ul>
+<li><strong>定义</strong>：AI 分步起草/执行；<strong>关键节点由人确认</strong>；AI 与原有界面操作均可配合。</li>
+<li><strong>典型任务</strong>：客户服务类、智能纠偏、现金流测算、审批流程类（中风险）、合同与文件管理（可控范围内）、交易支付类（需强约束）等。</li>
+</ul>
+<h3>委托型</h3>
+<ul>
+<li><strong>定义</strong>：在约束内由 AI 端到端执行微型业务任务；<strong>独立完成整个任务</strong>，人类审核结果。</li>
+<li><strong>典型任务</strong>：回单查询/批量下载、单据标注、实体验像描述、金融知识问答/功能引导/今日工作安排等（取决于打分）。</li>
+</ul>
+<h3>推迟（产品决策象限）</h3>
+<ul>
+<li><strong>定义</strong>：不是交互模式本身，而是“暂不投入 AI 化”的结论；通常因为投入回报率低（SROI 低），即使适用性高也建议先不做或只做最小辅助。</li>
+</ul>
+<h2>评分维度（0–10）</h2>
+<p>对每个场景给出 6 个分数（0–10）。评分时用“可观察、可验证”的依据，避免凭感觉。</p>
+<h3>Suit（AI 适用性）三因子</h3>
+<ul>
+<li><strong>可控性</strong>：流程是否可约束、可回滚、可监控、可验收？输入输出边界是否清晰？</li>
+<li><strong>安全/风险</strong>：越高表示风险越大（合规、资金、隐私、不可逆操作等）。</li>
+<li><strong>用户意图</strong>：需求是否明确且稳定？用户目标是否可被清晰表达与验证？</li>
+</ul>
+<h3>SROI（投资回报率）三因子</h3>
+<ul>
+<li><strong>使用频率</strong>：发生频次、覆盖用户规模、节省的人力/时间是否稳定可见？</li>
+<li><strong>数据标准度</strong>：结构化程度、字段一致性、噪声、是否有可用标注/规则/校验口径？</li>
+<li><strong>AI 技术成熟度</strong>：行业成熟度 + 你的实现可行性（可用模型/工具链/评测集/上线经验）。</li>
+</ul>
+<h2>评分公式（与文档一致）</h2>
+<h3>Suit（AI 适用性）</h3>
+<p>\[</p>
+<p>Suit = \frac{可控性 + (10 - 安全/风险) + 用户意图}{3}</p>
+<p>\]</p>
+<h3>SROI（投资回报率）</h3>
+<p>\[</p>
+<p>SROI = \frac{使用频率 + 数据标准度 + AI技术成熟度}{3}</p>
+<p>\]</p>
+<h2>模式判定阈值（与文档表一致）</h2>
+<p>按下表直接产出结论：</p>
+<p>| Suit 区间 | SROI 条件 | 交互模式 |</p>
+<p>|---|---:|---|</p>
+<p>| \(\ge 7\) | \(\ge 6\) | 委托型 |</p>
+<p>| \(\ge 7\) | \(&lt; 6\) | 辅助型（同时标记“推迟候选”） |</p>
+<p>| \(5 \sim 6.9\) | — | 辅助型 |</p>
+<p>| \(&lt; 5\) | — | 人工主导型 |</p>
+<p>&gt; <strong>推迟象限补充规则（与象限图对齐）</strong>：当 <strong>Suit 高（\(\ge 7\)）但 SROI 低（\(&lt;6\)）</strong>，输出“辅助型”为主结论，同时给出“推迟/后做”的建议：若资源紧张，先不做端到端，优先补齐数据标准化、评测与自动化验收，再进入委托型。</p>
+<h2>工作流（按此执行）</h2>
+<h3>1) 明确场景边界</h3>
+<p>用 5 句话写清楚：</p>
+<ul>
+<li><strong>用户是谁</strong>、要达成的<strong>目标</strong>是什么</li>
+<li><strong>输入</strong>有哪些（结构化字段/文件/上下文）</li>
+<li><strong>输出</strong>是什么（结果、报告、状态变化）</li>
+<li><strong>可接受的失败方式</strong>是什么（能否回滚/重试/人工兜底）</li>
+<li><strong>合规/风险红线</strong>是什么（不可做的操作）</li>
+</ul>
+<h3>2) 打分并给出依据</h3>
+<p>为 6 个维度分别给 0–10 分，并各写 1 条依据（来自流程、数据、合规、历史工单、监控指标等）。</p>
+<h3>3) 计算 Suit / SROI 并判定模式</h3>
+<p>按公式算出 Suit 与 SROI（保留 1 位小数即可），再按阈值表输出交互模式结论。</p>
+<h3>4) 输出落地建议（必须包含）</h3>
+<p>根据结论给出：</p>
+<ul>
+<li><strong>模式结论</strong>：人工主导 / 辅助 / 委托 / 推迟（可附加）</li>
+<li><strong>最小可行实现（MVP）</strong>：先做哪些能力</li>
+<li><strong>关键控制点</strong>：人审点、风控点、审计日志、回滚策略</li>
+<li><strong>评测与验收</strong>：离线指标 + 线上护栏（失败兜底、灰度）</li>
+</ul>
+<h2>输出模板（直接复制使用）</h2>
+<pre><code>### 场景
+[一句话描述场景与用户目标]
+
+### 评分（0–10）
+- 可控性: X（依据：...）
+- 安全/风险: X（依据：...）
+- 用户意图: X（依据：...）
+- 使用频率: X（依据：...）
+- 数据标准度: X（依据：...）
+- AI 技术成熟度: X（依据：...）
+
+### 计算结果
+- Suit = (可控性 + (10-安全/风险) + 用户意图) / 3 = X.X
+- SROI = (使用频率 + 数据标准度 + AI技术成熟度) / 3 = X.X
+
+### 交互模式结论
+**结论**：{人工主导型 / 辅助型 / 委托型}
+**象限提示**：{如 Suit≥7 且 SROI&lt;6，补充“推迟候选：原因 + 需要补齐的前置条件”}
+
+### MVP 建议
+- 能力范围：...
+- 人审/确认点：...
+- 风险护栏：...
+- 数据与评测：...</code></pre>
+<h2>批量场景打分（表格版输出）</h2>
+<p>当用户一次给出多个场景名（或你需要为一组页面/功能做对比评审）时，输出一张表即可落到评审材料里。</p>
+<p><strong>要求</strong>：</p>
+<ul>
+<li>每行是一个场景</li>
+<li>分数为 0–10 整数；Suit/SROI 为 1 位小数</li>
+<li>交互模式按阈值表自动判定</li>
+<li>若 Suit≥7 且 SROI&lt;6，<code>象限/备注</code> 列必须写 <code>推迟候选</code> + 需要补齐的前置条件</li>
+</ul>
+<pre><code>### 批量场景打分表
+
+| 场景 | 可控性 | 安全/风险 | 用户意图 | Suit | 使用频率 | 数据标准度 | AI技术成熟度 | SROI | 交互模式 | 象限/备注 |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|---|
+| 场景A | X | X | X | X.X | X | X | X | X.X | {人工主导/辅助/委托} | ... |
+| 场景B | X | X | X | X.X | X | X | X | X.X | {人工主导/辅助/委托} | ... |
+| 场景C | X | X | X | X.X | X | X | X | X.X | {人工主导/辅助/委托} | ... |</code></pre>
+<p><strong>表格后附：批量结论（可选但推荐）</strong></p>
+<ul>
+<li><strong>优先做（委托型）</strong>：…（Top N，按 SROI 从高到低）</li>
+<li><strong>先做辅助（辅助型）</strong>：…（强调人审点）</li>
+<li><strong>暂缓/推迟候选</strong>：…（写清楚阻塞：数据标准/评测/权限/风控）</li>
+</ul>
+<h2>自动生成象限图（仅给计算与结论，不画图）</h2>
+<p>当用户要“象限图”但不需要绘制时，用下列格式输出“点位 + 象限 + 结论”，以便他们自行画图或贴进文档。</p>
+<p><strong>坐标定义</strong>：</p>
+<ul>
+<li>横轴 \(x = SROI\)（0–10）</li>
+<li>纵轴 \(y = Suit\)（0–10）</li>
+<li>分割线：\(Suit = 7\)，\(SROI = 6\)</li>
+</ul>
+<p><strong>象限命名（与文档一致）</strong>：</p>
+<ul>
+<li><strong>委托</strong>：Suit≥7 且 SROI≥6</li>
+<li><strong>推迟</strong>：Suit≥7 且 SROI&lt;6</li>
+<li><strong>辅助</strong>：Suit&lt;7 且 SROI≥6（或 Suit 在 5–6.9 区间）</li>
+<li><strong>人工主导</strong>：Suit&lt;5（不依赖 SROI）</li>
+</ul>
+<pre><code>### 象限汇总（不画图）
+
+分割线：Suit=7，SROI=6
+
+| 场景 | 坐标 (x=SROI, y=Suit) | 象限 | 交互模式 | 一句话结论 |
+|---|---|---|---|---|
+| 场景A | (X.X, X.X) | {委托/推迟/辅助/人工主导} | {人工主导/辅助/委托} | ... |
+| 场景B | (X.X, X.X) | {委托/推迟/辅助/人工主导} | {人工主导/辅助/委托} | ... |</code></pre>
+<p><strong>自动汇总段（必须输出）</strong>：</p>
+<ul>
+<li><strong>委托象限</strong>：…（建议端到端做，强调结果审核与审计）</li>
+<li><strong>辅助象限</strong>：…（建议人确认点：口径/权限/执行前确认）</li>
+<li><strong>推迟象限</strong>：…（为什么 ROI 低；先补齐什么再进入委托）</li>
+<li><strong>人工主导象限</strong>：…（风险/不可控点；只给信息与分析）</li>
+</ul>
+<h2>常见校准（避免打分失真）</h2>
+<ul>
+<li><strong>安全/风险分高</strong>：通常意味着需要更强的人审、更细的约束与审计；优先落到“人工主导/辅助”，不要强行委托。</li>
+<li><strong>数据标准度低</strong>：先做标准化与口径统一（字段、规则、校验、标签），否则 SROI 会被低估/上线后不可控。</li>
+<li><strong>用户意图低</strong>：多发生在开放式需求或多目标混杂；优先做“澄清式对话 + 人工确认”，再谈自动化执行。</li>
+</ul></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

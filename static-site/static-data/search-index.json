@@ -1,0 +1,1583 @@
+{
+  "articles": [
+    {
+      "article": {
+        "id": "art-001",
+        "title": "Config 2025: Pushing past the limits of design systems",
+        "original_url": "https://www.figma.com/blog/config-2025-design-systems/",
+        "source_name": "Figma Blog",
+        "published_at": "2026-06-10",
+        "category": "ui_design",
+        "introduction": "Figma 在 Config 2025 上展示了设计系统的新边界：从组件库到跨产品 token 治理，再到 AI 辅助的变体生成。文章指出，成熟的设计系统不再只是 UI 组件集合，而是连接产品、研发与品牌的「语义层」。对银行 App 而言，这意味着组件与业务状态（如交易成功、风控提示）需要更紧密的 token 映射。若你正在推进手机银行设计系统升级，此文提供了国际一线团队的演进路径参考。",
+        "language": "en",
+        "link_status": "link_ok",
+        "status": "published",
+        "issue_id": "issue-1",
+        "sort_order": 1,
+        "intro_reviewed": true,
+        "click_count": 2
+      },
+      "issue_number": 1,
+      "issue_id": "issue-1"
+    },
+    {
+      "article": {
+        "id": "art-002",
+        "title": "Material 3 Expressive: Bringing more emotion to UX",
+        "original_url": "https://m3.material.io/blog/material-3-expressive",
+        "source_name": "Material Design",
+        "published_at": "2026-06-08",
+        "category": "ui_design",
+        "introduction": "Material 3 Expressive 引入更丰富的形状、动效与色彩表达，试图在一致性与情感化之间找到平衡。文章详解了「expressive」并非放弃规范，而是通过可控的弹性 token 让界面更具品牌个性。金融类产品长期偏稳重，但年轻用户对「有温度」的数字化体验期待在上升——可借鉴其「克制地使用表达性元素」思路，在营销页与核心交易流之间做差异化处理。",
+        "language": "en",
+        "link_status": "link_ok",
+        "status": "published",
+        "issue_id": "issue-1",
+        "sort_order": 2,
+        "intro_reviewed": true,
+        "click_count": 0
+      },
+      "issue_number": 1,
+      "issue_id": "issue-1"
+    },
+    {
+      "article": {
+        "id": "art-003",
+        "title": "移动端表单设计：12 条提升完成率的实践",
+        "original_url": "https://www.uisdc.com/mobile-form-design",
+        "source_name": "优设网",
+        "published_at": "2026-06-09",
+        "category": "ui_design",
+        "introduction": "优设整理了移动端表单设计的 12 条实践，涵盖标签位置、错误提示时机、键盘类型匹配与分步表单等。银行 App 中开户、转账、贷款申请均重度依赖表单，任何多余的字段或模糊的校验反馈都会直接造成流失。文章中的「先简后繁」「即时内联校验」与宁波银行现有 UED 规范高度契合，适合作为评审清单对照使用。",
+        "language": "zh",
+        "link_status": "link_ok",
+        "status": "published",
+        "issue_id": "issue-1",
+        "sort_order": 3,
+        "intro_reviewed": true,
+        "click_count": 2
+      },
+      "issue_number": 1,
+      "issue_id": "issue-1"
+    },
+    {
+      "article": {
+        "id": "art-004",
+        "title": "How to Run a Design Critique That Actually Helps",
+        "original_url": "https://www.nngroup.com/articles/design-critiques/",
+        "source_name": "Nielsen Norman Group",
+        "published_at": "2026-06-05",
+        "category": "design_experience",
+        "introduction": "NN/g 从结构、角色与反馈方式三个维度说明如何开一场「真正有用」的设计评审。核心观点：评审目标应是改进方案而非评判设计师；需提前共享上下文，并限制「我建议」式发散。对 UED 团队周会、需求评审与跨职能走查均有直接指导意义，尤其适合设计管理者用于统一评审话术，减少「主观审美争论」。",
+        "language": "en",
+        "link_status": "link_ok",
+        "status": "published",
+        "issue_id": "issue-1",
+        "sort_order": 4,
+        "intro_reviewed": true,
+        "click_count": 1
+      },
+      "issue_number": 1,
+      "issue_id": "issue-1"
+    },
+    {
+      "article": {
+        "id": "art-005",
+        "title": "设计师如何与产品经理建立信任协作关系",
+        "original_url": "https://www.zcool.com.cn/article/design-pm-collaboration",
+        "source_name": "站酷",
+        "published_at": "2026-06-07",
+        "category": "design_experience",
+        "introduction": "站酷作者结合互联网项目经验，梳理设计师与产品经理从需求对齐、原型评审到上线复盘的全链路协作要点。强调「共同目标」而非职能对立，并给出可操作的沟通模板。在银行数字化项目中，业务规则复杂、合规约束多，设计更需前置参与需求定义——此文的方法可转化为团队内部的协作 checklist。",
+        "language": "zh",
+        "link_status": "link_ok",
+        "status": "published",
+        "issue_id": "issue-1",
+        "sort_order": 5,
+        "intro_reviewed": true,
+        "click_count": 2
+      },
+      "issue_number": 1,
+      "issue_id": "issue-1"
+    },
+    {
+      "article": {
+        "id": "art-006",
+        "title": "The UX Research Reckoning",
+        "original_url": "https://uxdesign.cc/the-ux-research-reckoning",
+        "source_name": "UX Collective",
+        "published_at": "2026-06-04",
+        "category": "design_experience",
+        "introduction": "UX Collective 讨论用研在 AI 时代的价值重估：当生成速度远超验证速度，「轻量、高频、嵌入式」研究比大型报告更关键。作者主张将研究问题嵌入设计迭代节奏，用可执行的洞察替代冗长文档。对金融机构而言，合规场景下的可用性验证依然不可省略，但研究形式可以更敏捷——值得设计负责人思考团队能力配置。",
+        "language": "en",
+        "link_status": "link_ok",
+        "status": "published",
+        "issue_id": "issue-1",
+        "sort_order": 6,
+        "intro_reviewed": true,
+        "click_count": 0
+      },
+      "issue_number": 1,
+      "issue_id": "issue-1"
+    },
+    {
+      "article": {
+        "id": "art-007",
+        "title": "Figma AI: From mockup to code with more control",
+        "original_url": "https://www.figma.com/blog/figma-ai-code-generation/",
+        "source_name": "Figma Blog",
+        "published_at": "2026-06-11",
+        "category": "ai_frontier",
+        "introduction": "Figma 更新 AI 能力，支持从设计稿生成更可编辑的代码输出，并强调设计师对生成结果的精细控制。文章展示了 AI 在布局、组件识别与 token 映射上的进展，同时提醒「生成≠交付」——仍需设计系统约束与工程审查。对探索 Design-to-Code 降本增效的团队，这是观察产品走向的重要信号。",
+        "language": "en",
+        "link_status": "link_ok",
+        "status": "published",
+        "issue_id": "issue-1",
+        "sort_order": 7,
+        "intro_reviewed": true,
+        "click_count": 0
+      },
+      "issue_number": 1,
+      "issue_id": "issue-1"
+    },
+    {
+      "article": {
+        "id": "art-008",
+        "title": "2026 年设计师必备的 8 个 AI 工具与工作流",
+        "original_url": "https://sspai.com/post/ai-tools-for-designers-2026",
+        "source_name": "少数派",
+        "published_at": "2026-06-06",
+        "category": "ai_frontier",
+        "introduction": "少数派盘点 2026 年设计师常用的 AI 工具链，覆盖灵感发散、文案辅助、图像处理与原型加速等场景，并给出「人机分工」建议：AI 负责发散与初稿，设计师负责判断、约束与验收。文章对国内团队的可落地性较强，适合作为 UED 内部 AI 工具试用的入门参考清单。",
+        "language": "zh",
+        "link_status": "link_ok",
+        "status": "published",
+        "issue_id": "issue-1",
+        "sort_order": 8,
+        "intro_reviewed": true,
+        "click_count": 1
+      },
+      "issue_number": 1,
+      "issue_id": "issue-1"
+    },
+    {
+      "article": {
+        "id": "art-009",
+        "title": "Building Agents for Design Operations",
+        "original_url": "https://design.google/library/design-ops-agents",
+        "source_name": "Google Design",
+        "published_at": "2026-06-03",
+        "category": "ai_frontier",
+        "introduction": "Google Design 介绍如何将 Agent 用于设计运营（Design Ops）：自动整理设计资产、同步 token 变更、生成评审摘要等。文章将 Agent 定位为「流程自动化助手」而非「替代设计师」，并讨论权限与审计要求。对大型设计团队，这是 AI 从创作层走向管理层的一次实践探索，可与内部设计资产管理需求对照阅读。",
+        "language": "en",
+        "link_status": "link_ok",
+        "status": "published",
+        "issue_id": "issue-1",
+        "sort_order": 9,
+        "intro_reviewed": true,
+        "click_count": 1
+      },
+      "issue_number": 1,
+      "issue_id": "issue-1"
+    },
+    {
+      "article": {
+        "id": "art-c02",
+        "title": "示例：失效外链文章",
+        "original_url": "https://example.com/removed-article",
+        "source_name": "示例来源",
+        "published_at": "2026-05-20",
+        "category": "design_experience",
+        "introduction": "此条用于演示外链失效状态：引言内容完整保留，但阅读原文按钮将置灰，并提示用户链接暂时无法访问。原文 URL 可复制后手动尝试打开。",
+        "language": "zh",
+        "link_status": "link_broken",
+        "status": "published",
+        "issue_id": "issue-1",
+        "sort_order": 10,
+        "intro_reviewed": true,
+        "click_count": 0
+      },
+      "issue_number": 1,
+      "issue_id": "issue-1"
+    },
+    {
+      "article": {
+        "id": "art-c93",
+        "title": "Antigravity Design: Minimalist ve Premium Arayüzlerin Arkasındaki Teknoloji",
+        "original_url": "https://medium.com/@nasrettinaltundag29/antigravity-design-minimalist-ve-premium-aray%C3%BCzlerin-arkas%C4%B1ndaki-teknoloji-15bf922e3032?source=rss------ui_design-5",
+        "source_name": "Medium · UI Design",
+        "published_at": "2026-06-16",
+        "category": "ui_design",
+        "introduction": "浏览 Linear、Vercel、Stripe 时，元素仿佛悬浮、界面轻轻呼吸,那股说不清的\"premium\"质感，正来自一场安静的革命——Antigravity Design，失重感设计。它的目标是把认知负荷降到趋近于零：用无限留白替代拥挤，用柔和阴影与层次取代硬边框，用玻璃拟态注入纵深。而这种\"轻\"是设计与工程的合谋——backdrop-filter、弹簧动效、CSS 渐变替代重图，在美感与性能间小心走钢丝。用户要的从不是庞大菜单堆出的\"强大\"，而是干净、毫不费力的轻盈。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 3,
+        "issue_id": "issue-2",
+        "sort_order": 1
+      },
+      "issue_number": 2,
+      "issue_id": "issue-2"
+    },
+    {
+      "article": {
+        "id": "art-c126",
+        "title": "面向完全不懂编程的产品设计师的 RAG 简明解释",
+        "original_url": "https://medium.com/@swarnajha25/rag-simply-explained-for-product-designers-who-dont-know-coding-at-all-b15bf1066668",
+        "source_name": "Medium",
+        "published_at": "2026-06-16",
+        "category": "ai_frontier",
+        "introduction": "我们拼命研究提示词，却很少问：AI 开口之前，到底从哪\"翻\"出答案？其实你每天都在做同样的事——老板问\"为什么活跃度掉了\"，你会先扒数据、翻反馈再开口。有项技术逻辑一模一样，叫 RAG：先检索，后生成。它正是 AI\"一本正经胡说\"的解药——先调出真实文件，再据此回答。但这篇文章最想说的是：RAG 看似技术，难题却大多是体验问题。来源要不要露出、原文能否点开、不确定性如何传达、查不到时怎么收场——全是设计师的活儿。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 3,
+        "attachment": {
+          "original_name": "面向完全不懂编程的产品设计师的 RAG 简明解释 _ 作者：Swarna Jha _ 2026 年 6 月 _ Medium.pdf",
+          "stored_name": "1781591905480.pdf",
+          "url": "/uploads/articles/art-c126/1781591905480.pdf",
+          "size": 833245,
+          "mime_type": "application/pdf",
+          "uploaded_at": "2026-06-16T06:38:25.482Z"
+        },
+        "issue_id": "issue-2",
+        "sort_order": 2
+      },
+      "issue_number": 2,
+      "issue_id": "issue-2"
+    },
+    {
+      "article": {
+        "id": "art-c8",
+        "title": "How To Make Your Design System AI-Ready",
+        "original_url": "https://smashingmagazine.com/2026/06/how-make-design-system-ai-ready",
+        "source_name": "Smashing Magazine",
+        "published_at": "2026-06-03",
+        "category": "ai_frontier",
+        "introduction": "把设计稿丢给 AI，结果却像隔了层毛玻璃：间距错位、颜色跳出 Token、交互态凭空消失。问题不在 AI 不够聪明，而在我们从没把\"决策\"清楚地告诉它。这篇文章主张：把设计决策当作基础设施——用结构化的规范文件沉淀优先级与原则，用 Token 层收拢所有可用值，再用审计脚本兜住 AI 的越界发挥，并让规范随系统更新持续保鲜。AI 替代不了你的判断，却会放大判断的质量；你讲得越清楚，它做得越靠谱。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-2",
+        "sort_order": 3
+      },
+      "issue_number": 2,
+      "issue_id": "issue-2"
+    },
+    {
+      "article": {
+        "id": "art-c45",
+        "title": "从 BANG!CASE 到 AI Display：我为什么想给 AI 在桌面留一个位置",
+        "original_url": "https://sspai.com/post/110984",
+        "source_name": "少数派",
+        "published_at": "2026-06-15",
+        "category": "ai_frontier",
+        "introduction": "和 Codex、Claude Code 协作时，你很多时候不是在\"对话\"，而是在\"等待\"——等它跑完、等它卡住、等它问你要不要继续。于是你不停切窗口、瞥终端，注意力被一次次拽走。这暴露了一个被忽视的空白：桌面上缺一层介于\"主屏\"与\"通知\"之间的信息层。这篇文章记录了一次产品思考——能否做一块专门留给 AI 的\"第三块屏幕\"，让它的状态被余光感知、轻量操作触手可及。当 AI 从\"被打开的软件\"变成\"长期在线的伙伴\"，我们的界面范式，是不是也该换了？",
+        "language": "zh",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 1,
+        "issue_id": "issue-2",
+        "sort_order": 4
+      },
+      "issue_number": 2,
+      "issue_id": "issue-2"
+    },
+    {
+      "article": {
+        "id": "art-c125",
+        "title": "做了多个爆款Skills后，我发现它是Agent时代最大的能力商品！",
+        "original_url": "https://uisdc.com/skill-10",
+        "source_name": "uisdc.com",
+        "published_at": "2026-06-16",
+        "category": "ai_frontier",
+        "introduction": "很多人以为 AI 带来\"平权\"——人人都能写代码、做 PPT。但真相恰恰相反：Agent 不是抹平能力差距，而是在放大它。同一句指令，有人收获惊艳产出，有人只得到一堆\"AI 味\"半成品。弥合鸿沟的关键是 Skill——把专家经验、工作流与品味，封装成可分发、可复用、可迭代的能力单元。对设计师而言尤其值得玩味：做好设计 Skill，本质是把品味变成约束，让十年积累的隐性判断第一次被编码、被检查、被反复调用。",
+        "language": "zh",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 1,
+        "issue_id": "issue-2",
+        "sort_order": 5
+      },
+      "issue_number": 2,
+      "issue_id": "issue-2"
+    },
+    {
+      "article": {
+        "id": "art-c189",
+        "title": "从原型到落地！教你用GPT Image 2 融入真实设计项目！",
+        "original_url": "https://uisdc.com/gpt-image-2-14",
+        "source_name": "优设网",
+        "published_at": "2026-06-17",
+        "category": "ui_design",
+        "introduction": "当你面对一个模块繁多、信息层级复杂的大屏项目，却还在为视觉方向反复试错、素材风格不统一、地图效果难以预演而头疼时，GPT Image 2 或许能成为你的\"设计搭子\"。这篇文章以真实运营监管平台项目为例，拆解了从验证视觉方向、沉淀设计资产、辅助判断、统一图标，到地图方案预演的全流程实践。它强调 AI 最难的不是出图，而是如何让它变得可控、稳定、可调度——最终落地仍需设计师把控业务理解与实现细节。对正想把 AI 工具真正嵌入工作流的 B 端/UI 设计师而言，这是一份极具可操作性的实战指南。",
+        "language": "zh",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 1,
+        "issue_id": "issue-3",
+        "sort_order": 1
+      },
+      "issue_number": 3,
+      "issue_id": "issue-3"
+    },
+    {
+      "article": {
+        "id": "art-c156",
+        "title": "你的设计系统存在人工智能债务，只是你还没意识到而已",
+        "original_url": "https://designsystemscollective.com/your-design-system-has-ai-debt-you-just-havent-measured-it-yet-even-if-it-looks-fine-to-humans-545c74152902",
+        "source_name": "designsystemscollective.com",
+        "published_at": "2026-06-17",
+        "category": "design_experience",
+        "introduction": "你的设计系统看起来一切正常——工程师知道去 Slack 里翻答案，设计师清楚该用哪个变体，资深同事也心照不宣地绕开那些\"有坑\"的组件。可一旦让 AI 代理上场写代码，它不会提问、不会打开 Figma、更读不懂那些靠人脑默默填补的\"潜规则\"，只会以机器的速度和十足的信心把猜错的结果扩散到几十个文件里。这就是作者所说的 AI 债务：模糊的 Token 命名、没写下来的组件规则、缺失的约束。它不是新债务，而是早已存在的系统欠账，只是被 AI 一把照亮。文章拆解了五类债务的真实模样，并给出一套无需推倒重建的偿还路径。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "attachment": {
+          "original_name": "你的设计系统存在人工智能债务，只是你还没意识到而已。（即使在人类看来一切正常）_ 作者：George William Amalan _ 2026年6月 _ 设计系统联盟.pdf",
+          "stored_name": "1781656261324.pdf",
+          "url": "/uploads/articles/art-c156/1781656261324.pdf",
+          "size": 2337855,
+          "mime_type": "application/pdf",
+          "uploaded_at": "2026-06-17T00:31:01.326Z"
+        },
+        "issue_id": "issue-3",
+        "sort_order": 2
+      },
+      "issue_number": 3,
+      "issue_id": "issue-3"
+    },
+    {
+      "article": {
+        "id": "art-c133",
+        "title": "Designing A Better Lou: Reducing Cognitive Load Through Design, Content, and Systems",
+        "original_url": "https://tympanus.net/codrops/2026/06/16/designing-a-better-lou-reducing-cognitive-load-through-design-content-and-systems",
+        "source_name": "Codrops",
+        "published_at": "2026-06-16",
+        "category": "ui_design",
+        "introduction": "当你打开一家医疗保健网站，却被层层堆叠的治疗说明、服务列表、保险问答和多重 CTA 淹没时，你大概率会和大多数访客一样——还没读完就关掉。这篇文章以「A Better Lou」男士健康网站为例，拆解了如何在不牺牲专业可信度的前提下，用清晰的视觉层级、生活化摄影、围绕「成果而非疗程」的内容结构，以及可复用的 Webflow 系统，显著降低认知负荷。它提醒设计师：真正的简洁不是删减内容，而是建立一套能随内容增长而扩展的规则，让用户在最短时间内找到与自己问题相关的答案。对任何需要平衡信息密度与用户耐心的项目而言，这篇案例都是极具参考价值的实战手册。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-3",
+        "sort_order": 3
+      },
+      "issue_number": 3,
+      "issue_id": "issue-3"
+    },
+    {
+      "article": {
+        "id": "art-c128",
+        "title": "Words of Type",
+        "original_url": "https://wiki.wordsoftype.com",
+        "source_name": "Sidebar",
+        "published_at": "2026-06-16",
+        "category": "ui_design",
+        "introduction": "当你在 Figma 或 FontLab 里反复调整一个字母的弧度、粗细或开口，却苦于找不到准确的术语与同行讨论时，这本「Words of Type 百科」就像一位随身携带的字体解剖图谱。它把从 Alphabet 到 Ascender、从 Aperture 到 Bézier Curve 的数百个排版与字体设计术语，用清晰定义、历史脉络、设计考量和精美插图一一拆解，既有实用规则，也有美学洞见。对设计师而言，它不仅能让你在评审中精准表达\"这个 arm 太短了\"，更能帮助你在海量字体选择中建立结构化的判断标准，把原本模糊的\"感觉\"转化为可复用的设计语言。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-3",
+        "sort_order": 4
+      },
+      "issue_number": 3,
+      "issue_id": "issue-3"
+    },
+    {
+      "article": {
+        "id": "art-c110",
+        "title": "How I Would Design AI Agents at Scale Today",
+        "original_url": "https://medium.com/@systemdesignguru/how-i-would-design-ai-agents-at-scale-today-d22ec74be2cb?source=rss------design_systems-5",
+        "source_name": "Medium · Design Systems",
+        "published_at": "2026-06-16",
+        "category": "ai_frontier",
+        "introduction": "当你的 AI 代理从能回答问题的聊天机器人，变成需要规划、调用工具、协调多个角色、记忆历史并在生产环境稳定运行的\"数字员工\"时，单纯的提示词优化已远远不够。这篇文章把 AI 代理系统设计比作从单体应用向分布式系统演进的过程，拆解了单代理瓶颈、多代理分工、事件驱动通信、多层记忆架构、延迟与成本控制、以及可观测性与容错等核心挑战。它提醒设计师：真正决定规模化成败的，往往不是模型本身，而是代理如何像分布式服务一样协作、记忆、适应并被监控。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-3",
+        "sort_order": 5
+      },
+      "issue_number": 3,
+      "issue_id": "issue-3"
+    },
+    {
+      "article": {
+        "id": "art-c302",
+        "title": "Agentic AI Transparency: Why Every AI Decision Now Needs a “Why?” Button",
+        "original_url": "https://medium.com/@iizzathisharah/agentic-ai-transparency-why-every-ai-decision-now-needs-a-why-button-2d40947b619b?source=rss------ui_design-5",
+        "source_name": "Medium · UI Design",
+        "published_at": "2026-06-22",
+        "category": "ai_frontier",
+        "introduction": "当 AI 不再只是被动回答问题，而是开始替我们自主执行任务时，用户凭什么信任它？一旦 AI 拥有行动力，它交付的不再是单一答案，而是一连串黑盒决策后的结果，信任裂缝由此产生。为此，产品界面正围绕一个原则被重新设计：永远别让用户追问「它为什么这么做」。一个小小的「Why?」按钮或一行具体说明，这层「解释层」正成为 Agentic 时代的新基础设施，更是建立信任、满足合规与支持纠错的底线。真正赢得用户的不是最聪明的 AI，而是敢于摊开思考过程的 AI。设计师的新命题已然确立：如何让「解释」既克制具体，又始终与用户的「控制权」相伴而生。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-4",
+        "sort_order": 1
+      },
+      "issue_number": 4,
+      "issue_id": "issue-4"
+    },
+    {
+      "article": {
+        "id": "art-c323",
+        "title": "The Large Design Model: Why Brands Need Design AI, Not Just Image AI",
+        "original_url": "https://medium.com/@aisivigeo/the-large-design-model-why-brands-need-design-ai-not-just-image-ai-93c16b8f0c7c?source=rss------ai_design-5",
+        "source_name": "Medium · AI Design",
+        "published_at": "2026-06-22",
+        "category": "ai_frontier",
+        "introduction": "当 AI 图像工具能在几秒内生成漂亮画面时，设计师真正要追问的不是「它会不会画」，而是「它懂不懂设计」。品牌需要的往往不是一张扁平图片，而是可编辑、可复用、符合品牌规范，并能适配多渠道与多语言场景的设计资产。Large Design Model 的价值正在于此：它把设计视为结构化沟通，而不是像素生成。文字层级、版式关系、品牌组件、CTA 与视觉系统不再被压成一张图，而成为可调整的设计文件。对设计师而言，AI 的下一站不是替代创意，而是成为理解目标、组织信息、维护一致性的设计伙伴。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-4",
+        "sort_order": 2
+      },
+      "issue_number": 4,
+      "issue_id": "issue-4"
+    },
+    {
+      "article": {
+        "id": "art-c266",
+        "title": "用AI生成的图标不高级？试试这10个大厂设计师私藏图标库！",
+        "original_url": "https://uisdc.com/pick-your-icons",
+        "source_name": "优设网",
+        "published_at": "2026-06-21",
+        "category": "ai_frontier",
+        "introduction": "当 AI 已经能快速生成界面时，真正拉开质感差距的，往往不是大布局，而是图标这种「小零件」。如果不加约束，AI 很容易混用不同风格的图标：线宽不一、圆角不同、语义勉强，页面立刻显得像临时拼装。对设计师来说，提示词不该只写「加几个图标」，而要明确图标库、引入方式、尺寸、颜色与替代规则。图标选择看似细节，实则是视觉一致性、设计系统意识和 AI 协作质量的集中体现。",
+        "language": "zh",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-4",
+        "sort_order": 3
+      },
+      "issue_number": 4,
+      "issue_id": "issue-4"
+    },
+    {
+      "article": {
+        "id": "art-c371",
+        "title": "用AI写代码总出问题？试试这2个Vibe Coding必备的超实用Prompt",
+        "original_url": "https://uisdc.com/vibe-coding-11",
+        "source_name": "优设网",
+        "published_at": "2026-06-30",
+        "category": "ai_frontier",
+        "introduction": "AI 写代码，正在把设计师从\"只能画方案\"推向\"可以做产品\"的新边界。但 Vibe Coding 并不是把想法丢给 AI、等它自动变成可用工具；它更像一次高速原型实验：设计师负责定义问题、拆解逻辑、判断体验，AI 负责生成与迭代。真正拉开差距的，不是会不会写代码，而是能否用第一性原理逼近本质，再用对抗式审查提前发现风险。",
+        "language": "zh",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-4",
+        "sort_order": 4
+      },
+      "issue_number": 4,
+      "issue_id": "issue-4"
+    },
+    {
+      "article": {
+        "id": "art-c317",
+        "title": "KYC Was Blocking the Wrong Trucks",
+        "original_url": "https://medium.com/@adwithibalachandra/kyc-was-blocking-the-wrong-trucks-51c341b39ae2?source=rss------product_design-5",
+        "source_name": "Medium · Product Design",
+        "published_at": "2026-06-22",
+        "category": "ui_design",
+        "introduction": "在很多验证流程里，系统拒绝用户，并不一定是因为用户错了，而是因为产品把真实世界想得太简单。BlackBuck 的 KYC 问题正是如此：司机与车辆登记所有人姓名不一致，被系统一律视为异常，却忽略了家庭持有、公司车辆、近期购车等复杂但合法的所有权关系。对设计师而言，这不是一个单纯的表单优化问题，而是一次对「信任如何被建模」的重新审视。当界面无法表达真实情境，复杂性就会被推给用户、客服和线下流程。真正好的验证设计，不是更快地判定通过或失败，而是先理解用户处境，再把模糊的现实转译为可验证、可解释、可继续前进的路径。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-4",
+        "sort_order": 5
+      },
+      "issue_number": 4,
+      "issue_id": "issue-4"
+    },
+    {
+      "article": {
+        "id": "art-c318",
+        "title": "Designing a Community Platform, Not Just a Community App",
+        "original_url": "https://medium.com/@rakeshkulla/designing-a-community-platform-not-just-a-community-app-ea6c71254592?source=rss------design_systems-5",
+        "source_name": "Medium · Design Systems",
+        "published_at": "2026-06-22",
+        "category": "ui_design",
+        "introduction": "多数社区管理产品，往往从访客登记、报修、公告、缴费这些功能开始；但真正的社区生活，并不是一组孤立入口，而是一套围绕信任、秩序、关系与日常协作运转的系统。这篇案例对设计师的启发在于：不要急着设计一个「社区 App」，而要先理解社区本身如何工作。大门建立信任，道路组织路径，会所承载聚合，楼栋形成信息架构。当我们把真实空间中的秩序翻译成数字体验，产品才不只是管理工具，而会成为居民每天愿意使用、并能随社区一起生长的平台。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-4",
+        "sort_order": 6
+      },
+      "issue_number": 4,
+      "issue_id": "issue-4"
+    },
+    {
+      "article": {
+        "id": "art-c455",
+        "title": "8 Typography Best Practices in UI Design",
+        "original_url": "https://medium.com/design-bootcamp/8-typography-best-practices-in-ui-design-2b73eab177b4?source=rss------ui_design-5",
+        "source_name": "Medium · UI Design",
+        "published_at": "2026-06-30",
+        "category": "ui_design",
+        "introduction": "字体不是界面里的\"装饰品\"，而是用户理解产品的第一条路径。字号、字重、行高、字距、大小写与对齐方式，看似只是视觉细节，实际决定了信息是否清晰、层级是否成立、阅读是否轻松。优秀的 UI 排版，不是把文字排得漂亮，而是让用户在最短时间内看懂重点、完成判断，并感到界面稳定可信。本文将从 8 个基础但高频的排版实践出发，帮助设计师把字体从\"凭感觉调整\"，转化为可复用、可验证的设计决策。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-4",
+        "sort_order": 7
+      },
+      "issue_number": 4,
+      "issue_id": "issue-4"
+    },
+    {
+      "article": {
+        "id": "art-c285",
+        "title": "Claude Code Project Structure for Design Project",
+        "original_url": "https://uxplanet.org/claude-code-project-structure-for-design-project-00cb36f3cbee?source=rss----819cc2aaeee0---4",
+        "source_name": "UX Planet",
+        "published_at": "2026-06-19",
+        "category": "design_experience",
+        "introduction": "当设计师开始用 Claude Code 参与项目时，真正影响产出质量的，往往不是某一句提示词，而是项目是否给 AI 提供了清晰的上下文。一个好的设计项目结构，应该像给团队新成员准备的工作台：有 PRD、用户流程、设计原则、Design System、Tokens、组件规范，也有明确的 CLAUDE.md 作为长期说明书。对设计师而言，这不是技术洁癖，而是 AI 协作的基础设施。只有当目标、约束与规范被结构化地摆在项目里，AI 才不再靠猜，而能更稳定地成为设计执行与思考的伙伴。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-4",
+        "sort_order": 8
+      },
+      "issue_number": 4,
+      "issue_id": "issue-4"
+    },
+    {
+      "article": {
+        "id": "art-c344",
+        "title": "You don’t design the interface anymore. You design the deciding.",
+        "original_url": "https://uxdesign.cc/you-dont-design-the-interface-anymore-you-design-the-deciding-835c01982ead?source=rss----138adf9c44c---4",
+        "source_name": "UX Collective",
+        "published_at": "2026-06-29",
+        "category": "design_experience",
+        "introduction": "AI 时代的设计对象，正在从\"界面长什么样\"转向\"系统能决定什么\"。当 Agent 不再只是响应指令，而是开始替用户判断、执行、升级任务时，设计师真正要处理的就不是按钮、页面或流程图，而是决策边界：哪些事可以自动完成，哪些必须经过人工确认，系统为什么这样判断，又如何被用户理解、质疑和纠正。换句话说，未来的 UX 设计不只是让机器好用，而是让机器的自主行为可信、可控、可追责。",
+        "language": "en",
+        "link_status": "link_unknown",
+        "status": "published",
+        "intro_reviewed": true,
+        "click_count": 0,
+        "issue_id": "issue-4",
+        "sort_order": 9
+      },
+      "issue_number": 4,
+      "issue_id": "issue-4"
+    }
+  ],
+  "skills": [
+    {
+      "id": "empathy-map",
+      "name": "同理心地图",
+      "introduction": "将访谈/观察资料结构化为同理心地图（Says/Thinks/Does/Feels），归纳痛点与收益并标注待验证假设。",
+      "category": "user_analysis",
+      "file_path": "empathy-map.md"
+    },
+    {
+      "id": "user-interview-five-questions",
+      "name": "用户访谈五问法",
+      "introduction": "用「访谈五问法」从背景到行为、动机、痛苦与理想状态递进追问，挖掘用户真实动机与价值期望。",
+      "category": "user_analysis",
+      "file_path": "user-interview-five-questions.md"
+    },
+    {
+      "id": "jtbd",
+      "name": "Jobs to be Done",
+      "introduction": "用 Jobs-to-be-Done（任务驱动）视角识别用户真实「雇佣」产品完成的任务，重定义竞争与成功标准。",
+      "category": "requirements_analysis",
+      "file_path": "jtbd.md"
+    },
+    {
+      "id": "five-why",
+      "name": "五个为什么",
+      "introduction": "用「五次为什么」沿因果链持续追问，找到可被系统性消除的根因（通常是流程/规则/责任缺失），避免反复救火。",
+      "category": "requirements_analysis",
+      "file_path": "five-why.md"
+    },
+    {
+      "id": "crazy-eights",
+      "name": "Crazy 8s",
+      "introduction": "用 Crazy 8s 在 8 分钟内产出 8 个不同方向草图，绕过过度思考与会议权力结构，快速发散方案。",
+      "category": "solution_design",
+      "file_path": "crazy-eights.md"
+    },
+    {
+      "id": "scamper",
+      "name": "SCAMPER",
+      "introduction": "用 SCAMPER 七视角（替换/组合/改编/修改/他用/删除/反转）系统性改造既有产品或流程，产生创新方向。",
+      "category": "solution_design",
+      "file_path": "scamper.md"
+    },
+    {
+      "id": "usability-testing-five-users",
+      "name": "五用户可用性测试",
+      "introduction": "Nielsen 经验法则：约 5 名用户可发现大部分易用性问题；重迭代、轻单次样本规模。",
+      "category": "effect_validation",
+      "file_path": "usability-testing-five-users.md"
+    },
+    {
+      "id": "wizard-of-oz",
+      "name": "绿野仙踪法",
+      "introduction": "前台真实界面，后台人工模拟「智能/自动化」，在开发前验证完整体验是否值得投入。",
+      "category": "effect_validation",
+      "file_path": "wizard-of-oz.md"
+    },
+    {
+      "id": "shape-up",
+      "name": "Shape Up",
+      "introduction": "用 Shape Up（Basecamp）以 6 周固定周期+2 周冷却替代 Scrum：先 Shaping 成型问题，再 Betting 押注，再 Building 构建，时间固定范围浮动。",
+      "category": "solution_design",
+      "file_path": "shape-up.md"
+    },
+    {
+      "id": "daci",
+      "name": "DACI 决策框架",
+      "introduction": "用 DACI 明确决策角色：Driver 推动、Approver 拍板、Contributor 提供输入、Informed 知情，提升跨团队决策速度与清晰度。",
+      "category": "solution_design",
+      "file_path": "daci.md"
+    },
+    {
+      "id": "aarrr",
+      "name": "AARRR 增长漏斗",
+      "introduction": "用 AARRR 海盗指标拆解增长漏斗（获客/激活/留存/推荐/营收），定位最大流失瓶颈并按优先级优化。",
+      "category": "effect_validation",
+      "file_path": "aarrr.md"
+    },
+    {
+      "id": "hook-model",
+      "name": "Hook 上瘾模型",
+      "introduction": "用 Hook 上钩模型（触发→行动→可变奖励→投入）设计习惯回访机制，把外部触发逐步转为内部触发（情绪驱动）。",
+      "category": "effect_validation",
+      "file_path": "hook-model.md"
+    },
+    {
+      "id": "systems-thinking",
+      "name": "系统思维",
+      "introduction": "用系统思维（反馈回路、存量/流量、延迟、杠杆点）诊断反复出现的问题，避免线性因果误判，并在高杠杆处设计干预。",
+      "category": "requirements_analysis",
+      "file_path": "systems-thinking.md"
+    },
+    {
+      "id": "cynefin",
+      "name": "Cynefin 决策框架",
+      "introduction": "用 Cynefin 将问题分为清晰/繁杂/复杂/混沌/混乱五域，选择匹配的决策逻辑（规则/分析/实验/行动），避免用错误方法处理问题。",
+      "category": "requirements_analysis",
+      "file_path": "cynefin.md"
+    },
+    {
+      "id": "visual-acceptance-check",
+      "name": "视觉验收",
+      "introduction": "通过 MasterGo 设计稿链接与开发页面截图（或登录后 URL 截图）按《视觉验收》PDF 全量 VA-* 检查点验收，从 DSL 提取设计基准、逐点 pass/fail/na 计分并 bbox 标注，输出 HTML 报告。Use when the user mentions 视觉验收、MasterGo、设计稿链接、上传截图、页面截图、视觉差异、全量检查点、验收报告。",
+      "category": "design_acceptance",
+      "file_path": "visual-acceptance-check.md",
+      "package_path": "packages/visual-acceptance-check.zip"
+    },
+    {
+      "id": "adapt",
+      "name": "响应式适配",
+      "introduction": "Adapt designs to work across different screen sizes, devices, contexts, or platforms. Implements breakpoints, fluid layouts, and touch targets. Use when the user mentions responsive design, mobile layouts, breakpoints, viewport adaptation, or cross-device compatibility.",
+      "category": "solution_design",
+      "file_path": "adapt.md"
+    },
+    {
+      "id": "animate",
+      "name": "动画与微交互",
+      "introduction": "Review a feature and enhance it with purposeful animations, micro-interactions, and motion effects that improve usability and delight. Use when the user mentions adding animation, transitions, micro-interactions, motion design, hover effects, or making the UI feel more alive.",
+      "category": "solution_design",
+      "file_path": "animate.md"
+    },
+    {
+      "id": "ant-design",
+      "name": "Ant Design",
+      "introduction": "Decision guide for antd 6.x, Ant Design Pro 5/ProComponents, Ant Design X v2, and the offline `@ant-design/cli`. Use for component selection, theming/tokens, SSR, a11y, performance, routing/access/CRUD, AI/chat UI patterns, local API lookup, debugging, migration, and usage analysis.",
+      "category": "solution_design",
+      "package_path": "packages/ant-design.zip",
+      "file_path": "ant-design.md"
+    },
+    {
+      "id": "audit",
+      "name": "技术质量审计",
+      "introduction": "Run technical quality checks across accessibility, performance, theming, responsive design, and anti-patterns. Generates a scored report with P0-P3 severity ratings and actionable plan. Use when the user wants an accessibility check, performance audit, or technical quality review.",
+      "category": "solution_design",
+      "file_path": "audit.md"
+    },
+    {
+      "id": "bolder",
+      "name": "视觉冲击力增强",
+      "introduction": "Amplify safe or boring designs to make them more visually interesting and stimulating. Increases impact while maintaining usability. Use when the user says the design looks bland, generic, too safe, lacks personality, or wants more visual impact and character.",
+      "category": "solution_design",
+      "file_path": "bolder.md"
+    },
+    {
+      "id": "carbon-builder",
+      "name": "Carbon Design System",
+      "introduction": "'Carbon Design System expert for React and Web Components. Use for: Carbon components (Button, Modal, DataTable, etc.), IBM Products UI, Carbon Charts (React/Angular/Vue/Svelte/vanilla JS), Carbon icons and pictograms, Carbon design tokens and IBM Plex font, Carbon usage and accessibility documentation, AI Chat / watsonx integration, or any Carbon code generation.'",
+      "category": "solution_design",
+      "package_path": "packages/carbon-builder.zip",
+      "file_path": "carbon-builder.md"
+    },
+    {
+      "id": "clarify",
+      "name": "UX 文案优化",
+      "introduction": "Improve unclear UX copy, error messages, microcopy, labels, and instructions to make interfaces easier to understand. Use when the user mentions confusing text, unclear labels, bad error messages, hard-to-follow instructions, or wanting better UX writing.",
+      "category": "solution_design",
+      "file_path": "clarify.md"
+    },
+    {
+      "id": "colorize",
+      "name": "策略性配色",
+      "introduction": "Add strategic color to features that are too monochromatic or lack visual interest, making interfaces more engaging and expressive. Use when the user mentions the design looking gray, dull, lacking warmth, needing more color, or wanting a more vibrant or expressive palette.",
+      "category": "solution_design",
+      "file_path": "colorize.md"
+    },
+    {
+      "id": "critique",
+      "name": "UX 设计评审",
+      "introduction": "Evaluate design from a UX perspective, assessing visual hierarchy, information architecture, emotional resonance, cognitive load, and overall quality with quantitative scoring, persona-based testing, automated anti-pattern detection, and actionable feedback. Use when the user asks to review, critique, evaluate, or give feedback on a design or component.",
+      "category": "solution_design",
+      "package_path": "packages/critique.zip",
+      "file_path": "critique.md"
+    },
+    {
+      "id": "delight",
+      "name": "愉悦感设计",
+      "introduction": "Add moments of joy, personality, and unexpected touches that make interfaces memorable and enjoyable to use. Elevates functional to delightful. Use when the user asks to add polish, personality, animations, micro-interactions, delight, or make an interface feel fun or memorable.",
+      "category": "solution_design",
+      "file_path": "delight.md"
+    },
+    {
+      "id": "distill",
+      "name": "设计简化",
+      "introduction": "Strip designs to their essence by removing unnecessary complexity. Great design is simple, powerful, and clean. Use when the user asks to simplify, declutter, reduce noise, remove elements, or make a UI cleaner and more focused.",
+      "category": "solution_design",
+      "file_path": "distill.md"
+    },
+    {
+      "id": "harden",
+      "name": "生产就绪加固",
+      "introduction": "Make interfaces production-ready: error handling, empty states, onboarding flows, i18n, text overflow, and edge case management. Use when the user asks to harden, make production-ready, handle edge cases, add error states, design empty states, improve onboarding, or fix overflow and i18n issues.",
+      "category": "solution_design",
+      "file_path": "harden.md"
+    },
+    {
+      "id": "impeccable",
+      "name": "高品质前端实现",
+      "introduction": "Create distinctive, production-grade frontend interfaces with high design quality. Generates creative, polished code that avoids generic AI aesthetics. Use when the user asks to build web components, pages, artifacts, posters, or applications, or when any design skill requires project context. Call with 'craft' for shape-then-build, 'teach' for design context setup, or 'extract' to pull reusable components and tokens into the design system.",
+      "category": "solution_design",
+      "package_path": "packages/impeccable.zip",
+      "file_path": "impeccable.md"
+    },
+    {
+      "id": "layout",
+      "name": "布局优化",
+      "introduction": "Improve layout, spacing, and visual rhythm. Fixes monotonous grids, inconsistent spacing, and weak visual hierarchy. Use when the user mentions layout feeling off, spacing issues, visual hierarchy, crowded UI, alignment problems, or wanting better composition.",
+      "category": "solution_design",
+      "file_path": "layout.md"
+    },
+    {
+      "id": "optimize",
+      "name": "UI 性能优化",
+      "introduction": "Diagnoses and fixes UI performance across loading speed, rendering, animations, images, and bundle size. Use when the user mentions slow, laggy, janky, performance, bundle size, load time, or wants a faster, smoother experience.",
+      "category": "solution_design",
+      "file_path": "optimize.md"
+    },
+    {
+      "id": "overdrive",
+      "name": "高野心视觉实现",
+      "introduction": "Pushes interfaces past conventional limits with technically ambitious implementations — shaders, spring physics, scroll-driven reveals, 60fps animations. Use when the user wants to wow, impress, go all-out, or make something that feels extraordinary.",
+      "category": "solution_design",
+      "file_path": "overdrive.md"
+    },
+    {
+      "id": "polish",
+      "name": "上线前打磨",
+      "introduction": "Performs a final quality pass fixing alignment, spacing, consistency, and micro-detail issues before shipping. Use when the user mentions polish, finishing touches, pre-launch review, something looks off, or wants to go from good to great.",
+      "category": "solution_design",
+      "file_path": "polish.md"
+    },
+    {
+      "id": "quieter",
+      "name": "视觉降噪",
+      "introduction": "Tones down visually aggressive or overstimulating designs, reducing intensity while preserving quality. Use when the user mentions too bold, too loud, overwhelming, aggressive, garish, or wants a calmer, more refined aesthetic.",
+      "category": "solution_design",
+      "file_path": "quieter.md"
+    },
+    {
+      "id": "req-to-design",
+      "name": "需求到设计",
+      "introduction": "把模糊需求一路收敛成可落地、可验证的设计方案，走通「需求 → 设计目标 → 设计策略 → 设计方案」四跳，并将分析结果导出为 MD 或 PDF 交付文件。当用户给出一段需求/诉求/问题，要求做需求分析、定设计目标、出设计策略、产出交互或视觉方案、写设计说明、或导出设计方案文档时使用。也适用于评审现有方案是否「目标-策略-方案」自洽。",
+      "category": "solution_design",
+      "file_path": "req-to-design.md"
+    },
+    {
+      "id": "semantic-token-naming",
+      "name": "语义化 Token 命名",
+      "introduction": "Names design tokens by semantic intent (not appearance) in a three-layer cascade—semantic, component, and Oklch-derived state tokens. Use when creating or auditing design tokens, Figma variables, CSS custom properties, DLS foundations, or before AI builds components from a design system.",
+      "category": "solution_design",
+      "package_path": "packages/semantic-token-naming.zip",
+      "file_path": "semantic-token-naming.md"
+    },
+    {
+      "id": "shape",
+      "name": "UX/UI 规划",
+      "introduction": "Plan the UX and UI for a feature before writing code. Runs a structured discovery interview, then produces a design brief that guides implementation. Use during the planning phase to establish design direction, constraints, and strategy before any code is written.",
+      "category": "solution_design",
+      "file_path": "shape.md"
+    },
+    {
+      "id": "typeset",
+      "name": "排版优化",
+      "introduction": "Improves typography by fixing font choices, hierarchy, sizing, weight, and readability so text feels intentional. Use when the user mentions fonts, type, readability, text hierarchy, sizing looks off, or wants more polished, intentional typography.",
+      "category": "solution_design",
+      "file_path": "typeset.md"
+    },
+    {
+      "id": "ab-testing",
+      "name": "A/B 测试",
+      "introduction": "用 A/B 测试以随机对照方式验证版本优劣：先写假设、只改一个变量、预设样本量与成功标准、再统计分析并决策。",
+      "category": "effect_validation",
+      "file_path": "ab-testing.md"
+    },
+    {
+      "id": "affinity-diagram",
+      "name": "亲和图",
+      "introduction": "用亲和图（KJ 法）把大量定性数据写成便利贴静默聚类，命名主题并提炼洞察与优先级。",
+      "category": "solution_design",
+      "file_path": "affinity-diagram.md"
+    },
+    {
+      "id": "ai-interaction-mode-selection",
+      "name": "AI 交互模式选择",
+      "introduction": "Select an AI interaction mode (human-led, assistive, delegated, or defer) for a product scenario using a simple scoring model (Suit/SROI) and threshold rules. Use when the user asks how to choose AI interaction mode, decide between human vs AI vs agent, evaluate scenario suitability, or mentions Suit/SROI/ROI/风险/可控性/意图/数据标准/成熟度.",
+      "category": "solution_design",
+      "file_path": "ai-interaction-mode-selection.md"
+    },
+    {
+      "id": "analogical-thinking",
+      "name": "类比思维",
+      "introduction": "用类比思维从跨领域迁移解法：生成多领域类比→做结构映射→翻译为产品等价物，打破行业内同质化。",
+      "category": "requirements_analysis",
+      "file_path": "analogical-thinking.md"
+    },
+    {
+      "id": "ansoff-matrix",
+      "name": "Ansoff 增长矩阵",
+      "introduction": "用 Ansoff 增长矩阵（现有/新产品 × 现有/新市场）系统评估增长路径：渗透/开发/产品开发/多元化，并明确风险与资源权重。",
+      "category": "requirements_analysis",
+      "file_path": "ansoff-matrix.md"
+    },
+    {
+      "id": "antifragile-design",
+      "name": "反脆弱设计",
+      "introduction": "受 Taleb「反脆弱」启发：好的系统不只抗压，还能从波动与压力中获得改进；产品可用冗余、可选性与小失败实验来设计。",
+      "category": "solution_design",
+      "file_path": "antifragile-design.md"
+    },
+    {
+      "id": "assumption-validation-board",
+      "name": "假设验证板",
+      "introduction": "用假设验证板列出产品赖以成立的假设，按风险排序，设计最便宜实验并提前锁定最低成功标准与学习结论。",
+      "category": "requirements_analysis",
+      "file_path": "assumption-validation-board.md"
+    },
+    {
+      "id": "blue-ocean-errc",
+      "name": "蓝海 ERRC 策略",
+      "introduction": "用蓝海策略 ERRC（消除/减少/提升/创造）重构行业价值曲线，跳出红海内卷；配合战略画布验证差异化并面向“非客户”寻找增量。",
+      "category": "requirements_analysis",
+      "file_path": "blue-ocean-errc.md"
+    },
+    {
+      "id": "business-model-canvas",
+      "name": "商业模式画布",
+      "introduction": "用商业模式画布（BMC）九宫格在一页呈现“为谁创造价值、如何交付、如何盈利”，并用于对比竞品与诊断漏洞。",
+      "category": "requirements_analysis",
+      "file_path": "business-model-canvas.md"
+    },
+    {
+      "id": "circles",
+      "name": "CIRCLES 问题推演",
+      "introduction": "用 CIRCLES（Comprehend→Identify→Report→Cut→List→Evaluate→Summarize）结构化从问题到方案的推演，避免未理解问题就跳入解法。",
+      "category": "requirements_analysis",
+      "file_path": "circles.md"
+    },
+    {
+      "id": "ckm-banner-design",
+      "name": "CKM Banner 设计",
+      "introduction": "\"Design banners for social media, ads, website heroes, creative assets, and print. Multiple art direction options with AI-generated visuals. Actions: design, create, generate banner. Platforms: Facebook, Twitter/X, LinkedIn, YouTube, Instagram, Google Display, website hero, print. Styles: minimalist, gradient, bold typography, photo-based, illustrated, geometric, retro, glassmorphism, 3D, neon, duotone, editorial, collage. Uses ui-ux-pro-max, frontend-design, ai-artist, ai-multimodal skills.\"",
+      "category": "solution_design",
+      "package_path": "packages/ckm-banner-design.zip",
+      "file_path": "ckm-banner-design.md"
+    },
+    {
+      "id": "ckm-brand",
+      "name": "CKM 品牌",
+      "introduction": "Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.",
+      "category": "solution_design",
+      "package_path": "packages/ckm-brand.zip",
+      "file_path": "ckm-brand.md"
+    },
+    {
+      "id": "ckm-design",
+      "name": "CKM 综合设计",
+      "introduction": "\"Comprehensive design skill: brand identity, design tokens, UI styling, logo generation (55 styles, Gemini AI), corporate identity program (50 deliverables, CIP mockups), HTML presentations (Chart.js), banner design (22 styles, social/ads/web/print), icon design (15 styles, SVG, Gemini 3.1 Pro), social photos (HTML→screenshot, multi-platform). Actions: design logo, create CIP, generate mockups, build slides, design banner, generate icon, create social photos, social media images, brand identity, design system. Platforms: Facebook, Twitter, LinkedIn, YouTube, Instagram, Pinterest, TikTok, Threads, Google Ads.\"",
+      "category": "solution_design",
+      "package_path": "packages/ckm-design.zip",
+      "file_path": "ckm-design.md"
+    },
+    {
+      "id": "ckm-design-system",
+      "name": "CKM 设计系统",
+      "introduction": "Token architecture, component specifications, and slide generation. Three-layer tokens (primitive→semantic→component), CSS variables, spacing/typography scales, component specs, strategic slide creation. Use for design tokens, systematic design, brand-compliant presentations.",
+      "category": "solution_design",
+      "package_path": "packages/ckm-design-system.zip",
+      "file_path": "ckm-design-system.md"
+    },
+    {
+      "id": "ckm-slides",
+      "name": "CKM 演示文稿",
+      "introduction": "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.",
+      "category": "solution_design",
+      "package_path": "packages/ckm-slides.zip",
+      "file_path": "ckm-slides.md"
+    },
+    {
+      "id": "ckm-ui-styling",
+      "name": "CKM UI 样式",
+      "introduction": "Create beautiful, accessible user interfaces with shadcn/ui components (built on Radix UI + Tailwind), Tailwind CSS utility-first styling, and canvas-based visual designs. Use when building user interfaces, implementing design systems, creating responsive layouts, adding accessible components (dialogs, dropdowns, forms, tables), customizing themes and colors, implementing dark mode, generating visual designs and posters, or establishing consistent styling patterns across applications.",
+      "category": "solution_design",
+      "file_path": "ckm-ui-styling.md"
+    },
+    {
+      "id": "coffer-design",
+      "name": "Coffer 设计系统",
+      "introduction": "\"This skill should be used when the user explicitly says 'Coffer style', 'Coffer design', '/coffer-design', or directly asks to use/apply the Coffer design system. NEVER trigger automatically for generic UI or design tasks.\"",
+      "category": "solution_design",
+      "package_path": "packages/coffer-design.zip",
+      "file_path": "coffer-design.md"
+    },
+    {
+      "id": "competitive-analysis",
+      "name": "竞品分析",
+      "introduction": "用竞品分析框架覆盖直接/间接/替代三圈，从定位、功能、体验、商业模式、份额、技术壁垒等维度建立对比矩阵并提炼差异化机会与风险。",
+      "category": "requirements_analysis",
+      "file_path": "competitive-analysis.md"
+    },
+    {
+      "id": "competitive-positioning-map",
+      "name": "竞争定位地图",
+      "introduction": "用竞争定位地图把竞品置于二维坐标（选“客户在乎且有差异”的两维），识别白地与差异化定位，并用于品牌叙事、融资与重定位。",
+      "category": "requirements_analysis",
+      "file_path": "competitive-positioning-map.md"
+    },
+    {
+      "id": "contextual-inquiry",
+      "name": "情境调研",
+      "introduction": "在用户真实场景中观察与同步访谈，提炼隐性流程与行为洞察（情境调研 / Contextual Inquiry）。",
+      "category": "user_analysis",
+      "file_path": "contextual-inquiry.md"
+    },
+    {
+      "id": "coss",
+      "name": "COSS UI",
+      "introduction": "Helps implement coss UI components correctly. Use when building UIs with coss primitives (buttons, dialogs, selects, forms, menus, tabs, inputs, toasts, etc.), migrating from shadcn/Radix to coss/Base UI, composing trigger-based overlays, or troubleshooting coss component behavior. Covers imports, accessibility, Tailwind styling, and common pitfalls.",
+      "category": "solution_design",
+      "package_path": "packages/coss.zip",
+      "file_path": "coss.md"
+    },
+    {
+      "id": "coss-particles",
+      "name": "COSS Particles",
+      "introduction": "Index of all COSS UI particle examples. Use when implementing UI features to find copy-paste-ready component patterns built on coss primitives. Each particle has a description and a JSON URL for easy installation.",
+      "category": "solution_design",
+      "file_path": "coss-particles.md"
+    },
+    {
+      "id": "design-thinking",
+      "name": "设计思维",
+      "introduction": "用设计思维五步循环（共情→定义→创意→原型→测试）在问题不清晰时以人为中心探索并迭代学习。",
+      "category": "solution_design",
+      "file_path": "design-thinking.md"
+    },
+    {
+      "id": "diary-study",
+      "name": "日记研究",
+      "introduction": "通过日记研究让用户在真实生活中持续记录体验，捕捉跨天/周的情境、情绪与行为变化。",
+      "category": "user_analysis",
+      "file_path": "diary-study.md"
+    },
+    {
+      "id": "double-diamond",
+      "name": "双钻模型",
+      "introduction": "用双钻模型把设计过程拆成两次“发散→收敛”：先找到正确问题（Discover/Define），再找到正确方案（Develop/Deliver）。",
+      "category": "solution_design",
+      "file_path": "double-diamond.md"
+    },
+    {
+      "id": "elevator-pitch",
+      "name": "电梯演讲",
+      "introduction": "用 30 秒电梯演讲模板清晰表达：目标用户、核心痛点、产品类别、核心价值、差异化与下一步行动，用于对齐、招募与路演。",
+      "category": "requirements_analysis",
+      "file_path": "elevator-pitch.md"
+    },
+    {
+      "id": "empathy-driven-roadmap",
+      "name": "同理心驱动路线图",
+      "introduction": "以用户痛苦强度驱动路线图排序：最痛的问题优先得资源，并用数据追踪痛苦是否缓解。",
+      "category": "user_analysis",
+      "file_path": "empathy-driven-roadmap.md"
+    },
+    {
+      "id": "event-storming",
+      "name": "事件风暴",
+      "introduction": "DDD 协作工具：用橙色「领域事件」便利贴快速拉通业务流程，识别聚合、界限上下文与系统边界。",
+      "category": "requirements_analysis",
+      "file_path": "event-storming.md"
+    },
+    {
+      "id": "extract",
+      "name": "设计系统提取",
+      "introduction": "Extract and consolidate reusable components, design tokens, and patterns into your design system. Identifies opportunities for systematic reuse and enriches your component library.",
+      "category": "solution_design",
+      "file_path": "extract.md"
+    },
+    {
+      "id": "feature-priority-pyramid",
+      "name": "feature priority pyramid",
+      "introduction": "用特性优先级金字塔（功能性→可靠性→易用性→体验优化→差异化创新）校准资源投入顺序，避免跳层建设导致基础不稳。",
+      "category": "solution_design",
+      "file_path": "feature-priority-pyramid.md"
+    },
+    {
+      "id": "find-skills",
+      "name": "发现 Agent Skills",
+      "introduction": "Helps users discover and install agent skills when they ask questions like \"how do I do X\", \"find a skill for X\", \"is there a skill that can...\", or express interest in extending capabilities. This skill should be used when the user is looking for functionality that might exist as an installable skill.",
+      "category": "solution_design",
+      "file_path": "find-skills.md"
+    },
+    {
+      "id": "first-principles",
+      "name": "第一性原理",
+      "introduction": "用第一性原理把问题拆到不可再分的事实（物理/逻辑下限），识别隐藏假设并从事实重新构建方案，实现 10 倍改进而非 10% 微调。",
+      "category": "requirements_analysis",
+      "file_path": "first-principles.md"
+    },
+    {
+      "id": "fogg-behavior-model",
+      "name": "Fogg 行为模型",
+      "introduction": "用 Fogg 行为模型 B=MAP（动机×能力×触发）诊断转化/留存卡点，优先通过降低摩擦（提升能力）与精准触发推动目标行为发生。",
+      "category": "solution_design",
+      "file_path": "fogg-behavior-model.md"
+    },
+    {
+      "id": "four-actions-framework",
+      "name": "四行动框架",
+      "introduction": "用四行动框架（ERRC：消除/减少/提升/创造）重塑行业价值曲线，同时降低成本与提升用户价值，为蓝海战略与差异化定位提供可操作的决策网格。",
+      "category": "requirements_analysis",
+      "file_path": "four-actions-framework.md"
+    },
+    {
+      "id": "google-design-sprint",
+      "name": "Google Design Sprint",
+      "introduction": "Google Ventures 提出的 5 天快速方法：在一周内完成从问题定义到用户测试的完整验证循环（与 Design Sprint 同义，对齐 PMFrame 站内 slug）。",
+      "category": "solution_design",
+      "file_path": "google-design-sprint.md"
+    },
+    {
+      "id": "growth-flywheel",
+      "name": "增长飞轮",
+      "introduction": "用增长飞轮把核心用户行为设计成自我强化闭环，识别限速节点并用实验验证每条因果链，构建复利式增长。",
+      "category": "solution_design",
+      "file_path": "growth-flywheel.md"
+    },
+    {
+      "id": "gtm",
+      "name": "Go-to-Market",
+      "introduction": "用 GTM（上市策略）五要素画布制定发布作战计划：目标市场(ICP)/价值主张/定价与套餐/分发渠道/获客模式(PLG/SLG)。",
+      "category": "solution_design",
+      "file_path": "gtm.md"
+    },
+    {
+      "id": "heart",
+      "name": "HEART 指标",
+      "introduction": "Define UX metrics using the HEART framework for user-centered measurement",
+      "category": "effect_validation",
+      "file_path": "heart.md"
+    },
+    {
+      "id": "hmw",
+      "name": "How Might We",
+      "introduction": "用 HMW（How Might We）把用户洞察改写成宽窄适中的机会问题，触发创意发散并对齐团队方向。",
+      "category": "solution_design",
+      "file_path": "hmw.md"
+    },
+    {
+      "id": "how-now-wow",
+      "name": "How/Now/Wow 矩阵",
+      "introduction": "用 How Now Wow 矩阵按“创意度×可行性”对头脑风暴想法快速分类，选出 WOW 优先推进、NOW 快赢、HOW 存档。",
+      "category": "solution_design",
+      "file_path": "how-now-wow.md"
+    },
+    {
+      "id": "ice",
+      "name": "ICE 优先级",
+      "introduction": "用 ICE（Impact×Confidence×Ease）快速为实验和想法打分排序；与 ice-prioritization 目录一致，对齐 PMFrame 站内 slug「ice」。",
+      "category": "solution_design",
+      "file_path": "ice.md"
+    },
+    {
+      "id": "iceberg-model",
+      "name": "冰山模型",
+      "introduction": "用冰山模型从事件→模式→结构→心智模式逐层下潜，定位反复出现问题的根因，并在结构/心智层设计高杠杆干预。",
+      "category": "requirements_analysis",
+      "file_path": "iceberg-model.md"
+    },
+    {
+      "id": "impact-effort-matrix",
+      "name": "影响力×工作量矩阵",
+      "introduction": "用 Impact/Effort 矩阵按“影响力×工作量”快速分级任务优先级：Quick Wins、Major Projects、Fill-ins、Time Sinks。",
+      "category": "solution_design",
+      "file_path": "impact-effort-matrix.md"
+    },
+    {
+      "id": "innovation-diffusion-curve",
+      "name": "创新扩散曲线",
+      "introduction": "用创新扩散曲线识别采用者分群（创新者→落后者）与“鸿沟”风险，制定滩头市场、参考案例、产品稳定性与渠道/信息切换策略。",
+      "category": "requirements_analysis",
+      "file_path": "innovation-diffusion-curve.md"
+    },
+    {
+      "id": "issue-tree",
+      "name": "问题树",
+      "introduction": "用问题树（Issue Tree）按 MECE 原则把复杂问题分解为互斥且穷尽的子问题，并逐层下钻到可用数据验证的叶节点（诊断树/解决树）。",
+      "category": "requirements_analysis",
+      "file_path": "issue-tree.md"
+    },
+    {
+      "id": "jobs-portfolio",
+      "name": "Jobs Portfolio",
+      "introduction": "用 Jobs Portfolio（核心/相关/情感 Jobs × 重要度/满足度）系统盘点用户“工作组合”，定位高重要度×低满足度的增长空白并规划扩展路线图。",
+      "category": "requirements_analysis",
+      "file_path": "jobs-portfolio.md"
+    },
+    {
+      "id": "jobs-scoping",
+      "name": "Jobs 边界界定",
+      "introduction": "从用户所有可能的任务出发，精确界定产品要解决的 Job 边界，防止范围蔓延和方向漂移。",
+      "category": "requirements_analysis",
+      "file_path": "jobs-scoping.md"
+    },
+    {
+      "id": "jtbd-growth-matrix",
+      "name": "JTBD 增长矩阵",
+      "introduction": "将所有用户 Jobs 按「重要性 × 当前满足度」作图，找出高重要、低满足的欠缺区作为增长杠杆。",
+      "category": "requirements_analysis",
+      "file_path": "jtbd-growth-matrix.md"
+    },
+    {
+      "id": "kano",
+      "name": "Kano 模型",
+      "introduction": "用 Kano 模型将需求分为必备型/期望型/魅力型等，结合双问题问卷识别功能对满意度的非线性影响并指导版本取舍。",
+      "category": "requirements_analysis",
+      "file_path": "kano.md"
+    },
+    {
+      "id": "lean-canvas",
+      "name": "Lean Canvas",
+      "introduction": "用 Lean Canvas（一页式九宫格）梳理早期商业假设：问题→客户→方案→UVP→指标→收入成本等，并标注待验证项。",
+      "category": "requirements_analysis",
+      "file_path": "lean-canvas.md"
+    },
+    {
+      "id": "lean-startup-mvp",
+      "name": "精益创业 MVP",
+      "introduction": "用精益创业 MVP 以最小代价验证最危险的商业假设，运行 Build→Measure→Learn 的快速循环。",
+      "category": "solution_design",
+      "file_path": "lean-startup-mvp.md"
+    },
+    {
+      "id": "lean-ux-canvas",
+      "name": "Lean UX Canvas",
+      "introduction": "将精益创业与 UX 结合：一张画布对齐业务问题、假设、目标用户、MVP 与成功指标，驱动快速验证。",
+      "category": "solution_design",
+      "file_path": "lean-ux-canvas.md"
+    },
+    {
+      "id": "ltv-cac",
+      "name": "LTV:CAC",
+      "introduction": "用 LTV:CAC 与 CAC 回收期诊断订阅/SaaS 增长健康度，按分群计算并定位提升 LTV 或降低 CAC 的优先杠杆。",
+      "category": "requirements_analysis",
+      "file_path": "ltv-cac.md"
+    },
+    {
+      "id": "mental-models",
+      "name": "心智模型",
+      "introduction": "用户对世界的内在假设若与产品设计一致，学习成本趋近于零；若对抗则困惑放弃。用研究与走查显式对齐心智模型。",
+      "category": "requirements_analysis",
+      "file_path": "mental-models.md"
+    },
+    {
+      "id": "morphological-chart",
+      "name": "形态学矩阵",
+      "introduction": "将问题拆成若干独立维度，每维列出选项，用系统组合穷举方案空间，再筛选深化。",
+      "category": "requirements_analysis",
+      "file_path": "morphological-chart.md"
+    },
+    {
+      "id": "moscow",
+      "name": "MoSCoW 优先级",
+      "introduction": "用 MoSCoW 将需求分为 Must/Should/Could/Won't（this time），用“如果不做会怎样”约束范围蔓延，保障按时交付。",
+      "category": "requirements_analysis",
+      "file_path": "moscow.md"
+    },
+    {
+      "id": "musk-five-steps",
+      "name": "Musk 五步简化法",
+      "introduction": "Use when simplifying a process or product by eliminating unnecessary complexity",
+      "category": "requirements_analysis",
+      "file_path": "musk-five-steps.md"
+    },
+    {
+      "id": "network-effects",
+      "name": "网络效应",
+      "introduction": "识别并设计网络效应（直接/间接/数据/社交），解决冷启动与临界质量问题，构建随规模增强的护城河。",
+      "category": "requirements_analysis",
+      "file_path": "network-effects.md"
+    },
+    {
+      "id": "north-star-metric",
+      "name": "北极星指标",
+      "introduction": "选择并落地北极星指标（NSM），用“北极星→输入指标→产出指标”三层体系统一团队增长方向。",
+      "category": "requirements_analysis",
+      "file_path": "north-star-metric.md"
+    },
+    {
+      "id": "now-next-later",
+      "name": "NOW/NEXT/LATER",
+      "introduction": "用 NOW-NEXT-LATER 路线图替代日期时间轴：用相对顺序传达优先级，越往后越用“结果”而非“功能”描述，避免虚假精确承诺。",
+      "category": "solution_design",
+      "file_path": "now-next-later.md"
+    },
+    {
+      "id": "ogsm",
+      "name": "OGSM 战略",
+      "introduction": "用 OGSM（一页纸）把战略翻译成执行：Objective→Goals→Strategies→Measures，形成可追溯逻辑链并用于季度复盘。",
+      "category": "requirements_analysis",
+      "file_path": "ogsm.md"
+    },
+    {
+      "id": "onboard",
+      "name": "Onboarding 设计",
+      "introduction": "Design or improve onboarding flows, empty states, and first-time user experiences. Helps users get started successfully and understand value quickly.",
+      "category": "user_analysis",
+      "file_path": "onboard.md"
+    },
+    {
+      "id": "opportunity-solution-tree",
+      "name": "机会方案树",
+      "introduction": "用 Opportunity Solution Tree（OST）从成果目标出发，系统梳理机会→方案→实验，防止直接跳到解决方案。",
+      "category": "solution_design",
+      "file_path": "opportunity-solution-tree.md"
+    },
+    {
+      "id": "pain-solution-matrix",
+      "name": "痛苦-解决方案矩阵",
+      "introduction": "用痛苦-解决方案矩阵把“痛点强度”与“现有解法完整度”配对，识别黄金机会区（高痛苦×低完整度）并指导优先级。",
+      "category": "solution_design",
+      "file_path": "pain-solution-matrix.md"
+    },
+    {
+      "id": "persona",
+      "name": "用户画像",
+      "introduction": "基于用户研究构建 Persona（用户画像），用行为与动机对齐团队对“用户”的共同参照物。",
+      "category": "user_analysis",
+      "file_path": "persona.md"
+    },
+    {
+      "id": "pestle",
+      "name": "PESTLE 分析",
+      "introduction": "用 PESTLE（政治/经济/社会/技术/法律/环境）系统扫描宏观外部变量，评估影响与确定性，并转化为产品机会与威胁及监控机制。",
+      "category": "requirements_analysis",
+      "file_path": "pestle.md"
+    },
+    {
+      "id": "platform-ecosystem-canvas",
+      "name": "平台生态画布",
+      "introduction": "用平台生态系统画布拆解平台为核心交互/参与者/价值单元/过滤器，指导平台从零设计、平台化转型、冷启动与生态健康诊断。",
+      "category": "requirements_analysis",
+      "file_path": "platform-ecosystem-canvas.md"
+    },
+    {
+      "id": "pmf",
+      "name": "Product-Market Fit",
+      "introduction": "用 PMF 框架测量与提升产品市场契合：Sean Ellis 40% 测试 + 留存曲线 + 定性访谈，建立并迭代“PMF 引擎”。",
+      "category": "requirements_analysis",
+      "file_path": "pmf.md"
+    },
+    {
+      "id": "porter-five-forces",
+      "name": "波特五力",
+      "introduction": "用波特五力评估行业结构与盈利潜力（现有竞争/新进入者/替代品/供应商/买家），识别最强压力与可撬动的战略杠杆。",
+      "category": "requirements_analysis",
+      "file_path": "porter-five-forces.md"
+    },
+    {
+      "id": "pov-statement",
+      "name": "POV 问题陈述",
+      "introduction": "用 POV 陈述（用户+需求+洞察）三段式精准定义核心设计问题，统一团队对“我们在解决什么”的理解，并为 HMW/创意发散提供北极星。",
+      "category": "solution_design",
+      "file_path": "pov-statement.md"
+    },
+    {
+      "id": "priority-quadrant",
+      "name": "优先级四象限",
+      "introduction": "用重要性×紧迫性四象限（立即做/计划做/委托做/不做）快速梳理 Backlog，保护“重要不紧急”的长期价值投入。",
+      "category": "solution_design",
+      "file_path": "priority-quadrant.md"
+    },
+    {
+      "id": "problem-solution-fit",
+      "name": "问题-方案契合",
+      "introduction": "在 PMF 之前验证 Problem-Solution Fit：问题真的存在且足够痛吗？方案真的能解决并获得真实承诺吗？",
+      "category": "requirements_analysis",
+      "file_path": "problem-solution-fit.md"
+    },
+    {
+      "id": "product-lifecycle",
+      "name": "产品生命周期",
+      "introduction": "产品经历导入、成长、成熟、衰退四阶段，每阶段策略与资源配置不同（与 product-lifecycle-management 一致，对齐 PMFrame 站内 slug）。",
+      "category": "requirements_analysis",
+      "file_path": "product-lifecycle.md"
+    },
+    {
+      "id": "pure",
+      "name": "PURE 体验走查",
+      "introduction": "专家走查框架：从 Purposeful / Usable / Reliable / Enjoyable 四维度快速评估体验质量，无需用户参与即可得方向性结论。",
+      "category": "solution_design",
+      "file_path": "pure.md"
+    },
+    {
+      "id": "rca",
+      "name": "根本原因分析",
+      "introduction": "用 RCA（根本原因分析）区分直接原因/促成原因/根本原因，结合鱼骨图+5Why 等工具定位系统性根因并制定可追踪的纠正措施，防止复发。",
+      "category": "requirements_analysis",
+      "file_path": "rca.md"
+    },
+    {
+      "id": "reverse-brainstorming",
+      "name": "逆向头脑风暴",
+      "introduction": "用逆向头脑风暴先问“如何让问题更糟”，再把坏主意逐条翻转为解法，突破自我审查并暴露隐性风险。",
+      "category": "requirements_analysis",
+      "file_path": "reverse-brainstorming.md"
+    },
+    {
+      "id": "rice",
+      "name": "RICE 优先级",
+      "introduction": "用 RICE（Reach×Impact×Confidence÷Effort）量化功能/项目优先级，把“我觉得”变为可挑战的数字假设，支撑季度规划与资源分配。",
+      "category": "requirements_analysis",
+      "file_path": "rice.md"
+    },
+    {
+      "id": "service-blueprint",
+      "name": "服务蓝图",
+      "introduction": "绘制服务蓝图，用五层泳道把前台触点与后台支撑/支持系统串起来，定位失败点、等待与协作断点。",
+      "category": "solution_design",
+      "file_path": "service-blueprint.md"
+    },
+    {
+      "id": "six-thinking-hats",
+      "name": "六顶思考帽",
+      "introduction": "用六顶思考帽把不同思维模式“分时”使用，避免会议变辩论，提升决策与评审质量。",
+      "category": "requirements_analysis",
+      "file_path": "six-thinking-hats.md"
+    },
+    {
+      "id": "snap",
+      "name": "SNAP 快速决策",
+      "introduction": "Make faster product or sales decisions using SNAP criteria",
+      "category": "requirements_analysis",
+      "file_path": "snap.md"
+    },
+    {
+      "id": "sprint",
+      "name": "Scrum Sprint",
+      "introduction": "用 Scrum Sprint（1–2 周时间盒）持续交付与反馈：计划→执行→评审→回顾，建立快速迭代与改进循环。",
+      "category": "solution_design",
+      "file_path": "sprint.md"
+    },
+    {
+      "id": "story-spine",
+      "name": "Story Spine",
+      "introduction": "用 Story Spine 六句骨架把功能清单变成有因果链的用户叙事（从前/每天/直到有一天/因为这样/直到最终/从此以后），用于 PRD、Pitch、Onboarding 与洞察整合。",
+      "category": "solution_design",
+      "file_path": "story-spine.md"
+    },
+    {
+      "id": "storybrand",
+      "name": "StoryBrand",
+      "introduction": "用 StoryBrand SB7（主角/问题/向导/计划/行动号召/避免失败/成功）重构品牌与产品沟通，让客户做主角、品牌做向导，提升转化与一致性。",
+      "category": "requirements_analysis",
+      "file_path": "storybrand.md"
+    },
+    {
+      "id": "stp",
+      "name": "STP 营销",
+      "introduction": "用 STP（Segmentation/Targeting/Positioning）先细分市场、再选择目标战场、最后建立差异化定位，避免“面向所有人”导致定位模糊。",
+      "category": "requirements_analysis",
+      "file_path": "stp.md"
+    },
+    {
+      "id": "swot",
+      "name": "SWOT 分析",
+      "introduction": "用 SWOT（优势/劣势/机会/威胁）建立战略对话的共同语言，并通过 SO/ST/WO/WT 组合把诊断转成可执行策略。",
+      "category": "requirements_analysis",
+      "file_path": "swot.md"
+    },
+    {
+      "id": "systems-archetypes",
+      "name": "系统基模",
+      "introduction": "用系统基模（饮鸩止渴/成长的极限/转移负担/目标侵蚀/竞争升级等）识别反复出现的问题结构，找到高杠杆点并用结构性干预替代症状性解法。",
+      "category": "requirements_analysis",
+      "file_path": "systems-archetypes.md"
+    },
+    {
+      "id": "task-completion-rate",
+      "name": "任务完成率",
+      "introduction": "在给定场景下统计用户独立完成核心任务的成功比例，是可用性最直观的客观指标之一。",
+      "category": "effect_validation",
+      "file_path": "task-completion-rate.md"
+    },
+    {
+      "id": "theory-of-constraints",
+      "name": "约束理论",
+      "introduction": "用 TOC 约束理论五步聚焦法识别系统瓶颈（约束），围绕吞吐量优化（而非局部效率）提升交付速度，并用 WIP 限制暴露积压。",
+      "category": "requirements_analysis",
+      "file_path": "theory-of-constraints.md"
+    },
+    {
+      "id": "three-horizons",
+      "name": "三视野规划",
+      "introduction": "用 Three Horizons（三视野）管理产品/业务组合：H1 核心、H2 成长、H3 探索，并讨论 70/20/10 等资源配比与断层风险。",
+      "category": "requirements_analysis",
+      "file_path": "three-horizons.md"
+    },
+    {
+      "id": "threshold-of-viable-ideas",
+      "name": "创意可行性门槛",
+      "introduction": "为创意设定跨栏最低分与维度门槛，系统性过滤低质量想法，把资源留给高潜力方向。",
+      "category": "requirements_analysis",
+      "file_path": "threshold-of-viable-ideas.md"
+    },
+    {
+      "id": "triz",
+      "name": "TRIZ 发明原理",
+      "introduction": "用 TRIZ 识别并表述设计矛盾（改善A必然恶化B），查矛盾矩阵与发明原理，系统生成突破性方案并做小规模验证。",
+      "category": "requirements_analysis",
+      "file_path": "triz.md"
+    },
+    {
+      "id": "ui-ux-pro-max",
+      "name": "UI/UX Pro Max",
+      "introduction": "\"UI/UX design intelligence for web and mobile. Includes 50+ styles, 161 color palettes, 57 font pairings, 161 product types, 99 UX guidelines, and 25 chart types across 10 stacks (React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui, and HTML/CSS). Actions: plan, build, create, design, implement, review, fix, improve, optimize, enhance, refactor, and check UI/UX code. Projects: website, landing page, dashboard, admin panel, e-commerce, SaaS, portfolio, blog, and mobile app. Elements: button, modal, navbar, sidebar, card, table, form, and chart. Styles: glassmorphism, claymorphism, minimalism, brutalism, neumorphism, bento grid, dark mode, responsive, skeuomorphism, and flat design. Topics: color systems, accessibility, animation, layout, typography, font pairing, spacing, interaction states, shadow, and gradient. Integrations: shadcn/ui MCP for component search and examples.\"",
+      "category": "solution_design",
+      "package_path": "packages/ui-ux-pro-max.zip",
+      "file_path": "ui-ux-pro-max.md"
+    },
+    {
+      "id": "user-feedback-loop",
+      "name": "用户反馈闭环",
+      "introduction": "建立收集→分类归因→排期→回告用户的闭环，让用户感到被倾听，提升留存与口碑。",
+      "category": "effect_validation",
+      "file_path": "user-feedback-loop.md"
+    },
+    {
+      "id": "user-journey-map",
+      "name": "用户旅程地图",
+      "introduction": "绘制用户旅程地图，把触点、行为、情绪曲线、痛点与机会点放入同一时间轴以定位优化优先级。",
+      "category": "user_analysis",
+      "file_path": "user-journey-map.md"
+    },
+    {
+      "id": "user-story-map",
+      "name": "用户故事地图",
+      "introduction": "用用户故事地图按“活动→任务→子任务”组织需求，横轴呈现用户旅程、纵轴表示优先级，通过发布线切出有意义的 MVP 边界。",
+      "category": "user_analysis",
+      "file_path": "user-story-map.md"
+    },
+    {
+      "id": "validated-learning-loop",
+      "name": "验证学习循环",
+      "introduction": "用验证学习循环（Build→Measure→Learn）把“构建”变成“学习”，每轮只验证一个假设并基于预设标准决定坚持或转向。",
+      "category": "effect_validation",
+      "file_path": "validated-learning-loop.md"
+    },
+    {
+      "id": "value-chain-analysis",
+      "name": "价值链分析",
+      "introduction": "Porter 价值链：把企业活动分为主活动与支持活动，找成本高、差异化弱或可外包的环节，指导战略投入。",
+      "category": "solution_design",
+      "file_path": "value-chain-analysis.md"
+    },
+    {
+      "id": "value-proposition-canvas",
+      "name": "价值主张画布",
+      "introduction": "用价值主张画布对齐“用户任务/痛点/收益”与“产品功能/痛点解药/收益制造器”，检验与提升 Fit。",
+      "category": "requirements_analysis",
+      "file_path": "value-proposition-canvas.md"
+    },
+    {
+      "id": "wardley-mapping",
+      "name": "Wardley Map",
+      "introduction": "用 Wardley Mapping 在一张图上可视化价值链与组件进化阶段（Genesis→Custom→Product→Commodity），指导自建/购买/外包与战略窗口判断。",
+      "category": "requirements_analysis",
+      "file_path": "wardley-mapping.md"
+    },
+    {
+      "id": "working-backwards",
+      "name": "反向工作法",
+      "introduction": "用反向工作法（Amazon PR/FAQ）在写代码前先写新闻稿与 FAQ，从客户价值倒推需求边界与可行性，逼出模糊假设。",
+      "category": "requirements_analysis",
+      "file_path": "working-backwards.md"
+    },
+    {
+      "id": "design-annotation",
+      "name": "设计稿标注",
+      "introduction": "用于设计稿标注说明。完成标注后，输出可视化标注图片 + 文档。核心产物为「整体分栏图」：左侧放置原始设计稿，右侧完整呈现全部标注子项内容（1-13 节所有细节，非摘要）。另生成各章节专用可视化图。系统补全隐式标注。Use when 设计稿标注、设计交付、整体分栏标注图、左侧设计稿右侧完整规格、可视化标注、design handoff、给开发的一图全览规格说明书。",
+      "category": "solution_design",
+      "file_path": "design-annotation.md",
+      "package_path": "packages/design-annotation.zip"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "data": {
+    "id": "ckm-slides",
+    "name": "CKM 演示文稿",
+    "introduction": "Create strategic HTML presentations with Chart.js, design tokens, responsive layouts, copywriting formulas, and contextual slide strategies.",
+    "category": "solution_design",
+    "package_path": "packages/ckm-slides.zip",
+    "file_path": "ckm-slides.md",
+    "content": "\n# Slides\n\nStrategic HTML presentation design with data visualization.\n\n<args>$ARGUMENTS</args>\n\n## When to Use\n\n- Marketing presentations and pitch decks\n- Data-driven slides with Chart.js\n- Strategic slide design with layout patterns\n- Copywriting-optimized presentation content\n\n## Subcommands\n\n| Subcommand | Description | Reference |\n|------------|-------------|-----------|\n| `create` | Create strategic presentation slides | `references/create.md` |\n\n## References (Knowledge Base)\n\n| Topic | File |\n|-------|------|\n| Layout Patterns | `references/layout-patterns.md` |\n| HTML Template | `references/html-template.md` |\n| Copywriting Formulas | `references/copywriting-formulas.md` |\n| Slide Strategies | `references/slide-strategies.md` |\n\n## Routing\n\n1. Parse subcommand from `$ARGUMENTS` (first word)\n2. Load corresponding `references/{subcommand}.md`\n3. Execute with remaining arguments\n",
+    "has_package": true
+  }
+}

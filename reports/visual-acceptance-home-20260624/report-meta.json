@@ -1,0 +1,54 @@
+{
+  "dev_input": {
+    "type": "url",
+    "url": "http://localhost:3000/",
+    "resolved": "http://localhost:3000/",
+    "capture": "Playwright full_page 2056px desktop dpr=1",
+    "image": [
+      2056,
+      1230
+    ],
+    "aligned_to_frame": true,
+    "note": "3000 端口 webpack dev；Turbopack 中文路径 bug 已规避"
+  },
+  "design_input": {
+    "platform": "figma",
+    "type": "link",
+    "url": "https://www.figma.com/design/Sd6rkUWJZoFPvjr4uAC4hn/%E6%91%B8%E9%B1%BC%E5%91%A8%E5%88%8A?node-id=4-2"
+  },
+  "production_url": "http://localhost:3000/",
+  "resolved_url": "http://localhost:3000/",
+  "capture_method": "Playwright viewport 2056×1230 dpr=1 full_page",
+  "viewport": {
+    "width": 2056,
+    "height": 1230,
+    "dpr": 1
+  },
+  "image_size": [
+    2056,
+    1230
+  ],
+  "methodology": "Figma context + Playwright getComputedStyle",
+  "requirements_confirmed": {
+    "footer_about_color": {
+      "status": "confirmed",
+      "detail": "用户确认：页脚「关于」链接色实现符合产品预期，非缺陷"
+    },
+    "card_title_weight": {
+      "status": "confirmed",
+      "detail": "用户确认：精选卡片标题字重实现为 600，符合设计稿"
+    }
+  },
+  "corrections": [
+    {
+      "issue": "F-002",
+      "action": "用户确认：页脚「关于」链接色实现符合产品预期，非缺陷",
+      "score_after": 99
+    },
+    {
+      "issue": "F-001",
+      "action": "用户确认：精选卡片标题字重实现为 600，符合设计稿",
+      "score_after": 100
+    }
+  ]
+}

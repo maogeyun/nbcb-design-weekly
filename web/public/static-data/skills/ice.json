@@ -1,0 +1,11 @@
+{
+  "data": {
+    "id": "ice",
+    "name": "ICE 优先级",
+    "introduction": "用 ICE（Impact×Confidence×Ease）快速为实验和想法打分排序；与 ice-prioritization 目录一致，对齐 PMFrame 站内 slug「ice」。",
+    "category": "solution_design",
+    "file_path": "ice.md",
+    "content": "\nICE 是轻量、快速的优先级工具，适合数据不足的早期或每周增长例会。它把分歧从“谁嗓门大”转成“哪个维度估计不同”。\n\n## 公式（1–10 分）\n\n常用两种算法，团队需统一：\n\n- **乘积版**：\\( ICE = Impact \\times Confidence \\times Ease \\)\n- **均值版**（站内描述）：\\( ICE = (I + C + E) / 3 \\)\n\n- **Impact**：成功后对核心指标影响（1–10）\n- **Confidence**：成功把握（基于证据而非愿望，1–10）\n- **Ease**：易实现性（时间/人力/依赖，1–10）\n\n## 用法\n\n1) 列出 {ideas}\n2) 团队匿名同时打分（避免锚定效应）\n3) 取平均分排序，讨论分歧最大的条目（尤其是 Confidence）\n4) 跑 Top 2–3 个实验，复盘校准打分能力\n\n## 注意\n\n- ICE 适合战术实验，不适合 6 个月级战略押注。\n- 分数是估计：真正价值在于暴露「谁对 Impact / Confidence 假设不同」，再对齐证据。\n- 若想法之间 Reach 差异极大，可改用 RICE 或结合分层（ICE 排序 + 资源约束二次筛选）。\n",
+    "has_package": false
+  }
+}

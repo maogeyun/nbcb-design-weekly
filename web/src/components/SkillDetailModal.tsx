@@ -7,6 +7,7 @@ import type { Skill } from '@/types';
 import { SkillCategoryTag } from '@/components/SkillCategoryTag';
 import { SkillMarkdown } from '@/components/SkillMarkdown';
 import { getSkillDownload } from '@/lib/skill-utils';
+import { fetchSkillDetail } from '@/lib/public-data-client';
 
 type SkillDetail = Skill & {
   content?: string;
@@ -38,14 +39,7 @@ export function SkillDetailModal({
     setLoading(true);
     setSkill(null);
 
-    fetch(`/api/skills/${encodeURIComponent(skillId)}`)
-      .then(async (res) => {
-        const json = await res.json();
-        if (!res.ok) {
-          throw new Error(json.error ?? '加载失败');
-        }
-        return json.data as SkillDetail;
-      })
+    fetchSkillDetail(skillId)
       .then((data) => {
         if (!cancelled) {
           setSkill(data);

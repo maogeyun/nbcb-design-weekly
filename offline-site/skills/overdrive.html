@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>高野心视觉实现 · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / 高野心视觉实现
+    </p>
+    <span class="tag tag--solution_design">方案设计</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">高野心视觉实现</h1>
+      <p>Pushes interfaces past conventional limits with technically ambitious implementations — shaders, spring physics, scroll-driven reveals, 60fps animations. Use when the user wants to wow, impress, go all-out, or make something that feels extraordinary.</p>
+    </div>
+    
+    <div class="markdown"><p>Start your response with:</p>
+<pre><code>──────────── ⚡ OVERDRIVE ─────────────
+》》》 Entering overdrive mode...</code></pre>
+<p>Push an interface past conventional limits. This isn&#39;t just about visual effects — it&#39;s about using the full power of the browser to make any part of an interface feel extraordinary: a table that handles a million rows, a dialog that morphs from its trigger, a form that validates in real-time with streaming feedback, a page transition that feels cinematic.</p>
+<h2>MANDATORY PREPARATION</h2>
+<p>Invoke /impeccable — it contains design principles, anti-patterns, and the <strong>Context Gathering Protocol</strong>. Follow the protocol before proceeding — if no design context exists yet, you MUST run /impeccable teach first.</p>
+<p><strong>EXTRA IMPORTANT FOR THIS SKILL</strong>: Context determines what &quot;extraordinary&quot; means. A particle system on a creative portfolio is impressive. The same particle system on a settings page is embarrassing. But a settings page with instant optimistic saves and animated state transitions? That&#39;s extraordinary too. Understand the project&#39;s personality and goals before deciding what&#39;s appropriate.</p>
+<h3>Propose Before Building</h3>
+<p>This skill has the highest potential to misfire. Do NOT jump straight into implementation. You MUST:</p>
+<ol>
+<li><strong>Think through 2-3 different directions</strong> — consider different techniques, levels of ambition, and aesthetic approaches. For each direction, briefly describe what the result would look and feel like.</li>
+<li><strong>ask the user directly to clarify what you cannot infer.</strong> to present these directions and get the user&#39;s pick before writing any code. Explain trade-offs (browser support, performance cost, complexity).</li>
+<li>Only proceed with the direction the user confirms.</li>
+</ol>
+<p>Skipping this step risks building something embarrassing that needs to be thrown away.</p>
+<h3>Iterate with Browser Automation</h3>
+<p>Technically ambitious effects almost never work on the first try. You MUST actively use browser automation tools to preview your work, visually verify the result, and iterate. Do not assume the effect looks right — check it. Expect multiple rounds of refinement. The gap between &quot;technically works&quot; and &quot;looks extraordinary&quot; is closed through visual iteration, not code alone.</p>
+<p>---</p>
+<h2>Assess What &quot;Extraordinary&quot; Means Here</h2>
+<p>The right kind of technical ambition depends entirely on what you&#39;re working with. Before choosing a technique, ask: <strong>what would make a user of THIS specific interface say &quot;wow, that&#39;s nice&quot;?</strong></p>
+<h3>For visual/marketing surfaces</h3>
+<p>Pages, hero sections, landing pages, portfolios — the &quot;wow&quot; is often sensory: a scroll-driven reveal, a shader background, a cinematic page transition, generative art that responds to the cursor.</p>
+<h3>For functional UI</h3>
+<p>Tables, forms, dialogs, navigation — the &quot;wow&quot; is in how it FEELS: a dialog that morphs from the button that triggered it via View Transitions, a data table that renders 100k rows at 60fps via virtual scrolling, a form with streaming validation that feels instant, drag-and-drop with spring physics.</p>
+<h3>For performance-critical UI</h3>
+<p>The &quot;wow&quot; is invisible but felt: a search that filters 50k items without a flicker, a complex form that never blocks the main thread, an image editor that processes in near-real-time. The interface just never hesitates.</p>
+<h3>For data-heavy interfaces</h3>
+<p>Charts and dashboards — the &quot;wow&quot; is in fluidity: GPU-accelerated rendering via Canvas/WebGL for massive datasets, animated transitions between data states, force-directed graph layouts that settle naturally.</p>
+<p><strong>The common thread</strong>: something about the implementation goes beyond what users expect from a web interface. The technique serves the experience, not the other way around.</p>
+<h2>The Toolkit</h2>
+<p>Organized by what you&#39;re trying to achieve, not by technology name.</p>
+<h3>Make transitions feel cinematic</h3>
+<ul>
+<li><strong>View Transitions API</strong> (same-document: all browsers; cross-document: no Firefox) — shared element morphing between states. A list item expanding into a detail page. A button morphing into a dialog. This is the closest thing to native FLIP animations.</li>
+<li><strong><code>@starting-style</code></strong> (all browsers) — animate elements from <code>display: none</code> to visible with CSS only, including entry keyframes</li>
+<li><strong>Spring physics</strong> — natural motion with mass, tension, and damping instead of cubic-bezier. Libraries: motion (formerly Framer Motion), GSAP, or roll your own spring solver.</li>
+</ul>
+<h3>Tie animation to scroll position</h3>
+<ul>
+<li><strong>Scroll-driven animations</strong> (<code>animation-timeline: scroll()</code>) — CSS-only, no JS. Parallax, progress bars, reveal sequences all driven by scroll position. (Chrome/Edge/Safari; Firefox: flag only — always provide a static fallback)</li>
+</ul>
+<h3>Render beyond CSS</h3>
+<ul>
+<li><strong>WebGL</strong> (all browsers) — shader effects, post-processing, particle systems. Libraries: Three.js, OGL (lightweight), regl. Use for effects CSS can&#39;t express.</li>
+<li><strong>WebGPU</strong> (Chrome/Edge; Safari partial; Firefox: flag only) — next-gen GPU compute. More powerful than WebGL but limited browser support. Always fall back to WebGL2.</li>
+<li><strong>Canvas 2D / OffscreenCanvas</strong> — custom rendering, pixel manipulation, or moving heavy rendering off the main thread entirely via Web Workers + OffscreenCanvas.</li>
+<li><strong>SVG filter chains</strong> — displacement maps, turbulence, morphology for organic distortion effects. CSS-animatable.</li>
+</ul>
+<h3>Make data feel alive</h3>
+<ul>
+<li><strong>Virtual scrolling</strong> — render only visible rows for tables/lists with tens of thousands of items. No library required for simple cases; TanStack Virtual for complex ones.</li>
+<li><strong>GPU-accelerated charts</strong> — Canvas or WebGL-rendered data visualization for datasets too large for SVG/DOM. Libraries: deck.gl, regl-based custom renderers.</li>
+<li><strong>Animated data transitions</strong> — morph between chart states rather than replacing. D3&#39;s <code>transition()</code> or View Transitions for DOM-based charts.</li>
+</ul>
+<h3>Animate complex properties</h3>
+<ul>
+<li><strong><code>@property</code></strong> (all browsers) — register custom CSS properties with types, enabling animation of gradients, colors, and complex values that CSS can&#39;t normally interpolate.</li>
+<li><strong>Web Animations API</strong> (all browsers) — JavaScript-driven animations with the performance of CSS. Composable, cancellable, reversible. The foundation for complex choreography.</li>
+</ul>
+<h3>Push performance boundaries</h3>
+<ul>
+<li><strong>Web Workers</strong> — move computation off the main thread. Heavy data processing, image manipulation, search indexing — anything that would cause jank.</li>
+<li><strong>OffscreenCanvas</strong> — render in a Worker thread. The main thread stays free while complex visuals render in the background.</li>
+<li><strong>WASM</strong> — near-native performance for computation-heavy features. Image processing, physics simulations, codecs.</li>
+</ul>
+<h3>Interact with the device</h3>
+<ul>
+<li><strong>Web Audio API</strong> — spatial audio, audio-reactive visualizations, sonic feedback. Requires user gesture to start.</li>
+<li><strong>Device APIs</strong> — orientation, ambient light, geolocation. Use sparingly and always with user permission.</li>
+</ul>
+<p><strong>NOTE</strong>: This skill is about enhancing how an interface FEELS, not changing what a product DOES. Adding real-time collaboration, offline support, or new backend capabilities are product decisions, not UI enhancements. Focus on making existing features feel extraordinary.</p>
+<h2>Implement with Discipline</h2>
+<h3>Progressive enhancement is non-negotiable</h3>
+<p>Every technique must degrade gracefully. The experience without the enhancement must still be good.</p>
+<pre><code>@supports (animation-timeline: scroll()) {
+  .hero { animation-timeline: scroll(); }
+}</code></pre>
+<pre><code>if (&#39;gpu&#39; in navigator) { /* WebGPU */ }
+else if (canvas.getContext(&#39;webgl2&#39;)) { /* WebGL2 fallback */ }
+/* CSS-only fallback must still look good */</code></pre>
+<h3>Performance rules</h3>
+<ul>
+<li>Target 60fps. If dropping below 50, simplify.</li>
+<li>Respect <code>prefers-reduced-motion</code> — always. Provide a beautiful static alternative.</li>
+<li>Lazy-initialize heavy resources (WebGL contexts, WASM modules) only when near viewport.</li>
+<li>Pause off-screen rendering. Kill what you can&#39;t see.</li>
+<li>Test on real mid-range devices, not just your development machine.</li>
+</ul>
+<h3>Polish is the difference</h3>
+<p>The gap between &quot;cool&quot; and &quot;extraordinary&quot; is in the last 20% of refinement: the easing curve on a spring animation, the timing offset in a staggered reveal, the subtle secondary motion that makes a transition feel physical. Don&#39;t ship the first version that works — ship the version that feels inevitable.</p>
+<p><strong>NEVER</strong>:</p>
+<ul>
+<li>Ignore <code>prefers-reduced-motion</code> — this is an accessibility requirement, not a suggestion</li>
+<li>Ship effects that cause jank on mid-range devices</li>
+<li>Use bleeding-edge APIs without a functional fallback</li>
+<li>Add sound without explicit user opt-in</li>
+<li>Use technical ambition to mask weak design fundamentals — fix those first with other skills</li>
+<li>Layer multiple competing extraordinary moments — focus creates impact, excess creates noise</li>
+</ul>
+<h2>Verify the Result</h2>
+<ul>
+<li><strong>The wow test</strong>: Show it to someone who hasn&#39;t seen it. Do they react?</li>
+<li><strong>The removal test</strong>: Take it away. Does the experience feel diminished, or does nobody notice?</li>
+<li><strong>The device test</strong>: Run it on a phone, a tablet, a Chromebook. Still smooth?</li>
+<li><strong>The accessibility test</strong>: Enable reduced motion. Still beautiful?</li>
+<li><strong>The context test</strong>: Does this make sense for THIS brand and audience?</li>
+</ul>
+<p>Remember: &quot;Technically extraordinary&quot; isn&#39;t about using the newest API. It&#39;s about making an interface do something users didn&#39;t think a website could do.</p></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

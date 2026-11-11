@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:"$Sreact.suspense"
+3:I[49222,["500","static/chunks/500-e2a7ab501ac40f90.js","415","static/chunks/app/m/article/%5Bid%5D/page-5aba7d40c207e840.js"],"MobileArticlePageClient"]
+4:I[90484,[],"OutletBoundary"]
+0:{"rsc":["$","$1","c",{"children":[["$","$2",null,{"children":["$","$L3",null,{"article":{"id":"art-c128","title":"Words of Type","original_url":"https://wiki.wordsoftype.com","source_name":"Sidebar","published_at":"2026-06-16","category":"ui_design","introduction":"当你在 Figma 或 FontLab 里反复调整一个字母的弧度、粗细或开口，却苦于找不到准确的术语与同行讨论时，这本「Words of Type 百科」就像一位随身携带的字体解剖图谱。它把从 Alphabet 到 Ascender、从 Aperture 到 Bézier Curve 的数百个排版与字体设计术语，用清晰定义、历史脉络、设计考量和精美插图一一拆解，既有实用规则，也有美学洞见。对设计师而言，它不仅能让你在评审中精准表达\"这个 arm 太短了\"，更能帮助你在海量字体选择中建立结构化的判断标准，把原本模糊的\"感觉\"转化为可复用的设计语言。","language":"en","link_status":"link_unknown","status":"published","intro_reviewed":true,"click_count":0,"issue_id":"issue-3","sort_order":4},"issueId":"issue-3","issueNumber":3}]}],null,["$","$L4",null,{"children":["$","$2",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"hZQ7hwDsqTHpsAxefcyvp"}
+5:null

@@ -13,6 +13,7 @@ import { CategoryTag } from '@/components/CategoryTag';
 import { SkillCard } from '@/components/SkillCard';
 import { SkillDetailModal } from '@/components/SkillDetailModal';
 import { brandTokens } from '@/lib/tokens';
+import { searchPublicContent } from '@/lib/search-client';
 import { PageHeader } from '@/components/layout/PageHeader';
 
 const { Text, Paragraph } = Typography;
@@ -149,9 +150,7 @@ function SearchContent() {
     setSelectedSkillId(null);
     setLoading(true);
     try {
-      const res = await fetch(`/api/search?q=${encodeURIComponent(q)}`);
-      const json = await res.json();
-      const nextResults = json.data ?? { articles: [], skills: [] };
+      const nextResults = await searchPublicContent(q);
       setResults(nextResults);
       setActiveTab(pickDefaultTab(nextResults));
       setSearched(true);

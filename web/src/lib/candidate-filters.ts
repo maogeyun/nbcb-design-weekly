@@ -1,4 +1,7 @@
 import type { Article, ArticleCategory } from '@/types';
+import { introStatusTagStyles } from '@/lib/tokens';
+
+export type IntroStatus = keyof typeof introStatusTagStyles;
 
 export type IntroFilter = 'all' | 'reviewed' | 'pending' | 'empty';
 export type CandidateSortKey =
@@ -24,10 +27,14 @@ export const DEFAULT_CANDIDATE_FILTERS: CandidateFilterState = {
   sortKey: 'published_at_desc',
 };
 
+export function getIntroStatus(article: Article): IntroStatus {
+  if (article.intro_reviewed) return 'reviewed';
+  if (article.introduction) return 'pending';
+  return 'empty';
+}
+
 export function introStatusLabel(article: Article): string {
-  if (article.intro_reviewed) return '已审核';
-  if (article.introduction) return '待审核';
-  return '未生成';
+  return introStatusTagStyles[getIntroStatus(article)].label;
 }
 
 export function getCandidateSources(candidates: Article[]): string[] {

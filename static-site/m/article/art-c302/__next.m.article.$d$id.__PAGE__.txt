@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:"$Sreact.suspense"
+3:I[49222,["500","static/chunks/500-e2a7ab501ac40f90.js","415","static/chunks/app/m/article/%5Bid%5D/page-5aba7d40c207e840.js"],"MobileArticlePageClient"]
+4:I[90484,[],"OutletBoundary"]
+0:{"rsc":["$","$1","c",{"children":[["$","$2",null,{"children":["$","$L3",null,{"article":{"id":"art-c302","title":"Agentic AI Transparency: Why Every AI Decision Now Needs a “Why?” Button","original_url":"https://medium.com/@iizzathisharah/agentic-ai-transparency-why-every-ai-decision-now-needs-a-why-button-2d40947b619b?source=rss------ui_design-5","source_name":"Medium · UI Design","published_at":"2026-06-22","category":"ai_frontier","introduction":"当 AI 不再只是被动回答问题，而是开始替我们自主执行任务时，用户凭什么信任它？一旦 AI 拥有行动力，它交付的不再是单一答案，而是一连串黑盒决策后的结果，信任裂缝由此产生。为此，产品界面正围绕一个原则被重新设计：永远别让用户追问「它为什么这么做」。一个小小的「Why?」按钮或一行具体说明，这层「解释层」正成为 Agentic 时代的新基础设施，更是建立信任、满足合规与支持纠错的底线。真正赢得用户的不是最聪明的 AI，而是敢于摊开思考过程的 AI。设计师的新命题已然确立：如何让「解释」既克制具体，又始终与用户的「控制权」相伴而生。","language":"en","link_status":"link_unknown","status":"published","intro_reviewed":true,"click_count":0,"issue_id":"issue-4","sort_order":1},"issueId":"issue-4","issueNumber":4}]}],null,["$","$L4",null,{"children":["$","$2",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"hZQ7hwDsqTHpsAxefcyvp"}
+5:null

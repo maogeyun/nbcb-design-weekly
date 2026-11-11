@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:"$Sreact.suspense"
+3:I[49222,["500","static/chunks/500-e2a7ab501ac40f90.js","415","static/chunks/app/m/article/%5Bid%5D/page-5aba7d40c207e840.js"],"MobileArticlePageClient"]
+4:I[90484,[],"OutletBoundary"]
+0:{"rsc":["$","$1","c",{"children":[["$","$2",null,{"children":["$","$L3",null,{"article":{"id":"art-006","title":"The UX Research Reckoning","original_url":"https://uxdesign.cc/the-ux-research-reckoning","source_name":"UX Collective","published_at":"2026-06-04","category":"design_experience","introduction":"UX Collective 讨论用研在 AI 时代的价值重估：当生成速度远超验证速度，「轻量、高频、嵌入式」研究比大型报告更关键。作者主张将研究问题嵌入设计迭代节奏，用可执行的洞察替代冗长文档。对金融机构而言，合规场景下的可用性验证依然不可省略，但研究形式可以更敏捷——值得设计负责人思考团队能力配置。","language":"en","link_status":"link_ok","status":"published","issue_id":"issue-1","sort_order":6,"intro_reviewed":true,"click_count":0},"issueId":"issue-1","issueNumber":1}]}],null,["$","$L4",null,{"children":["$","$2",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"hZQ7hwDsqTHpsAxefcyvp"}
+5:null

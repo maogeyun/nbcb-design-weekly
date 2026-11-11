@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:"$Sreact.suspense"
+3:I[49222,["500","static/chunks/500-e2a7ab501ac40f90.js","415","static/chunks/app/m/article/%5Bid%5D/page-5aba7d40c207e840.js"],"MobileArticlePageClient"]
+4:I[90484,[],"OutletBoundary"]
+0:{"rsc":["$","$1","c",{"children":[["$","$2",null,{"children":["$","$L3",null,{"article":{"id":"art-c266","title":"用AI生成的图标不高级？试试这10个大厂设计师私藏图标库！","original_url":"https://uisdc.com/pick-your-icons","source_name":"优设网","published_at":"2026-06-21","category":"ai_frontier","introduction":"当 AI 已经能快速生成界面时，真正拉开质感差距的，往往不是大布局，而是图标这种「小零件」。如果不加约束，AI 很容易混用不同风格的图标：线宽不一、圆角不同、语义勉强，页面立刻显得像临时拼装。对设计师来说，提示词不该只写「加几个图标」，而要明确图标库、引入方式、尺寸、颜色与替代规则。图标选择看似细节，实则是视觉一致性、设计系统意识和 AI 协作质量的集中体现。","language":"zh","link_status":"link_unknown","status":"published","intro_reviewed":true,"click_count":0,"issue_id":"issue-4","sort_order":3},"issueId":"issue-4","issueNumber":4}]}],null,["$","$L4",null,{"children":["$","$2",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"hZQ7hwDsqTHpsAxefcyvp"}
+5:null

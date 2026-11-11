@@ -1,0 +1,11 @@
+{
+  "data": {
+    "id": "ogsm",
+    "name": "OGSM 战略",
+    "introduction": "用 OGSM（一页纸）把战略翻译成执行：Objective→Goals→Strategies→Measures，形成可追溯逻辑链并用于季度复盘。",
+    "category": "requirements_analysis",
+    "file_path": "ogsm.md",
+    "content": "\nOGSM 的价值是把“愿景文件”变成“下周行动”：在同一张纸上把目标、指标、策略、衡量串起来，任何断裂会立刻暴露。\n\n## 四层结构（一条因果链）\n\n- **O Objective（目标）**：定性、鼓舞人心、3–5 年视野（不写数字）\n- **G Goals（指标）**：3–5 个年度可核实的量化目标（数字+单位+截止）\n- **S Strategies（策略）**：方向性选择，用“我们将做 X，而非 Y”写清取舍\n- **M Measures（衡量/行动）**：每条策略的领先指标（每月追踪）+ owner\n\n## 何时使用\n\n- 年度战略规划与对齐\n- 作为 OKR 的上层战略锚点（OGSM 定战略，OKR 做季度执行）\n- 跨团队目标与职责对齐\n- 新业务/新产品线启动前对齐\n- 季度战略复盘（RAG 标注 + 调整策略）\n\n## 主持工作坊流程（典型 4–5 小时）\n\n1) **对齐 Objective（60min）**：读出来像官僚文件就重写\n2) **设定 Goals（60min）**：追问“达成它能证明 O 在实现吗？”\n3) **制定 Strategies（90min）**：写清“做什么/不做什么”，必须有取舍\n4) **绑定 Measures（60min）**：为每条策略定义 2–3 个领先指标 + owner\n5) **上墙与复盘**：季度 RAG 标注，问“哪条策略已被证伪？”\n\n## 常见坑\n\n- Objective 写成指标（出现数字就应下放到 Goals）\n- Strategies 不写取舍，变成口号\n- Measures 选滞后指标（年度收入）而非领先指标（本月新签/转化等）\n\n",
+    "has_package": false
+  }
+}

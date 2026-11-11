@@ -1,0 +1,18 @@
+{
+  "data": {
+    "id": "art-c02",
+    "title": "示例：失效外链文章",
+    "original_url": "https://example.com/removed-article",
+    "source_name": "示例来源",
+    "published_at": "2026-05-20",
+    "category": "design_experience",
+    "introduction": "此条用于演示外链失效状态：引言内容完整保留，但阅读原文按钮将置灰，并提示用户链接暂时无法访问。原文 URL 可复制后手动尝试打开。",
+    "language": "zh",
+    "link_status": "link_broken",
+    "status": "published",
+    "issue_id": "issue-1",
+    "sort_order": 10,
+    "intro_reviewed": true,
+    "click_count": 0
+  }
+}

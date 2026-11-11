@@ -1,0 +1,11 @@
+{
+  "data": {
+    "id": "heart",
+    "name": "HEART 指标",
+    "introduction": "Define UX metrics using the HEART framework for user-centered measurement",
+    "category": "effect_validation",
+    "file_path": "heart.md",
+    "content": "\nDefine user experience metrics using Google's HEART framework across five dimensions. For each dimension, produce a clear Goal, the Signals that indicate progress, and concrete Metrics that can be instrumented.\n\n## Steps\n\n1. **Clarify scope**\n   - Identify the product/feature and primary user segment.\n   - Note the primary user job-to-be-done and success outcome.\n\n2. **Create a HEART table**\n   - **Happiness** — user satisfaction and sentiment (e.g., NPS, CSAT, perceived ease-of-use).\n   - **Engagement** — depth and frequency of interaction (e.g., sessions per user, actions per session).\n   - **Adoption** — acquisition and initial uptake (e.g., new signups, feature activation rate).\n   - **Retention** — repeat usage over time (e.g., D7/D30 retention, churn).\n   - **Task Success** — efficiency and effectiveness (e.g., completion rate, time-on-task, error rate).\n\n3. **Make metrics shippable**\n   - Prefer metrics tied to specific events/properties.\n   - Include a recommended cadence and likely tooling (e.g., analytics, surveys, logging).\n   - Call out likely confounders (seasonality, cohort effects) when relevant.\n\n## Output Format\n\nReturn a HEART table with one row per dimension and columns:\n- **Goal**\n- **Signal**\n- **Metric**\n- **Cadence**\n- **Tooling**\n",
+    "has_package": false
+  }
+}

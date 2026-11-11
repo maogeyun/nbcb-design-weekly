@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import type { IssueHomePreview } from '@/types';
 import { SITE_TAGLINE } from '@/lib/constants';
 import { brandTokens } from '@/lib/tokens';
+import { fetchLatestIssuePreview } from '@/lib/public-data-client';
 import { HomeHeroBanner } from '@/components/home/HomeHeroBanner';
 import { FeaturedArticlesSection } from '@/components/home/FeaturedArticlesSection';
 import { HomeArchiveCTA } from '@/components/home/HomeArchiveCTA';
@@ -16,13 +17,9 @@ export default function HomePage() {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch('/api/issues/latest')
-      .then((r) => {
-        if (!r.ok) throw new Error('Failed to load latest issue');
-        return r.json();
-      })
-      .then((json) => {
-        setLatest(json.data);
+    fetchLatestIssuePreview()
+      .then((data) => {
+        setLatest(data);
         setLoading(false);
       })
       .catch(() => {

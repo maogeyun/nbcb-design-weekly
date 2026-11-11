@@ -12,6 +12,7 @@ import {
   filterSkillsByKeyword,
   parseSkillCategory,
 } from '@/lib/skill-utils';
+import { fetchSkillsList } from '@/lib/public-data-client';
 import { SkillCard } from '@/components/SkillCard';
 import { SkillDetailModal } from '@/components/SkillDetailModal';
 import { PageHeader } from '@/components/layout/PageHeader';
@@ -300,10 +301,9 @@ function SkillsContent() {
   }, [rawCategory, category, router, rawSkill, draftKeyword]);
 
   useEffect(() => {
-    fetch('/api/skills')
-      .then((r) => r.json())
-      .then((json) => {
-        setSkills(json.data ?? []);
+    fetchSkillsList()
+      .then((data) => {
+        setSkills(data ?? []);
         setLoading(false);
       })
       .catch(() => setLoading(false));

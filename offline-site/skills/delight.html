@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>愉悦感设计 · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / 愉悦感设计
+    </p>
+    <span class="tag tag--solution_design">方案设计</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">愉悦感设计</h1>
+      <p>Add moments of joy, personality, and unexpected touches that make interfaces memorable and enjoyable to use. Elevates functional to delightful. Use when the user asks to add polish, personality, animations, micro-interactions, delight, or make an interface feel fun or memorable.</p>
+    </div>
+    
+    <div class="markdown"><p>Identify opportunities to add moments of joy, personality, and unexpected polish that transform functional interfaces into delightful experiences.</p>
+<h2>MANDATORY PREPARATION</h2>
+<p>Invoke /impeccable — it contains design principles, anti-patterns, and the <strong>Context Gathering Protocol</strong>. Follow the protocol before proceeding — if no design context exists yet, you MUST run /impeccable teach first. Additionally gather: what&#39;s appropriate for the domain (playful vs professional vs quirky vs elegant).</p>
+<p>---</p>
+<h2>Assess Delight Opportunities</h2>
+<p>Identify where delight would enhance (not distract from) the experience:</p>
+<ol>
+<li><strong>Find natural delight moments</strong>:</li>
+</ol>
+<p>   - <strong>Success states</strong>: Completed actions (save, send, publish)</p>
+<p>   - <strong>Empty states</strong>: First-time experiences, onboarding</p>
+<p>   - <strong>Loading states</strong>: Waiting periods that could be entertaining</p>
+<p>   - <strong>Achievements</strong>: Milestones, streaks, completions</p>
+<p>   - <strong>Interactions</strong>: Hover states, clicks, drags</p>
+<p>   - <strong>Errors</strong>: Softening frustrating moments</p>
+<p>   - <strong>Easter eggs</strong>: Hidden discoveries for curious users</p>
+<ol>
+<li><strong>Understand the context</strong>:</li>
+</ol>
+<p>   - What&#39;s the brand personality? (Playful? Professional? Quirky? Elegant?)</p>
+<p>   - Who&#39;s the audience? (Tech-savvy? Creative? Corporate?)</p>
+<p>   - What&#39;s the emotional context? (Accomplishment? Exploration? Frustration?)</p>
+<p>   - What&#39;s appropriate? (Banking app ≠ gaming app)</p>
+<ol>
+<li><strong>Define delight strategy</strong>:</li>
+</ol>
+<p>   - <strong>Subtle sophistication</strong>: Refined micro-interactions (luxury brands)</p>
+<p>   - <strong>Playful personality</strong>: Whimsical illustrations and copy (consumer apps)</p>
+<p>   - <strong>Helpful surprises</strong>: Anticipating needs before users ask (productivity tools)</p>
+<p>   - <strong>Sensory richness</strong>: Satisfying sounds, smooth animations (creative tools)</p>
+<p>If any of these are unclear from the codebase, ask the user directly to clarify what you cannot infer.</p>
+<p><strong>CRITICAL</strong>: Delight should enhance usability, never obscure it. If users notice the delight more than accomplishing their goal, you&#39;ve gone too far.</p>
+<h2>Delight Principles</h2>
+<p>Follow these guidelines:</p>
+<h3>Delight Amplifies, Never Blocks</h3>
+<ul>
+<li>Delight moments should be quick (&lt; 1 second)</li>
+<li>Never delay core functionality for delight</li>
+<li>Make delight skippable or subtle</li>
+<li>Respect user&#39;s time and task focus</li>
+</ul>
+<h3>Surprise and Discovery</h3>
+<ul>
+<li>Hide delightful details for users to discover</li>
+<li>Reward exploration and curiosity</li>
+<li>Don&#39;t announce every delight moment</li>
+<li>Let users share discoveries with others</li>
+</ul>
+<h3>Appropriate to Context</h3>
+<ul>
+<li>Match delight to emotional moment (celebrate success, empathize with errors)</li>
+<li>Respect the user&#39;s state (don&#39;t be playful during critical errors)</li>
+<li>Match brand personality and audience expectations</li>
+<li>Cultural sensitivity (what&#39;s delightful varies by culture)</li>
+</ul>
+<h3>Compound Over Time</h3>
+<ul>
+<li>Delight should remain fresh with repeated use</li>
+<li>Vary responses (not same animation every time)</li>
+<li>Reveal deeper layers with continued use</li>
+<li>Build anticipation through patterns</li>
+</ul>
+<h2>Delight Techniques</h2>
+<p>Add personality and joy through these methods:</p>
+<h3>Micro-interactions &amp; Animation</h3>
+<p><strong>Button delight</strong>:</p>
+<pre><code>/* Satisfying button press */
+.button {
+  transition: transform 0.1s, box-shadow 0.1s;
+}
+.button:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Ripple effect on click */
+/* Smooth lift on hover */
+.button:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s cubic-bezier(0.25, 1, 0.5, 1); /* ease-out-quart */
+}</code></pre>
+<p><strong>Loading delight</strong>:</p>
+<ul>
+<li>Playful loading animations (not just spinners)</li>
+<li>Personality in loading messages (write product-specific ones, not generic AI filler)</li>
+<li>Progress indication with encouraging messages</li>
+<li>Skeleton screens with subtle animations</li>
+</ul>
+<p><strong>Success animations</strong>:</p>
+<ul>
+<li>Checkmark draw animation</li>
+<li>Confetti burst for major achievements</li>
+<li>Gentle scale + fade for confirmation</li>
+<li>Satisfying sound effects (subtle)</li>
+</ul>
+<p><strong>Hover surprises</strong>:</p>
+<ul>
+<li>Icons that animate on hover</li>
+<li>Color shifts or glow effects</li>
+<li>Tooltip reveals with personality</li>
+<li>Cursor changes (custom cursors for branded experiences)</li>
+</ul>
+<h3>Personality in Copy</h3>
+<p><strong>Playful error messages</strong>:</p>
+<pre><code>&quot;Error 404&quot;
+&quot;This page is playing hide and seek. (And winning)&quot;
+
+&quot;Connection failed&quot;
+&quot;Looks like the internet took a coffee break. Want to retry?&quot;</code></pre>
+<p><strong>Encouraging empty states</strong>:</p>
+<pre><code>&quot;No projects&quot;
+&quot;Your canvas awaits. Create something amazing.&quot;
+
+&quot;No messages&quot;
+&quot;Inbox zero! You&#39;re crushing it today.&quot;</code></pre>
+<p><strong>Playful labels &amp; tooltips</strong>:</p>
+<pre><code>&quot;Delete&quot;
+&quot;Send to void&quot; (for playful brand)
+
+&quot;Help&quot;
+&quot;Rescue me&quot; (tooltip)</code></pre>
+<p><strong>IMPORTANT</strong>: Match copy personality to brand. Banks shouldn&#39;t be wacky, but they can be warm.</p>
+<h3>Illustrations &amp; Visual Personality</h3>
+<p><strong>Custom illustrations</strong>:</p>
+<ul>
+<li>Empty state illustrations (not stock icons)</li>
+<li>Error state illustrations (friendly monsters, quirky characters)</li>
+<li>Loading state illustrations (animated characters)</li>
+<li>Success state illustrations (celebrations)</li>
+</ul>
+<p><strong>Icon personality</strong>:</p>
+<ul>
+<li>Custom icon set matching brand personality</li>
+<li>Animated icons (subtle motion on hover/click)</li>
+<li>Illustrative icons (more detailed than generic)</li>
+<li>Consistent style across all icons</li>
+</ul>
+<p><strong>Background effects</strong>:</p>
+<ul>
+<li>Subtle particle effects</li>
+<li>Gradient mesh backgrounds</li>
+<li>Geometric patterns</li>
+<li>Parallax depth</li>
+<li>Time-of-day themes (morning vs night)</li>
+</ul>
+<h3>Satisfying Interactions</h3>
+<p><strong>Drag and drop delight</strong>:</p>
+<ul>
+<li>Lift effect on drag (shadow, scale)</li>
+<li>Snap animation when dropped</li>
+<li>Satisfying placement sound</li>
+<li>Undo toast (&quot;Dropped in wrong place? [Undo]&quot;)</li>
+</ul>
+<p><strong>Toggle switches</strong>:</p>
+<ul>
+<li>Smooth slide with spring physics</li>
+<li>Color transition</li>
+<li>Haptic feedback on mobile</li>
+<li>Optional sound effect</li>
+</ul>
+<p><strong>Progress &amp; achievements</strong>:</p>
+<ul>
+<li>Streak counters with celebratory milestones</li>
+<li>Progress bars that &quot;celebrate&quot; at 100%</li>
+<li>Badge unlocks with animation</li>
+<li>Playful stats (&quot;You&#39;re on fire! 5 days in a row&quot;)</li>
+</ul>
+<p><strong>Form interactions</strong>:</p>
+<ul>
+<li>Input fields that animate on focus</li>
+<li>Checkboxes with a satisfying scale pulse when checked</li>
+<li>Success state that celebrates valid input</li>
+<li>Auto-grow textareas</li>
+</ul>
+<h3>Sound Design</h3>
+<p><strong>Subtle audio cues</strong> (when appropriate):</p>
+<ul>
+<li>Notification sounds (distinctive but not annoying)</li>
+<li>Success sounds (satisfying &quot;ding&quot;)</li>
+<li>Error sounds (empathetic, not harsh)</li>
+<li>Typing sounds for chat/messaging</li>
+<li>Ambient background audio (very subtle)</li>
+</ul>
+<p><strong>IMPORTANT</strong>:</p>
+<ul>
+<li>Respect system sound settings</li>
+<li>Provide mute option</li>
+<li>Keep volumes quiet (subtle cues, not alarms)</li>
+<li>Don&#39;t play on every interaction (sound fatigue is real)</li>
+</ul>
+<h3>Easter Eggs &amp; Hidden Delights</h3>
+<p><strong>Discovery rewards</strong>:</p>
+<ul>
+<li>Konami code unlocks special theme</li>
+<li>Hidden keyboard shortcuts (Cmd+K for special features)</li>
+<li>Hover reveals on logos or illustrations</li>
+<li>Alt text jokes on images (for screen reader users too!)</li>
+<li>Console messages for developers (&quot;Like what you see? We&#39;re hiring!&quot;)</li>
+</ul>
+<p><strong>Seasonal touches</strong>:</p>
+<ul>
+<li>Holiday themes (subtle, tasteful)</li>
+<li>Seasonal color shifts</li>
+<li>Weather-based variations</li>
+<li>Time-based changes (dark at night, light during day)</li>
+</ul>
+<p><strong>Contextual personality</strong>:</p>
+<ul>
+<li>Different messages based on time of day</li>
+<li>Responses to specific user actions</li>
+<li>Randomized variations (not same every time)</li>
+<li>Progressive reveals with continued use</li>
+</ul>
+<h3>Loading &amp; Waiting States</h3>
+<p><strong>Make waiting engaging</strong>:</p>
+<ul>
+<li>Interesting loading messages that rotate</li>
+<li>Progress bars with personality</li>
+<li>Mini-games during long loads</li>
+<li>Fun facts or tips while waiting</li>
+<li>Countdown with encouraging messages</li>
+</ul>
+<pre><code>Loading messages — write ones specific to your product, not generic AI filler:
+- &quot;Crunching your latest numbers...&quot;
+- &quot;Syncing with your team&#39;s changes...&quot;
+- &quot;Preparing your dashboard...&quot;
+- &quot;Checking for updates since yesterday...&quot;</code></pre>
+<p><strong>WARNING</strong>: Avoid cliched loading messages like &quot;Herding pixels&quot;, &quot;Teaching robots to dance&quot;, &quot;Consulting the magic 8-ball&quot;, &quot;Counting backwards from infinity&quot;. These are AI-slop copy — instantly recognizable as machine-generated. Write messages that are specific to what your product actually does.</p>
+<h3>Celebration Moments</h3>
+<p><strong>Success celebrations</strong>:</p>
+<ul>
+<li>Confetti for major milestones</li>
+<li>Animated checkmarks for completions</li>
+<li>Progress bar celebrations at 100%</li>
+<li>&quot;Achievement unlocked&quot; style notifications</li>
+<li>Personalized messages (&quot;You published your 10th article!&quot;)</li>
+</ul>
+<p><strong>Milestone recognition</strong>:</p>
+<ul>
+<li>First-time actions get special treatment</li>
+<li>Streak tracking and celebration</li>
+<li>Progress toward goals</li>
+<li>Anniversary celebrations</li>
+</ul>
+<h2>Implementation Patterns</h2>
+<p><strong>Animation libraries</strong>:</p>
+<ul>
+<li>Framer Motion (React)</li>
+<li>GSAP (universal)</li>
+<li>Lottie (After Effects animations)</li>
+<li>Canvas confetti (party effects)</li>
+</ul>
+<p><strong>Sound libraries</strong>:</p>
+<ul>
+<li>Howler.js (audio management)</li>
+<li>Use-sound (React hook)</li>
+</ul>
+<p><strong>Physics libraries</strong>:</p>
+<ul>
+<li>React Spring (spring physics)</li>
+<li>Popmotion (animation primitives)</li>
+</ul>
+<p><strong>IMPORTANT</strong>: File size matters. Compress images, optimize animations, lazy load delight features.</p>
+<p><strong>NEVER</strong>:</p>
+<ul>
+<li>Delay core functionality for delight</li>
+<li>Force users through delightful moments (make skippable)</li>
+<li>Use delight to hide poor UX</li>
+<li>Overdo it (less is more)</li>
+<li>Ignore accessibility (animate responsibly, provide alternatives)</li>
+<li>Make every interaction delightful (special moments should be special)</li>
+<li>Sacrifice performance for delight</li>
+<li>Be inappropriate for context (read the room)</li>
+</ul>
+<h2>Verify Delight Quality</h2>
+<p>Test that delight actually delights:</p>
+<ul>
+<li><strong>User reactions</strong>: Do users smile? Share screenshots?</li>
+<li><strong>Doesn&#39;t annoy</strong>: Still pleasant after 100th time?</li>
+<li><strong>Doesn&#39;t block</strong>: Can users opt out or skip?</li>
+<li><strong>Performant</strong>: No jank, no slowdown</li>
+<li><strong>Appropriate</strong>: Matches brand and context</li>
+<li><strong>Accessible</strong>: Works with reduced motion, screen readers</li>
+</ul>
+<p>Remember: Delight is the difference between a tool and an experience. Add personality, surprise users positively, and create moments worth sharing. But always respect usability - delight should enhance, never obstruct.</p></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

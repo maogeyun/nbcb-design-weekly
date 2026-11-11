@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:"$Sreact.suspense"
+3:I[49222,["500","static/chunks/500-e2a7ab501ac40f90.js","415","static/chunks/app/m/article/%5Bid%5D/page-5aba7d40c207e840.js"],"MobileArticlePageClient"]
+4:I[90484,[],"OutletBoundary"]
+0:{"rsc":["$","$1","c",{"children":[["$","$2",null,{"children":["$","$L3",null,{"article":{"id":"art-001","title":"Config 2025: Pushing past the limits of design systems","original_url":"https://www.figma.com/blog/config-2025-design-systems/","source_name":"Figma Blog","published_at":"2026-06-10","category":"ui_design","introduction":"Figma 在 Config 2025 上展示了设计系统的新边界：从组件库到跨产品 token 治理，再到 AI 辅助的变体生成。文章指出，成熟的设计系统不再只是 UI 组件集合，而是连接产品、研发与品牌的「语义层」。对银行 App 而言，这意味着组件与业务状态（如交易成功、风控提示）需要更紧密的 token 映射。若你正在推进手机银行设计系统升级，此文提供了国际一线团队的演进路径参考。","language":"en","link_status":"link_ok","status":"published","issue_id":"issue-1","sort_order":1,"intro_reviewed":true,"click_count":2},"issueId":"issue-1","issueNumber":1}]}],null,["$","$L4",null,{"children":["$","$2",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"hZQ7hwDsqTHpsAxefcyvp"}
+5:null

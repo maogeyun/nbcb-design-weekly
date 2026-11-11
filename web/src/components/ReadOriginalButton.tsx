@@ -3,6 +3,7 @@
 import { Button, Tooltip } from 'antd';
 import { ExportOutlined } from '@ant-design/icons';
 import type { LinkStatus } from '@/types';
+import { isStaticExportMode } from '@/lib/public-data-client';
 
 interface ReadOriginalButtonProps {
   url: string;
@@ -27,7 +28,7 @@ export function ReadOriginalButton({
 
   const handleClick = async () => {
     if (broken) return;
-    if (articleId) {
+    if (articleId && !isStaticExportMode()) {
       try {
         await fetch(`/api/articles/${articleId}/click`, { method: 'POST' });
       } catch {

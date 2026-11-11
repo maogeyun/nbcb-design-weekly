@@ -1,0 +1,18 @@
+{
+  "data": {
+    "id": "art-c317",
+    "title": "KYC Was Blocking the Wrong Trucks",
+    "original_url": "https://medium.com/@adwithibalachandra/kyc-was-blocking-the-wrong-trucks-51c341b39ae2?source=rss------product_design-5",
+    "source_name": "Medium · Product Design",
+    "published_at": "2026-06-22",
+    "category": "ui_design",
+    "introduction": "在很多验证流程里，系统拒绝用户，并不一定是因为用户错了，而是因为产品把真实世界想得太简单。BlackBuck 的 KYC 问题正是如此：司机与车辆登记所有人姓名不一致，被系统一律视为异常，却忽略了家庭持有、公司车辆、近期购车等复杂但合法的所有权关系。对设计师而言，这不是一个单纯的表单优化问题，而是一次对「信任如何被建模」的重新审视。当界面无法表达真实情境，复杂性就会被推给用户、客服和线下流程。真正好的验证设计，不是更快地判定通过或失败，而是先理解用户处境，再把模糊的现实转译为可验证、可解释、可继续前进的路径。",
+    "language": "en",
+    "link_status": "link_unknown",
+    "status": "published",
+    "intro_reviewed": true,
+    "click_count": 0,
+    "issue_id": "issue-4",
+    "sort_order": 5
+  }
+}

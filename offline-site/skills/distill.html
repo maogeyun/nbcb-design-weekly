@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>设计简化 · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / 设计简化
+    </p>
+    <span class="tag tag--solution_design">方案设计</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">设计简化</h1>
+      <p>Strip designs to their essence by removing unnecessary complexity. Great design is simple, powerful, and clean. Use when the user asks to simplify, declutter, reduce noise, remove elements, or make a UI cleaner and more focused.</p>
+    </div>
+    
+    <div class="markdown"><p>Remove unnecessary complexity from designs, revealing the essential elements and creating clarity through ruthless simplification.</p>
+<h2>MANDATORY PREPARATION</h2>
+<p>Invoke /impeccable — it contains design principles, anti-patterns, and the <strong>Context Gathering Protocol</strong>. Follow the protocol before proceeding — if no design context exists yet, you MUST run /impeccable teach first.</p>
+<p>---</p>
+<h2>Assess Current State</h2>
+<p>Analyze what makes the design feel complex or cluttered:</p>
+<ol>
+<li><strong>Identify complexity sources</strong>:</li>
+</ol>
+<p>   - <strong>Too many elements</strong>: Competing buttons, redundant information, visual clutter</p>
+<p>   - <strong>Excessive variation</strong>: Too many colors, fonts, sizes, styles without purpose</p>
+<p>   - <strong>Information overload</strong>: Everything visible at once, no progressive disclosure</p>
+<p>   - <strong>Visual noise</strong>: Unnecessary borders, shadows, backgrounds, decorations</p>
+<p>   - <strong>Confusing hierarchy</strong>: Unclear what matters most</p>
+<p>   - <strong>Feature creep</strong>: Too many options, actions, or paths forward</p>
+<ol>
+<li><strong>Find the essence</strong>:</li>
+</ol>
+<p>   - What&#39;s the primary user goal? (There should be ONE)</p>
+<p>   - What&#39;s actually necessary vs nice-to-have?</p>
+<p>   - What can be removed, hidden, or combined?</p>
+<p>   - What&#39;s the 20% that delivers 80% of value?</p>
+<p>If any of these are unclear from the codebase, ask the user directly to clarify what you cannot infer.</p>
+<p><strong>CRITICAL</strong>: Simplicity is not about removing features - it&#39;s about removing obstacles between users and their goals. Every element should justify its existence.</p>
+<h2>Plan Simplification</h2>
+<p>Create a ruthless editing strategy:</p>
+<ul>
+<li><strong>Core purpose</strong>: What&#39;s the ONE thing this should accomplish?</li>
+<li><strong>Essential elements</strong>: What&#39;s truly necessary to achieve that purpose?</li>
+<li><strong>Progressive disclosure</strong>: What can be hidden until needed?</li>
+<li><strong>Consolidation opportunities</strong>: What can be combined or integrated?</li>
+</ul>
+<p><strong>IMPORTANT</strong>: Simplification is hard. It requires saying no to good ideas to make room for great execution. Be ruthless.</p>
+<h2>Simplify the Design</h2>
+<p>Systematically remove complexity across these dimensions:</p>
+<h3>Information Architecture</h3>
+<ul>
+<li><strong>Reduce scope</strong>: Remove secondary actions, optional features, redundant information</li>
+<li><strong>Progressive disclosure</strong>: Hide complexity behind clear entry points (accordions, modals, step-through flows)</li>
+<li><strong>Combine related actions</strong>: Merge similar buttons, consolidate forms, group related content</li>
+<li><strong>Clear hierarchy</strong>: ONE primary action, few secondary actions, everything else tertiary or hidden</li>
+<li><strong>Remove redundancy</strong>: If it&#39;s said elsewhere, don&#39;t repeat it here</li>
+</ul>
+<h3>Visual Simplification</h3>
+<ul>
+<li><strong>Reduce color palette</strong>: Use 1-2 colors plus neutrals, not 5-7 colors</li>
+<li><strong>Limit typography</strong>: One font family, 3-4 sizes maximum, 2-3 weights</li>
+<li><strong>Remove decorations</strong>: Eliminate borders, shadows, backgrounds that don&#39;t serve hierarchy or function</li>
+<li><strong>Flatten structure</strong>: Reduce nesting, remove unnecessary containers—never nest cards inside cards</li>
+<li><strong>Remove unnecessary cards</strong>: Cards aren&#39;t needed for basic layout; use spacing and alignment instead</li>
+<li><strong>Consistent spacing</strong>: Use one spacing scale, remove arbitrary gaps</li>
+</ul>
+<h3>Layout Simplification</h3>
+<ul>
+<li><strong>Linear flow</strong>: Replace complex grids with simple vertical flow where possible</li>
+<li><strong>Remove sidebars</strong>: Move secondary content inline or hide it</li>
+<li><strong>Full-width</strong>: Use available space generously instead of complex multi-column layouts</li>
+<li><strong>Consistent alignment</strong>: Pick left or center, stick with it</li>
+<li><strong>Generous white space</strong>: Let content breathe, don&#39;t pack everything tight</li>
+</ul>
+<h3>Interaction Simplification</h3>
+<ul>
+<li><strong>Reduce choices</strong>: Fewer buttons, fewer options, clearer path forward (paradox of choice is real)</li>
+<li><strong>Smart defaults</strong>: Make common choices automatic, only ask when necessary</li>
+<li><strong>Inline actions</strong>: Replace modal flows with inline editing where possible</li>
+<li><strong>Remove steps</strong>: Can signup be one step instead of three? Can checkout be simplified?</li>
+<li><strong>Clear CTAs</strong>: ONE obvious next step, not five competing actions</li>
+</ul>
+<h3>Content Simplification</h3>
+<ul>
+<li><strong>Shorter copy</strong>: Cut every sentence in half, then do it again</li>
+<li><strong>Active voice</strong>: &quot;Save changes&quot; not &quot;Changes will be saved&quot;</li>
+<li><strong>Remove jargon</strong>: Plain language always wins</li>
+<li><strong>Scannable structure</strong>: Short paragraphs, bullet points, clear headings</li>
+<li><strong>Essential information only</strong>: Remove marketing fluff, legalese, hedging</li>
+<li><strong>Remove redundant copy</strong>: No headers restating intros, no repeated explanations, say it once</li>
+</ul>
+<h3>Code Simplification</h3>
+<ul>
+<li><strong>Remove unused code</strong>: Dead CSS, unused components, orphaned files</li>
+<li><strong>Flatten component trees</strong>: Reduce nesting depth</li>
+<li><strong>Consolidate styles</strong>: Merge similar styles, use utilities consistently</li>
+<li><strong>Reduce variants</strong>: Does that component need 12 variations, or can 3 cover 90% of cases?</li>
+</ul>
+<p><strong>NEVER</strong>:</p>
+<ul>
+<li>Remove necessary functionality (simplicity ≠ feature-less)</li>
+<li>Sacrifice accessibility for simplicity (clear labels and ARIA still required)</li>
+<li>Make things so simple they&#39;re unclear (mystery ≠ minimalism)</li>
+<li>Remove information users need to make decisions</li>
+<li>Eliminate hierarchy completely (some things should stand out)</li>
+<li>Oversimplify complex domains (match complexity to actual task complexity)</li>
+</ul>
+<h2>Verify Simplification</h2>
+<p>Ensure simplification improves usability:</p>
+<ul>
+<li><strong>Faster task completion</strong>: Can users accomplish goals more quickly?</li>
+<li><strong>Reduced cognitive load</strong>: Is it easier to understand what to do?</li>
+<li><strong>Still complete</strong>: Are all necessary features still accessible?</li>
+<li><strong>Clearer hierarchy</strong>: Is it obvious what matters most?</li>
+<li><strong>Better performance</strong>: Does simpler design load faster?</li>
+</ul>
+<h2>Document Removed Complexity</h2>
+<p>If you removed features or options:</p>
+<ul>
+<li>Document why they were removed</li>
+<li>Consider if they need alternative access points</li>
+<li>Note any user feedback to monitor</li>
+</ul>
+<p>Remember: You have great taste and judgment. Simplification is an act of confidence - knowing what to keep and courage to remove the rest. As Antoine de Saint-Exupéry said: &quot;Perfection is achieved not when there is nothing more to add, but when there is nothing left to take away.&quot;</p></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

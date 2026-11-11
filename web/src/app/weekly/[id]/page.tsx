@@ -1,10 +1,13 @@
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
+import { getStaticIssueParams } from '@/lib/static-params';
 import { getIssueById } from '@/lib/store';
 import { BreadcrumbPageData } from '@/components/layout/BreadcrumbProvider';
 import { WeeklyPageClient } from './WeeklyPageClient';
 
-export const dynamic = 'force-dynamic';
+export function generateStaticParams() {
+  return getStaticIssueParams();
+}
 
 export default async function WeeklyPage({
   params,

@@ -42,6 +42,48 @@ export function buildAppHref(path: string, context?: AppLinkContext): string {
   return query ? `${url.pathname}?${query}` : url.pathname;
 }
 
+const MOBILE_PREFIX = '/m';
+
+function withMobilePrefix(pathname: string): string {
+  if (pathname === '/' || pathname === '') return MOBILE_PREFIX;
+  if (pathname.startsWith(MOBILE_PREFIX)) return pathname;
+  return `${MOBILE_PREFIX}${pathname.startsWith('/') ? pathname : `/${pathname}`}`;
+}
+
+function stripMobilePrefix(pathname: string): string {
+  if (!pathname.startsWith(MOBILE_PREFIX)) return pathname;
+  const rest = pathname.slice(MOBILE_PREFIX.length);
+  return rest === '' ? '/' : rest;
+}
+
+/** Build mobile (/m) href with optional breadcrumb context. */
+export function buildMobileHref(path: string, context?: AppLinkContext): string {
+  const [pathname, existingQuery = ''] = path.split('?');
+  const mobilePath = withMobilePrefix(pathname);
+  const url = new URL(mobilePath, 'http://local');
+  if (existingQuery) {
+    const existing = new URLSearchParams(existingQuery);
+    existing.forEach((value, key) => url.searchParams.set(key, value));
+  }
+  appendContextParams(url, context);
+  const query = url.searchParams.toString();
+  return query ? `${url.pathname}?${query}` : url.pathname;
+}
+
+export function toMobileHref(desktopPath: string): string {
+  const [pathname, query = ''] = desktopPath.split('?');
+  const mobile = withMobilePrefix(pathname);
+  return query ? `${mobile}?${query}` : mobile;
+}
+
+export function toDesktopHref(mobilePath: string): string {
+  const [pathname, query = ''] = mobilePath.split('?');
+  const desktop = stripMobilePrefix(pathname);
+  return query ? `${desktop}?${query}` : desktop;
+}
+
+export const PREFER_DESKTOP_COOKIE = 'prefer-desktop';
+
 export interface ParsedBreadcrumbContext {
   from?: BreadcrumbFrom;
   issueId?: string;

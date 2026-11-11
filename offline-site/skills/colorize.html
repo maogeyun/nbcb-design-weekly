@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>策略性配色 · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / 策略性配色
+    </p>
+    <span class="tag tag--solution_design">方案设计</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">策略性配色</h1>
+      <p>Add strategic color to features that are too monochromatic or lack visual interest, making interfaces more engaging and expressive. Use when the user mentions the design looking gray, dull, lacking warmth, needing more color, or wanting a more vibrant or expressive palette.</p>
+    </div>
+    
+    <div class="markdown"><p>Strategically introduce color to designs that are too monochromatic, gray, or lacking in visual warmth and personality.</p>
+<h2>MANDATORY PREPARATION</h2>
+<p>Invoke /impeccable — it contains design principles, anti-patterns, and the <strong>Context Gathering Protocol</strong>. Follow the protocol before proceeding — if no design context exists yet, you MUST run /impeccable teach first. Additionally gather: existing brand colors.</p>
+<p>---</p>
+<h2>Assess Color Opportunity</h2>
+<p>Analyze the current state and identify opportunities:</p>
+<ol>
+<li><strong>Understand current state</strong>:</li>
+</ol>
+<p>   - <strong>Color absence</strong>: Pure grayscale? Limited neutrals? One timid accent?</p>
+<p>   - <strong>Missed opportunities</strong>: Where could color add meaning, hierarchy, or delight?</p>
+<p>   - <strong>Context</strong>: What&#39;s appropriate for this domain and audience?</p>
+<p>   - <strong>Brand</strong>: Are there existing brand colors we should use?</p>
+<ol>
+<li><strong>Identify where color adds value</strong>:</li>
+</ol>
+<p>   - <strong>Semantic meaning</strong>: Success (green), error (red), warning (yellow/orange), info (blue)</p>
+<p>   - <strong>Hierarchy</strong>: Drawing attention to important elements</p>
+<p>   - <strong>Categorization</strong>: Different sections, types, or states</p>
+<p>   - <strong>Emotional tone</strong>: Warmth, energy, trust, creativity</p>
+<p>   - <strong>Wayfinding</strong>: Helping users navigate and understand structure</p>
+<p>   - <strong>Delight</strong>: Moments of visual interest and personality</p>
+<p>If any of these are unclear from the codebase, ask the user directly to clarify what you cannot infer.</p>
+<p><strong>CRITICAL</strong>: More color ≠ better. Strategic color beats rainbow vomit every time. Every color should have a purpose.</p>
+<h2>Plan Color Strategy</h2>
+<p>Create a purposeful color introduction plan:</p>
+<ul>
+<li><strong>Color palette</strong>: What colors match the brand/context? (Choose 2-4 colors max beyond neutrals)</li>
+<li><strong>Dominant color</strong>: Which color owns 60% of colored elements?</li>
+<li><strong>Accent colors</strong>: Which colors provide contrast and highlights? (30% and 10%)</li>
+<li><strong>Application strategy</strong>: Where does each color appear and why?</li>
+</ul>
+<p><strong>IMPORTANT</strong>: Color should enhance hierarchy and meaning, not create chaos. Less is more when it matters more.</p>
+<h2>Introduce Color Strategically</h2>
+<p>Add color systematically across these dimensions:</p>
+<h3>Semantic Color</h3>
+<ul>
+<li><strong>State indicators</strong>:</li>
+</ul>
+<p>  - Success: Green tones (emerald, forest, mint)</p>
+<p>  - Error: Red/pink tones (rose, crimson, coral)</p>
+<p>  - Warning: Orange/amber tones</p>
+<p>  - Info: Blue tones (sky, ocean, indigo)</p>
+<p>  - Neutral: Gray/slate for inactive states</p>
+<ul>
+<li><strong>Status badges</strong>: Colored backgrounds or borders for states (active, pending, completed, etc.)</li>
+<li><strong>Progress indicators</strong>: Colored bars, rings, or charts showing completion or health</li>
+</ul>
+<h3>Accent Color Application</h3>
+<ul>
+<li><strong>Primary actions</strong>: Color the most important buttons/CTAs</li>
+<li><strong>Links</strong>: Add color to clickable text (maintain accessibility)</li>
+<li><strong>Icons</strong>: Colorize key icons for recognition and personality</li>
+<li><strong>Headers/titles</strong>: Add color to section headers or key labels</li>
+<li><strong>Hover states</strong>: Introduce color on interaction</li>
+</ul>
+<h3>Background &amp; Surfaces</h3>
+<ul>
+<li><strong>Tinted backgrounds</strong>: Replace pure gray (<code>#f5f5f5</code>) with warm neutrals (<code>oklch(97% 0.01 60)</code>) or cool tints (<code>oklch(97% 0.01 250)</code>)</li>
+<li><strong>Colored sections</strong>: Use subtle background colors to separate areas</li>
+<li><strong>Gradient backgrounds</strong>: Add depth with subtle, intentional gradients (not generic purple-blue)</li>
+<li><strong>Cards &amp; surfaces</strong>: Tint cards or surfaces slightly for warmth</li>
+</ul>
+<p><strong>Use OKLCH for color</strong>: It&#39;s perceptually uniform, meaning equal steps in lightness <em>look</em> equal. Great for generating harmonious scales.</p>
+<h3>Data Visualization</h3>
+<ul>
+<li><strong>Charts &amp; graphs</strong>: Use color to encode categories or values</li>
+<li><strong>Heatmaps</strong>: Color intensity shows density or importance</li>
+<li><strong>Comparison</strong>: Color coding for different datasets or timeframes</li>
+</ul>
+<h3>Borders &amp; Accents</h3>
+<ul>
+<li><strong>Accent borders</strong>: Add colored left/top borders to cards or sections</li>
+<li><strong>Underlines</strong>: Color underlines for emphasis or active states</li>
+<li><strong>Dividers</strong>: Subtle colored dividers instead of gray lines</li>
+<li><strong>Focus rings</strong>: Colored focus indicators matching brand</li>
+</ul>
+<h3>Typography Color</h3>
+<ul>
+<li><strong>Colored headings</strong>: Use brand colors for section headings (maintain contrast)</li>
+<li><strong>Highlight text</strong>: Color for emphasis or categories</li>
+<li><strong>Labels &amp; tags</strong>: Small colored labels for metadata or categories</li>
+</ul>
+<h3>Decorative Elements</h3>
+<ul>
+<li><strong>Illustrations</strong>: Add colored illustrations or icons</li>
+<li><strong>Shapes</strong>: Geometric shapes in brand colors as background elements</li>
+<li><strong>Gradients</strong>: Colorful gradient overlays or mesh backgrounds</li>
+<li><strong>Blobs/organic shapes</strong>: Soft colored shapes for visual interest</li>
+</ul>
+<h2>Balance &amp; Refinement</h2>
+<p>Ensure color addition improves rather than overwhelms:</p>
+<h3>Maintain Hierarchy</h3>
+<ul>
+<li><strong>Dominant color</strong> (60%): Primary brand color or most used accent</li>
+<li><strong>Secondary color</strong> (30%): Supporting color for variety</li>
+<li><strong>Accent color</strong> (10%): High contrast for key moments</li>
+<li><strong>Neutrals</strong> (remaining): Gray/black/white for structure</li>
+</ul>
+<h3>Accessibility</h3>
+<ul>
+<li><strong>Contrast ratios</strong>: Ensure WCAG compliance (4.5:1 for text, 3:1 for UI components)</li>
+<li><strong>Don&#39;t rely on color alone</strong>: Use icons, labels, or patterns alongside color</li>
+<li><strong>Test for color blindness</strong>: Verify red/green combinations work for all users</li>
+</ul>
+<h3>Cohesion</h3>
+<ul>
+<li><strong>Consistent palette</strong>: Use colors from defined palette, not arbitrary choices</li>
+<li><strong>Systematic application</strong>: Same color meanings throughout (green always = success)</li>
+<li><strong>Temperature consistency</strong>: Warm palette stays warm, cool stays cool</li>
+</ul>
+<p><strong>NEVER</strong>:</p>
+<ul>
+<li>Use every color in the rainbow (choose 2-4 colors beyond neutrals)</li>
+<li>Apply color randomly without semantic meaning</li>
+<li>Put gray text on colored backgrounds—it looks washed out; use a darker shade of the background color or transparency instead</li>
+<li>Use pure gray for neutrals—add subtle color tint (warm or cool) for sophistication</li>
+<li>Use pure black (<code>#000</code>) or pure white (<code>#fff</code>) for large areas</li>
+<li>Violate WCAG contrast requirements</li>
+<li>Use color as the only indicator (accessibility issue)</li>
+<li>Make everything colorful (defeats the purpose)</li>
+<li>Default to purple-blue gradients (AI slop aesthetic)</li>
+</ul>
+<h2>Verify Color Addition</h2>
+<p>Test that colorization improves the experience:</p>
+<ul>
+<li><strong>Better hierarchy</strong>: Does color guide attention appropriately?</li>
+<li><strong>Clearer meaning</strong>: Does color help users understand states/categories?</li>
+<li><strong>More engaging</strong>: Does the interface feel warmer and more inviting?</li>
+<li><strong>Still accessible</strong>: Do all color combinations meet WCAG standards?</li>
+<li><strong>Not overwhelming</strong>: Is color balanced and purposeful?</li>
+</ul>
+<p>Remember: Color is emotional and powerful. Use it to create warmth, guide attention, communicate meaning, and express personality. But restraint and strategy matter more than saturation and variety. Be colorful, but be intentional.</p></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

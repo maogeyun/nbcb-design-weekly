@@ -1,0 +1,11 @@
+{
+  "data": {
+    "id": "rice",
+    "name": "RICE 优先级",
+    "introduction": "用 RICE（Reach×Impact×Confidence÷Effort）量化功能/项目优先级，把“我觉得”变为可挑战的数字假设，支撑季度规划与资源分配。",
+    "category": "requirements_analysis",
+    "file_path": "rice.md",
+    "content": "\nRICE 适合“清单已存在但排序有争议”的场景。重点不是分数精确，而是对齐单位与假设，让分歧落在可讨论的维度上。\n\n## 公式\n\n\\( \\text{RICE} = \\dfrac{Reach \\times Impact \\times Confidence}{Effort} \\)\n\n- **Reach**：周期内受影响用户数（用绝对数，先对齐时间窗：周/月/季度）\n- **Impact**：对核心指标影响（建议固定量表：0.25/0.5/1/2/3）\n- **Confidence**：对 Reach/Impact 估算把握（100%/80%/50%）\n- **Effort**：总人力成本（设计+研发+测试的人周/人月）\n\n## 使用要点（避免失真）\n\n- Reach 单位先统一，否则不可比\n- Impact 必须绑定指标（例如激活率+15%），避免“感觉很大”\n- Confidence < 50%：先做小实验/访谈提升信心\n- Effort 用相对人月，避免漏算沟通与返工\n- 分数是对话起点：异常高/低都值得复核假设\n\n",
+    "has_package": false
+  }
+}

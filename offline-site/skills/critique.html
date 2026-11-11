@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UX 设计评审 · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / UX 设计评审
+    </p>
+    <span class="tag tag--solution_design">方案设计</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">UX 设计评审</h1>
+      <p>Evaluate design from a UX perspective, assessing visual hierarchy, information architecture, emotional resonance, cognitive load, and overall quality with quantitative scoring, persona-based testing, automated anti-pattern detection, and actionable feedback. Use when the user asks to review, critique, evaluate, or give feedback on a design or component.</p>
+    </div>
+    
+    <div class="markdown"><h2>STEPS</h2>
+<h3>Step 1: Preparation</h3>
+<p>Invoke /impeccable, which contains design principles, anti-patterns, and the <strong>Context Gathering Protocol</strong>. Follow the protocol before proceeding. If no design context exists yet, you MUST run /impeccable teach first. Additionally gather: what the interface is trying to accomplish.</p>
+<h3>Step 2: Gather Assessments</h3>
+<p>Launch two independent assessments. <strong>Neither must see the other&#39;s output</strong> to avoid bias.</p>
+<p>You SHOULD delegate each assessment to a separate sub-agent for independence. Use your environment&#39;s agent spawning mechanism (e.g., Claude Code&#39;s <code>Agent</code> tool, or Codex&#39;s subagent spawning). Sub-agents should return their findings as structured text. Do NOT output findings to the user yet.</p>
+<p>If sub-agents are not available in the current environment, complete each assessment sequentially, writing findings to internal notes before proceeding.</p>
+<p><strong>Tab isolation</strong>: When browser automation is available, each assessment MUST create its own new tab. Never reuse an existing tab, even if one is already open at the correct URL. This prevents the two assessments from interfering with each other&#39;s page state.</p>
+<h4>Assessment A: LLM Design Review</h4>
+<p>Read the relevant source files (HTML, CSS, JS/TS) and, if browser automation is available, visually inspect the live page. <strong>Create a new tab</strong> for this; do not reuse existing tabs. After navigation, label the tab by setting the document title:</p>
+<pre><code>document.title = &#39;[LLM] &#39; + document.title;</code></pre>
+<p>Think like a design director. Evaluate:</p>
+<p><strong>AI Slop Detection (CRITICAL)</strong>: Does this look like every other AI-generated interface? Review against ALL <strong>DON&#39;T</strong> guidelines in the impeccable skill. Check for AI color palette, gradient text, dark glows, glassmorphism, hero metric layouts, identical card grids, generic fonts, and all other tells. <strong>The test</strong>: If someone said &quot;AI made this,&quot; would you believe them immediately?</p>
+<p><strong>Holistic Design Review</strong>: visual hierarchy (eye flow, primary action clarity), information architecture (structure, grouping, cognitive load), emotional resonance (does it match brand and audience?), discoverability (are interactive elements obvious?), composition (balance, whitespace, rhythm), typography (hierarchy, readability, font choices), color (purposeful use, cohesion, accessibility), states &amp; edge cases (empty, loading, error, success), microcopy (clarity, tone, helpfulness).</p>
+<p><strong>Cognitive Load</strong> (consult <a href="reference/cognitive-load.md" target="_blank" rel="noopener noreferrer">cognitive-load</a>):</p>
+<ul>
+<li>Run the 8-item cognitive load checklist. Report failure count: 0-1 = low (good), 2-3 = moderate, 4+ = critical.</li>
+<li>Count visible options at each decision point. If &gt;4, flag it.</li>
+<li>Check for progressive disclosure: is complexity revealed only when needed?</li>
+</ul>
+<p><strong>Emotional Journey</strong>:</p>
+<ul>
+<li>What emotion does this interface evoke? Is that intentional?</li>
+<li><strong>Peak-end rule</strong>: Is the most intense moment positive? Does the experience end well?</li>
+<li><strong>Emotional valleys</strong>: Check for anxiety spikes at high-stakes moments (payment, delete, commit). Are there design interventions (progress indicators, reassurance copy, undo options)?</li>
+</ul>
+<p><strong>Nielsen&#39;s Heuristics</strong> (consult <a href="reference/heuristics-scoring.md" target="_blank" rel="noopener noreferrer">heuristics-scoring</a>):</p>
+<p>Score each of the 10 heuristics 0-4. This scoring will be presented in the report.</p>
+<p>Return structured findings covering: AI slop verdict, heuristic scores, cognitive load assessment, what&#39;s working (2-3 items), priority issues (3-5 with what/why/fix), minor observations, and provocative questions.</p>
+<h4>Assessment B: Automated Detection</h4>
+<p>Run the bundled deterministic detector, which flags 25 specific patterns (AI slop tells + general design quality).</p>
+<p><strong>CLI scan</strong>:</p>
+<pre><code>npx impeccable --json [--fast] [target]</code></pre>
+<ul>
+<li>Pass HTML/JSX/TSX/Vue/Svelte files or directories as <code>[target]</code> (anything with markup). Do not pass CSS-only files.</li>
+<li>For URLs, skip the CLI scan (it requires Puppeteer). Use browser visualization instead.</li>
+<li>For large directories (200+ scannable files), use <code>--fast</code> (regex-only, skips jsdom)</li>
+<li>For 500+ files, narrow scope or ask the user</li>
+<li>Exit code 0 = clean, 2 = findings</li>
+</ul>
+<p><strong>Browser visualization</strong> (when browser automation tools are available AND the target is a viewable page):</p>
+<p>The overlay is a <strong>visual aid for the user</strong>. It highlights issues directly in their browser. Do NOT scroll through the page to screenshot overlays. Instead, read the console output to get the results programmatically.</p>
+<ol>
+<li><strong>Start the live detection server</strong>:</li>
+</ol>
+<p>   ```bash</p>
+<p>   npx impeccable live &amp;</p>
+<p>   ```</p>
+<p>   Note the port printed to stdout (auto-assigned). Use <code>--port=PORT</code> to fix it.</p>
+<ol>
+<li><strong>Create a new tab</strong> and navigate to the page (use dev server URL for local files, or direct URL). Do not reuse existing tabs.</li>
+<li><strong>Label the tab</strong> via <code>javascript_tool</code> so the user can distinguish it:</li>
+</ol>
+<p>   ```javascript</p>
+<p>   document.title = &#39;[Human] &#39; + document.title;</p>
+<p>   ```</p>
+<ol>
+<li><strong>Scroll to top</strong> to ensure the page is scrolled to the very top before injection</li>
+<li><strong>Inject</strong> via <code>javascript_tool</code> (replace PORT with the port from step 1):</li>
+</ol>
+<p>   ```javascript</p>
+<p>   const s = document.createElement(&#39;script&#39;); s.src = &#39;http://localhost:PORT/detect.js&#39;; document.head.appendChild(s);</p>
+<p>   ```</p>
+<ol>
+<li>Wait 2-3 seconds for the detector to render overlays</li>
+<li><strong>Read results from console</strong> using <code>read_console_messages</code> with pattern <code>impeccable</code>. The detector logs all findings with the <code>[impeccable]</code> prefix. Do NOT scroll through the page to take screenshots of the overlays.</li>
+<li><strong>Cleanup</strong>: Stop the live server when done:</li>
+</ol>
+<p>   ```bash</p>
+<p>   npx impeccable live stop</p>
+<p>   ```</p>
+<p>For multi-view targets, inject on 3-5 representative pages. If injection fails, continue with CLI results only.</p>
+<p>Return: CLI findings (JSON), browser console findings (if applicable), and any false positives noted.</p>
+<h3>Step 3: Generate Combined Critique Report</h3>
+<p>Synthesize both assessments into a single report. Do NOT simply concatenate. Weave the findings together, noting where the LLM review and detector agree, where the detector caught issues the LLM missed, and where detector findings are false positives.</p>
+<p>Structure your feedback as a design director would:</p>
+<h4>Design Health Score</h4>
+<p>&gt; <em>Consult <a href="reference/heuristics-scoring.md" target="_blank" rel="noopener noreferrer">heuristics-scoring</a></em></p>
+<p>Present the Nielsen&#39;s 10 heuristics scores as a table:</p>
+<p>| # | Heuristic | Score | Key Issue |</p>
+<p>|---|-----------|-------|-----------|</p>
+<p>| 1 | Visibility of System Status | ? | [specific finding or &quot;n/a&quot; if solid] |</p>
+<p>| 2 | Match System / Real World | ? | |</p>
+<p>| 3 | User Control and Freedom | ? | |</p>
+<p>| 4 | Consistency and Standards | ? | |</p>
+<p>| 5 | Error Prevention | ? | |</p>
+<p>| 6 | Recognition Rather Than Recall | ? | |</p>
+<p>| 7 | Flexibility and Efficiency | ? | |</p>
+<p>| 8 | Aesthetic and Minimalist Design | ? | |</p>
+<p>| 9 | Error Recovery | ? | |</p>
+<p>| 10 | Help and Documentation | ? | |</p>
+<p>| <strong>Total</strong> | | <strong>??/40</strong> | <strong>[Rating band]</strong> |</p>
+<p>Be honest with scores. A 4 means genuinely excellent. Most real interfaces score 20-32.</p>
+<h4>Anti-Patterns Verdict</h4>
+<p><strong>Start here.</strong> Does this look AI-generated?</p>
+<p><strong>LLM assessment</strong>: Your own evaluation of AI slop tells. Cover overall aesthetic feel, layout sameness, generic composition, missed opportunities for personality.</p>
+<p><strong>Deterministic scan</strong>: Summarize what the automated detector found, with counts and file locations. Note any additional issues the detector caught that you missed, and flag any false positives.</p>
+<p><strong>Visual overlays</strong> (if browser was used): Tell the user that overlays are now visible in the <strong>[Human]</strong> tab in their browser, highlighting the detected issues. Summarize what the console output reported.</p>
+<h4>Overall Impression</h4>
+<p>A brief gut reaction: what works, what doesn&#39;t, and the single biggest opportunity.</p>
+<h4>What&#39;s Working</h4>
+<p>Highlight 2-3 things done well. Be specific about why they work.</p>
+<h4>Priority Issues</h4>
+<p>The 3-5 most impactful design problems, ordered by importance.</p>
+<p>For each issue, tag with <strong>P0-P3 severity</strong> (consult <a href="reference/heuristics-scoring.md" target="_blank" rel="noopener noreferrer">heuristics-scoring</a> for severity definitions):</p>
+<ul>
+<li><strong>[P?] What</strong>: Name the problem clearly</li>
+<li><strong>Why it matters</strong>: How this hurts users or undermines goals</li>
+<li><strong>Fix</strong>: What to do about it (be concrete)</li>
+<li><strong>Suggested command</strong>: Which command could address this (from: /polish, /typeset, /colorize, /quieter, /critique, /overdrive, /clarify, /bolder, /audit, /distill, /harden, /layout, /shape, /animate, /optimize, /adapt, /delight)</li>
+</ul>
+<h4>Persona Red Flags</h4>
+<p>&gt; <em>Consult <a href="reference/personas.md" target="_blank" rel="noopener noreferrer">personas</a></em></p>
+<p>Auto-select 2-3 personas most relevant to this interface type (use the selection table in the reference). If <code>.cursorrules</code> contains a <code>## Design Context</code> section from <code>impeccable teach</code>, also generate 1-2 project-specific personas from the audience/brand info.</p>
+<p>For each selected persona, walk through the primary user action and list specific red flags found:</p>
+<p><strong>Alex (Power User)</strong>: No keyboard shortcuts detected. Form requires 8 clicks for primary action. Forced modal onboarding. High abandonment risk.</p>
+<p><strong>Jordan (First-Timer)</strong>: Icon-only nav in sidebar. Technical jargon in error messages (&quot;404 Not Found&quot;). No visible help. Will abandon at step 2.</p>
+<p>Be specific. Name the exact elements and interactions that fail each persona. Don&#39;t write generic persona descriptions; write what broke for them.</p>
+<h4>Minor Observations</h4>
+<p>Quick notes on smaller issues worth addressing.</p>
+<h4>Questions to Consider</h4>
+<p>Provocative questions that might unlock better solutions:</p>
+<ul>
+<li>&quot;What if the primary action were more prominent?&quot;</li>
+<li>&quot;Does this need to feel this complex?&quot;</li>
+<li>&quot;What would a confident version of this look like?&quot;</li>
+</ul>
+<p><strong>Remember</strong>:</p>
+<ul>
+<li>Be direct. Vague feedback wastes everyone&#39;s time.</li>
+<li>Be specific. &quot;The submit button,&quot; not &quot;some elements.&quot;</li>
+<li>Say what&#39;s wrong AND why it matters to users.</li>
+<li>Give concrete suggestions, not just &quot;consider exploring...&quot;</li>
+<li>Prioritize ruthlessly. If everything is important, nothing is.</li>
+<li>Don&#39;t soften criticism. Developers need honest feedback to ship great design.</li>
+</ul>
+<h3>Step 4: Ask the User</h3>
+<p><strong>After presenting findings</strong>, use targeted questions based on what was actually found. ask the user directly to clarify what you cannot infer. These answers will shape the action plan.</p>
+<p>Ask questions along these lines (adapt to the specific findings; do NOT ask generic questions):</p>
+<ol>
+<li><strong>Priority direction</strong>: Based on the issues found, ask which category matters most to the user right now. For example: &quot;I found problems with visual hierarchy, color usage, and information overload. Which area should we tackle first?&quot; Offer the top 2-3 issue categories as options.</li>
+</ol>
+<ol>
+<li><strong>Design intent</strong>: If the critique found a tonal mismatch, ask whether it was intentional. For example: &quot;The interface feels clinical and corporate. Is that the intended tone, or should it feel warmer/bolder/more playful?&quot; Offer 2-3 tonal directions as options based on what would fix the issues found.</li>
+</ol>
+<ol>
+<li><strong>Scope</strong>: Ask how much the user wants to take on. For example: &quot;I found N issues. Want to address everything, or focus on the top 3?&quot; Offer scope options like &quot;Top 3 only&quot;, &quot;All issues&quot;, &quot;Critical issues only&quot;.</li>
+</ol>
+<ol>
+<li><strong>Constraints</strong> (optional; only ask if relevant): If the findings touch many areas, ask if anything is off-limits. For example: &quot;Should any sections stay as-is?&quot; This prevents the plan from touching things the user considers done.</li>
+</ol>
+<p><strong>Rules for questions</strong>:</p>
+<ul>
+<li>Every question must reference specific findings from the report. Never ask generic &quot;who is your audience?&quot; questions.</li>
+<li>Keep it to 2-4 questions maximum. Respect the user&#39;s time.</li>
+<li>Offer concrete options, not open-ended prompts.</li>
+<li>If findings are straightforward (e.g., only 1-2 clear issues), skip questions and go directly to Step 5.</li>
+</ul>
+<h3>Step 5: Recommended Actions</h3>
+<p><strong>After receiving the user&#39;s answers</strong>, present a prioritized action summary reflecting the user&#39;s priorities and scope from Step 4.</p>
+<h4>Action Summary</h4>
+<p>List recommended commands in priority order, based on the user&#39;s answers:</p>
+<ol>
+<li><strong><code>/command-name</code></strong>: Brief description of what to fix (specific context from critique findings)</li>
+<li><strong><code>/command-name</code></strong>: Brief description (specific context)</li>
+</ol>
+<p>...</p>
+<p><strong>Rules for recommendations</strong>:</p>
+<ul>
+<li>Only recommend commands from: /polish, /typeset, /colorize, /quieter, /critique, /overdrive, /clarify, /bolder, /audit, /distill, /harden, /layout, /shape, /animate, /optimize, /adapt, /delight</li>
+<li>Order by the user&#39;s stated priorities first, then by impact</li>
+<li>Each item&#39;s description should carry enough context that the command knows what to focus on</li>
+<li>Map each Priority Issue to the appropriate command</li>
+<li>Skip commands that would address zero issues</li>
+<li>If the user chose a limited scope, only include items within that scope</li>
+<li>If the user marked areas as off-limits, exclude commands that would touch those areas</li>
+<li>End with <code>/polish</code> as the final step if any fixes were recommended</li>
+</ul>
+<p>After presenting the summary, tell the user:</p>
+<p>&gt; You can ask me to run these one at a time, all at once, or in any order you prefer.</p>
+<p>&gt;</p>
+<p>&gt; Re-run <code>/critique</code> after fixes to see your score improve.</p></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

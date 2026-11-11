@@ -1,0 +1,11 @@
+{
+  "data": {
+    "id": "jobs-portfolio",
+    "name": "Jobs Portfolio",
+    "introduction": "用 Jobs Portfolio（核心/相关/情感 Jobs × 重要度/满足度）系统盘点用户“工作组合”，定位高重要度×低满足度的增长空白并规划扩展路线图。",
+    "category": "requirements_analysis",
+    "file_path": "jobs-portfolio.md",
+    "content": "\n用户不只有一个 Job，而是一组 Jobs。健康产品应同时覆盖核心工作、相关工作与情感工作；增长机会往往来自“高重要度 × 低满足度”的相关/情感 Jobs 空白。\n\n## 三类 Jobs\n\n- **Core Job（核心）**：用户雇佣产品的主要目的（优先保证）\n- **Related Jobs（相关）**：核心工作前后自然出现的任务（常见扩展机会）\n- **Emotional/Social Jobs（情感/社会）**：用户希望获得的感受、身份与认同（品牌与差异化来源）\n\n## 操作步骤\n\n1) 收集 {user_stories}（“我用它来……”的真实叙述，别从功能清单开始）\n2) 将 Jobs 分类为 Core / Related / Emotional\n3) 评估每个 Job：重要度(1–10) 与 满足度(1–10)\n4) 标记机会：重要度高且满足度低的格子（尤其关注用户目前用哪些替代品解决）\n5) 先从“离现有旅程最近的 Related Job”做最小验证，再逐步加码\n\n",
+    "has_package": false
+  }
+}

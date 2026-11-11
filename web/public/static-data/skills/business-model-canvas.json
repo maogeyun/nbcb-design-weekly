@@ -1,0 +1,11 @@
+{
+  "data": {
+    "id": "business-model-canvas",
+    "name": "商业模式画布",
+    "introduction": "用商业模式画布（BMC）九宫格在一页呈现“为谁创造价值、如何交付、如何盈利”，并用于对比竞品与诊断漏洞。",
+    "category": "requirements_analysis",
+    "file_path": "business-model-canvas.md",
+    "content": "\nBMC 用 9 个模块把商业逻辑压缩成一页：任何一个格子填不上，通常就意味着那里是未验证假设或资源缺口。\n\n## 何时使用\n\n- 创业/新产品线：快速勾勒全貌\n- 战略转型：系统重构模式\n- 竞品分析：并排对比差异\n- 投资人/董事会沟通：一眼看清逻辑链\n\n## 九个模块（按“市场侧/价值/效率侧”理解）\n\n### 市场侧（如何变现）\n\n- **客户细分（Customer Segments）**：为谁服务（最好聚焦一个核心群）\n- **客户关系（Customer Relationships）**：如何互动与维持关系\n- **渠道（Channels）**：如何触达与交付\n\n### 价值主张（核心）\n\n- **价值主张（Value Proposition）**：帮助谁解决什么问题、创造什么价值、为何选你\n\n### 效率侧（如何运营）\n\n- **关键活动（Key Activities）**：必须做什么才能交付价值\n- **关键资源（Key Resources）**：需要什么资产（人才/技术/品牌/资金/专利等）\n- **关键合作伙伴（Key Partners）**：谁帮你做你不做的事\n\n### 汇总（财务逻辑）\n\n- **成本结构（Cost Structure）**\n- **收入来源（Revenue Streams）**\n\n## 实操技巧（让它变成“验证路线图”）\n\n- 用颜色标注：绿色=已验证、黄色=部分验证、红色=纯假设\n- 把红色格子转成验证任务（访谈/实验/试点合作）\n- 至少填 3 个竞品 BMC：差异会更明显\n\n",
+    "has_package": false
+  }
+}

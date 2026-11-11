@@ -1,0 +1,11 @@
+{
+  "data": {
+    "id": "fogg-behavior-model",
+    "name": "Fogg 行为模型",
+    "introduction": "用 Fogg 行为模型 B=MAP（动机×能力×触发）诊断转化/留存卡点，优先通过降低摩擦（提升能力）与精准触发推动目标行为发生。",
+    "category": "solution_design",
+    "file_path": "fogg-behavior-model.md",
+    "content": "\nFogg 的反直觉结论：用户“不做”常不是动机不足，而是能力（太难/太耗时）或触发（时机不对）缺失。最有效杠杆通常是降低摩擦。\n\n## 核心公式\n\n\\( B = M \\times A \\times P \\)\n\n- **M Motivation 动机**：快感/痛苦、希望/恐惧、社会认同/排斥\n- **A Ability 能力**：时间、金钱、脑力、体力、与习惯偏离（越简单越高）\n- **P Prompt 触发**：Spark（低动机激励）、Facilitator（低能力助力）、Signal（高M高A提醒）\n\n## 使用流程\n\n1) 定义 {target_behavior}（可计数、可观察、足够具体）\n2) 评估当前 MAP：动机(1–10)、能力(1–10)、触发（有/无/时机错）\n3) 优先做能力干预：减少步骤/缩短时间承诺/智能默认/一键完成\n4) 设计触发策略：只在“行动线以上”触发；按 Spark/Facilitator/Signal 选型\n5) 监控并迭代：行为发生率、步骤放弃率、触发打开后完成率、通知屏蔽率\n\n## 典型场景\n\n- Onboarding 激活率提升\n- 转化漏斗优化（结账、付费、提交表单）\n- 通知策略与习惯养成\n\n",
+    "has_package": false
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>根本原因分析 · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / 根本原因分析
+    </p>
+    <span class="tag tag--requirements_analysis">需求分析</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">根本原因分析</h1>
+      <p>用 RCA（根本原因分析）区分直接原因/促成原因/根本原因，结合鱼骨图+5Why 等工具定位系统性根因并制定可追踪的纠正措施，防止复发。</p>
+    </div>
+    
+    <div class="markdown"><p>RCA 的目标是修复系统，而不是修复零件；是找到可防复发的根因，而不是快速止血的直接原因。</p>
+<h2>三类原因（别过早停止）</h2>
+<ul>
+<li><strong>Direct Cause 直接原因</strong>：直接触发事件（易见易修，但不足以防复发）</li>
+<li><strong>Contributing Causes 促成原因</strong>：让直接原因发生/恶化的条件（常有多个）</li>
+<li><strong>Root Cause 根本原因</strong>：消除后，直接原因不再发生或不再累积（多为系统性）</li>
+</ul>
+<h2>推荐流程（可做无责复盘）</h2>
+<p>1) 复述 {incident}：时间线 + 影响范围 + 触发条件</p>
+<p>2) 用鱼骨图发散原因维度（至少覆盖：人/流程/技术/环境/管理/材料/文案等）</p>
+<p>3) 对关键分支做 5 Why 深挖，形成因果链证据</p>
+<p>4) 收敛根因：用数据/日志/复现实验验证（避免“大家觉得”）</p>
+<p>5) 制定纠正措施（CAPA）：</p>
+<p>   - 每条措施有 owner（DRI）、截止时间、验收标准、回滚/监控</p>
+<p>6) 跟踪复发率与指标恢复，复盘措施是否真正生效</p>
+<h2>常见陷阱</h2>
+<ul>
+<li>停在“换零件/修 Bug”（只修直接原因）</li>
+<li>归咎个人而不改系统</li>
+<li>鱼骨图只写“技术骨头”，忽略流程/管理</li>
+<li>不追踪行动落地（RCA 白做）</li>
+</ul></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

@@ -1,0 +1,158 @@
+{
+  "frame": {
+    "fill_hex": "#F7F7F9",
+    "layout": { "width": 2056, "height": 1230 }
+  },
+  "text_bindings": [
+    {
+      "path": "首页/Body/Header/Navigation/Link/Text",
+      "node_id": "4:19",
+      "name": "最新周刊",
+      "text": "最新周刊",
+      "font": { "family": "Noto Sans SC", "size": 14, "weight": 500, "lineHeight": 22 },
+      "colors": [{ "hex": "#FFA62F", "role": "nav-active" }],
+      "region": "顶部导航"
+    },
+    {
+      "path": "首页/Body/Header/Navigation/Link/Text",
+      "node_id": "4:28",
+      "name": "归档",
+      "text": "归档",
+      "font": { "family": "Noto Sans SC", "size": 14, "weight": 400, "lineHeight": 22 },
+      "colors": [{ "hex": "#222222", "role": "nav-inactive" }],
+      "region": "顶部导航"
+    },
+    {
+      "path": "首页/Body/Main Content/Section/Text",
+      "node_id": "4:62",
+      "name": "NEW ISSUE",
+      "text": "NEW ISSUE",
+      "font": { "family": "Noto Sans SC", "size": 12, "weight": 400, "lineHeight": 20 },
+      "colors": [{ "hex": "#FFA62F", "role": "badge" }],
+      "region": "Hero"
+    },
+    {
+      "path": "首页/Body/Main Content/Section/Container",
+      "node_id": "4:65",
+      "name": "第 3 期 · 2026-06-25",
+      "text": "第 3 期 · 2026-06-25",
+      "font": { "family": "Noto Sans SC", "size": 38, "weight": 600, "lineHeight": 46 },
+      "colors": [{ "hex": "#222222", "role": "title" }],
+      "region": "Hero"
+    },
+    {
+      "path": "首页/Body/Main Content/Section/Container",
+      "node_id": "4:69",
+      "name": "hero-subtitle",
+      "text": "本周我们聚焦 AI…",
+      "font": { "family": "Noto Sans SC", "size": 16, "weight": 400, "lineHeight": 24 },
+      "colors": [{ "hex": "#555555", "role": "secondary" }],
+      "region": "Hero"
+    },
+    {
+      "path": "首页/Body/Main Content/Section/Heading 2",
+      "node_id": "4:78",
+      "name": "本期精选文章",
+      "text": "本期精选文章",
+      "font": { "family": "Noto Sans SC", "size": 30, "weight": 600, "lineHeight": 38 },
+      "colors": [{ "hex": "#222222", "role": "section-title" }],
+      "region": "区块标题"
+    },
+    {
+      "path": "首页/Body/Main Content/Section/Link",
+      "node_id": "4:81",
+      "name": "查看全部",
+      "text": "查看全部 →",
+      "font": { "family": "Noto Sans SC", "size": 14, "weight": 400, "lineHeight": 22 },
+      "colors": [{ "hex": "#FFA62F", "role": "link" }],
+      "region": "区块标题"
+    },
+    {
+      "path": "首页/Body/Main Content/Section/Article/Container",
+      "node_id": "4:91",
+      "name": "card-title",
+      "text": "从原型到落地…",
+      "font": { "family": "Noto Sans SC", "size": 20, "weight": 600, "lineHeight": 30 },
+      "colors": [{ "hex": "#222222", "role": "card-title" }],
+      "region": "卡片"
+    },
+    {
+      "path": "首页/Body/Main Content/Section/Article/Container",
+      "node_id": "4:95",
+      "name": "card-body",
+      "text": "当你面对一个模块繁多…",
+      "font": { "family": "Noto Sans SC", "size": 14, "weight": 400, "lineHeight": 21 },
+      "colors": [{ "hex": "#222222", "role": "card-body" }],
+      "region": "卡片"
+    },
+    {
+      "path": "首页/Body/Main Content/Section/Button/Text",
+      "node_id": "4:123",
+      "name": "查看全部归档",
+      "text": "查看全部归档",
+      "font": { "family": "Noto Sans SC", "size": 16, "weight": 500, "lineHeight": 25.143 },
+      "colors": [{ "hex": "#FFFFFF", "role": "button-text" }],
+      "region": "CTA"
+    },
+    {
+      "path": "首页/Body/Main Content/Section/Container",
+      "node_id": "4:126",
+      "name": "archive-stats",
+      "text": "共收录 5 篇精选文章，涵盖 UI设计、设计经验、AI前沿",
+      "font": { "family": "Noto Sans SC", "size": 12, "weight": 400, "lineHeight": 20 },
+      "colors": [{ "hex": "#888888", "role": "muted" }],
+      "region": "CTA"
+    },
+    {
+      "path": "首页/Body/Footer/Container",
+      "node_id": "4:133",
+      "name": "footer",
+      "text": "关于 · 本文由 AI 辅助摘要…",
+      "font": { "family": "Noto Sans SC", "size": 12, "weight": 400, "lineHeight": 18.857 },
+      "colors": [{ "hex": "#555555", "role": "footer" }, { "hex": "#999999", "role": "footer-muted" }],
+      "region": "Footer"
+    }
+  ],
+  "shadow_bindings": [
+    {
+      "path": "首页/Body/Main Content/Section/Article",
+      "node_id": "4:87",
+      "name": "Article",
+      "bbox": [0, 0, 405, 342],
+      "effect_id": "figma:4:87",
+      "box_shadow": [
+        "0px 6px 16px 0px rgba(0,0,0,0.08)",
+        "0px 3px 6px -4px rgba(0,0,0,0.12)",
+        "0px 9px 28px 8px rgba(0,0,0,0.05)"
+      ]
+    }
+  ],
+  "card_surfaces": [
+    {
+      "path": "首页/Body/Main Content/Section/Article",
+      "node_id": "4:87",
+      "name": "Article",
+      "width": 405,
+      "height": 342,
+      "has_shadow": true,
+      "effect_id": "figma:4:87",
+      "border_radius": 16
+    }
+  ],
+  "node_effects": [
+    {
+      "path": "首页/Body/Main Content/Section/Article",
+      "node_id": "4:87",
+      "name": "Article",
+      "bbox": [0, 0, 405, 342],
+      "effect_id": "figma:4:87",
+      "box_shadow": [
+        "0px 6px 16px 0px rgba(0,0,0,0.08)",
+        "0px 3px 6px -4px rgba(0,0,0,0.12)",
+        "0px 9px 28px 8px rgba(0,0,0,0.05)"
+      ]
+    }
+  ],
+  "component_hints": [],
+  "usage": "L2 对照 text_bindings；VA-SHADOW 对照 shadow_bindings 同路径 Article 节点"
+}

@@ -1,0 +1,11 @@
+{
+  "data": {
+    "id": "snap",
+    "name": "SNAP 快速决策",
+    "introduction": "Make faster product or sales decisions using SNAP criteria",
+    "category": "requirements_analysis",
+    "file_path": "snap.md",
+    "content": "\nMake faster, higher-quality product or sales decisions using the SNAP framework: **Simple**, **iNvaluable**, **Aligned**, **Priority**. Use it to cut through complexity, compare options, and produce a clear recommendation.\n\n## Steps\n\n1. **List options**\n   - Enumerate the viable options to choose from (including “do nothing” when relevant).\n   - State constraints (time, budget, compliance, resourcing).\n\n2. **Score each option with SNAP**\n   - **Simple** — Easy to understand and implement; avoid unnecessary complexity.\n   - **iNvaluable** — Delivers exceptional value that justifies attention and resources.\n   - **Aligned** — Fits the customer’s / organization’s core objectives and beliefs.\n   - **Priority** — Urgent and important enough to act on now versus other work.\n\n3. **Pass/Fail gate**\n   - Mark each dimension as **Pass/Fail** with short justification.\n   - Advance only options that **pass all four** dimensions; call out risks and mitigations for borderline cases.\n\n4. **Recommend**\n   - Pick the top choice and provide a crisp rationale.\n   - If no option passes, recommend what must change for a viable option to pass.\n\n## Output Format\n\nReturn a SNAP scorecard for each option with:\n- **Pass/Fail** per dimension (Simple/iNvaluable/Aligned/Priority)\n- **Overall recommendation**\n- **Rationale** for the top choice\n",
+    "has_package": false
+  }
+}

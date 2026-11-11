@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UI 性能优化 · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / UI 性能优化
+    </p>
+    <span class="tag tag--solution_design">方案设计</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">UI 性能优化</h1>
+      <p>Diagnoses and fixes UI performance across loading speed, rendering, animations, images, and bundle size. Use when the user mentions slow, laggy, janky, performance, bundle size, load time, or wants a faster, smoother experience.</p>
+    </div>
+    
+    <div class="markdown"><p>Identify and fix performance issues to create faster, smoother user experiences.</p>
+<h2>Assess Performance Issues</h2>
+<p>Understand current performance and identify problems:</p>
+<ol>
+<li><strong>Measure current state</strong>:</li>
+</ol>
+<p>   - <strong>Core Web Vitals</strong>: LCP, FID/INP, CLS scores</p>
+<p>   - <strong>Load time</strong>: Time to interactive, first contentful paint</p>
+<p>   - <strong>Bundle size</strong>: JavaScript, CSS, image sizes</p>
+<p>   - <strong>Runtime performance</strong>: Frame rate, memory usage, CPU usage</p>
+<p>   - <strong>Network</strong>: Request count, payload sizes, waterfall</p>
+<ol>
+<li><strong>Identify bottlenecks</strong>:</li>
+</ol>
+<p>   - What&#39;s slow? (Initial load? Interactions? Animations?)</p>
+<p>   - What&#39;s causing it? (Large images? Expensive JavaScript? Layout thrashing?)</p>
+<p>   - How bad is it? (Perceivable? Annoying? Blocking?)</p>
+<p>   - Who&#39;s affected? (All users? Mobile only? Slow connections?)</p>
+<p><strong>CRITICAL</strong>: Measure before and after. Premature optimization wastes time. Optimize what actually matters.</p>
+<h2>Optimization Strategy</h2>
+<p>Create systematic improvement plan:</p>
+<h3>Loading Performance</h3>
+<p><strong>Optimize Images</strong>:</p>
+<ul>
+<li>Use modern formats (WebP, AVIF)</li>
+<li>Proper sizing (don&#39;t load 3000px image for 300px display)</li>
+<li>Lazy loading for below-fold images</li>
+<li>Responsive images (<code>srcset</code>, <code>picture</code> element)</li>
+<li>Compress images (80-85% quality is usually imperceptible)</li>
+<li>Use CDN for faster delivery</li>
+</ul>
+<pre><code>&lt;img 
+  src=&quot;hero.webp&quot;
+  srcset=&quot;hero-400.webp 400w, hero-800.webp 800w, hero-1200.webp 1200w&quot;
+  sizes=&quot;(max-width: 400px) 400px, (max-width: 800px) 800px, 1200px&quot;
+  loading=&quot;lazy&quot;
+  alt=&quot;Hero image&quot;
+/&gt;</code></pre>
+<p><strong>Reduce JavaScript Bundle</strong>:</p>
+<ul>
+<li>Code splitting (route-based, component-based)</li>
+<li>Tree shaking (remove unused code)</li>
+<li>Remove unused dependencies</li>
+<li>Lazy load non-critical code</li>
+<li>Use dynamic imports for large components</li>
+</ul>
+<pre><code>// Lazy load heavy component
+const HeavyChart = lazy(() =&gt; import(&#39;./HeavyChart&#39;));</code></pre>
+<p><strong>Optimize CSS</strong>:</p>
+<ul>
+<li>Remove unused CSS</li>
+<li>Critical CSS inline, rest async</li>
+<li>Minimize CSS files</li>
+<li>Use CSS containment for independent regions</li>
+</ul>
+<p><strong>Optimize Fonts</strong>:</p>
+<ul>
+<li>Use <code>font-display: swap</code> or <code>optional</code></li>
+<li>Subset fonts (only characters you need)</li>
+<li>Preload critical fonts</li>
+<li>Use system fonts when appropriate</li>
+<li>Limit font weights loaded</li>
+</ul>
+<pre><code>@font-face {
+  font-family: &#39;CustomFont&#39;;
+  src: url(&#39;/fonts/custom.woff2&#39;) format(&#39;woff2&#39;);
+  font-display: swap; /* Show fallback immediately */
+  unicode-range: U+0020-007F; /* Basic Latin only */
+}</code></pre>
+<p><strong>Optimize Loading Strategy</strong>:</p>
+<ul>
+<li>Critical resources first (async/defer non-critical)</li>
+<li>Preload critical assets</li>
+<li>Prefetch likely next pages</li>
+<li>Service worker for offline/caching</li>
+<li>HTTP/2 or HTTP/3 for multiplexing</li>
+</ul>
+<h3>Rendering Performance</h3>
+<p><strong>Avoid Layout Thrashing</strong>:</p>
+<pre><code>// ❌ Bad: Alternating reads and writes (causes reflows)
+elements.forEach(el =&gt; {
+  const height = el.offsetHeight; // Read (forces layout)
+  el.style.height = height * 2; // Write
+});
+
+// ✅ Good: Batch reads, then batch writes
+const heights = elements.map(el =&gt; el.offsetHeight); // All reads
+elements.forEach((el, i) =&gt; {
+  el.style.height = heights[i] * 2; // All writes
+});</code></pre>
+<p><strong>Optimize Rendering</strong>:</p>
+<ul>
+<li>Use CSS <code>contain</code> property for independent regions</li>
+<li>Minimize DOM depth (flatter is faster)</li>
+<li>Reduce DOM size (fewer elements)</li>
+<li>Use <code>content-visibility: auto</code> for long lists</li>
+<li>Virtual scrolling for very long lists (react-window, react-virtualized)</li>
+</ul>
+<p><strong>Reduce Paint &amp; Composite</strong>:</p>
+<ul>
+<li>Use <code>transform</code> and <code>opacity</code> for animations (GPU-accelerated)</li>
+<li>Avoid animating layout properties (width, height, top, left)</li>
+<li>Use <code>will-change</code> sparingly for known expensive operations</li>
+<li>Minimize paint areas (smaller is faster)</li>
+</ul>
+<h3>Animation Performance</h3>
+<p><strong>GPU Acceleration</strong>:</p>
+<pre><code>/* ✅ GPU-accelerated (fast) */
+.animated {
+  transform: translateX(100px);
+  opacity: 0.5;
+}
+
+/* ❌ CPU-bound (slow) */
+.animated {
+  left: 100px;
+  width: 300px;
+}</code></pre>
+<p><strong>Smooth 60fps</strong>:</p>
+<ul>
+<li>Target 16ms per frame (60fps)</li>
+<li>Use <code>requestAnimationFrame</code> for JS animations</li>
+<li>Debounce/throttle scroll handlers</li>
+<li>Use CSS animations when possible</li>
+<li>Avoid long-running JavaScript during animations</li>
+</ul>
+<p><strong>Intersection Observer</strong>:</p>
+<pre><code>// Efficiently detect when elements enter viewport
+const observer = new IntersectionObserver((entries) =&gt; {
+  entries.forEach(entry =&gt; {
+    if (entry.isIntersecting) {
+      // Element is visible, lazy load or animate
+    }
+  });
+});</code></pre>
+<h3>React/Framework Optimization</h3>
+<p><strong>React-specific</strong>:</p>
+<ul>
+<li>Use <code>memo()</code> for expensive components</li>
+<li><code>useMemo()</code> and <code>useCallback()</code> for expensive computations</li>
+<li>Virtualize long lists</li>
+<li>Code split routes</li>
+<li>Avoid inline function creation in render</li>
+<li>Use React DevTools Profiler</li>
+</ul>
+<p><strong>Framework-agnostic</strong>:</p>
+<ul>
+<li>Minimize re-renders</li>
+<li>Debounce expensive operations</li>
+<li>Memoize computed values</li>
+<li>Lazy load routes and components</li>
+</ul>
+<h3>Network Optimization</h3>
+<p><strong>Reduce Requests</strong>:</p>
+<ul>
+<li>Combine small files</li>
+<li>Use SVG sprites for icons</li>
+<li>Inline small critical assets</li>
+<li>Remove unused third-party scripts</li>
+</ul>
+<p><strong>Optimize APIs</strong>:</p>
+<ul>
+<li>Use pagination (don&#39;t load everything)</li>
+<li>GraphQL to request only needed fields</li>
+<li>Response compression (gzip, brotli)</li>
+<li>HTTP caching headers</li>
+<li>CDN for static assets</li>
+</ul>
+<p><strong>Optimize for Slow Connections</strong>:</p>
+<ul>
+<li>Adaptive loading based on connection (navigator.connection)</li>
+<li>Optimistic UI updates</li>
+<li>Request prioritization</li>
+<li>Progressive enhancement</li>
+</ul>
+<h2>Core Web Vitals Optimization</h2>
+<h3>Largest Contentful Paint (LCP &lt; 2.5s)</h3>
+<ul>
+<li>Optimize hero images</li>
+<li>Inline critical CSS</li>
+<li>Preload key resources</li>
+<li>Use CDN</li>
+<li>Server-side rendering</li>
+</ul>
+<h3>First Input Delay (FID &lt; 100ms) / INP (&lt; 200ms)</h3>
+<ul>
+<li>Break up long tasks</li>
+<li>Defer non-critical JavaScript</li>
+<li>Use web workers for heavy computation</li>
+<li>Reduce JavaScript execution time</li>
+</ul>
+<h3>Cumulative Layout Shift (CLS &lt; 0.1)</h3>
+<ul>
+<li>Set dimensions on images and videos</li>
+<li>Don&#39;t inject content above existing content</li>
+<li>Use <code>aspect-ratio</code> CSS property</li>
+<li>Reserve space for ads/embeds</li>
+<li>Avoid animations that cause layout shifts</li>
+</ul>
+<pre><code>/* Reserve space for image */
+.image-container {
+  aspect-ratio: 16 / 9;
+}</code></pre>
+<h2>Performance Monitoring</h2>
+<p><strong>Tools to use</strong>:</p>
+<ul>
+<li>Chrome DevTools (Lighthouse, Performance panel)</li>
+<li>WebPageTest</li>
+<li>Core Web Vitals (Chrome UX Report)</li>
+<li>Bundle analyzers (webpack-bundle-analyzer)</li>
+<li>Performance monitoring (Sentry, DataDog, New Relic)</li>
+</ul>
+<p><strong>Key metrics</strong>:</p>
+<ul>
+<li>LCP, FID/INP, CLS (Core Web Vitals)</li>
+<li>Time to Interactive (TTI)</li>
+<li>First Contentful Paint (FCP)</li>
+<li>Total Blocking Time (TBT)</li>
+<li>Bundle size</li>
+<li>Request count</li>
+</ul>
+<p><strong>IMPORTANT</strong>: Measure on real devices with real network conditions. Desktop Chrome with fast connection isn&#39;t representative.</p>
+<p><strong>NEVER</strong>:</p>
+<ul>
+<li>Optimize without measuring (premature optimization)</li>
+<li>Sacrifice accessibility for performance</li>
+<li>Break functionality while optimizing</li>
+<li>Use <code>will-change</code> everywhere (creates new layers, uses memory)</li>
+<li>Lazy load above-fold content</li>
+<li>Optimize micro-optimizations while ignoring major issues (optimize the biggest bottleneck first)</li>
+<li>Forget about mobile performance (often slower devices, slower connections)</li>
+</ul>
+<h2>Verify Improvements</h2>
+<p>Test that optimizations worked:</p>
+<ul>
+<li><strong>Before/after metrics</strong>: Compare Lighthouse scores</li>
+<li><strong>Real user monitoring</strong>: Track improvements for real users</li>
+<li><strong>Different devices</strong>: Test on low-end Android, not just flagship iPhone</li>
+<li><strong>Slow connections</strong>: Throttle to 3G, test experience</li>
+<li><strong>No regressions</strong>: Ensure functionality still works</li>
+<li><strong>User perception</strong>: Does it <em>feel</em> faster?</li>
+</ul>
+<p>Remember: Performance is a feature. Fast experiences feel more responsive, more polished, more professional. Optimize systematically, measure ruthlessly, and prioritize user-perceived performance.</p></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

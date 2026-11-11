@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CKM 品牌 · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / CKM 品牌
+    </p>
+    <span class="tag tag--solution_design">方案设计</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">CKM 品牌</h1>
+      <p>Brand voice, visual identity, messaging frameworks, asset management, brand consistency. Activate for branded content, tone of voice, marketing assets, brand compliance, style guides.</p>
+    </div>
+    
+    <div class="markdown"><h1>Brand</h1>
+<p>Brand identity, voice, messaging, asset management, and consistency frameworks.</p>
+<h2>When to Use</h2>
+<ul>
+<li>Brand voice definition and content tone guidance</li>
+<li>Visual identity standards and style guide development</li>
+<li>Messaging framework creation</li>
+<li>Brand consistency review and audit</li>
+<li>Asset organization, naming, and approval</li>
+<li>Color palette management and typography specs</li>
+</ul>
+<h2>Quick Start</h2>
+<p><strong>Inject brand context into prompts:</strong></p>
+<pre><code>node scripts/inject-brand-context.cjs
+node scripts/inject-brand-context.cjs --json</code></pre>
+<p><strong>Validate an asset:</strong></p>
+<pre><code>node scripts/validate-asset.cjs &lt;asset-path&gt;</code></pre>
+<p><strong>Extract/compare colors:</strong></p>
+<pre><code>node scripts/extract-colors.cjs --palette
+node scripts/extract-colors.cjs &lt;image-path&gt;</code></pre>
+<h2>Brand Sync Workflow</h2>
+<pre><code># 1. Edit docs/brand-guidelines.md (or use /brand update)
+# 2. Sync to design tokens
+node scripts/sync-brand-to-tokens.cjs
+# 3. Verify
+node scripts/inject-brand-context.cjs --json | head -20</code></pre>
+<p><strong>Files synced:</strong></p>
+<ul>
+<li><code>docs/brand-guidelines.md</code> → Source of truth</li>
+<li><code>assets/design-tokens.json</code> → Token definitions</li>
+<li><code>assets/design-tokens.css</code> → CSS variables</li>
+</ul>
+<h2>Subcommands</h2>
+<p>| Subcommand | Description | Reference |</p>
+<p>|------------|-------------|-----------|</p>
+<p>| <code>update</code> | Update brand identity and sync to all design systems | <code>references/update.md</code> |</p>
+<h2>References</h2>
+<p>| Topic | File |</p>
+<p>|-------|------|</p>
+<p>| Voice Framework | <code>references/voice-framework.md</code> |</p>
+<p>| Visual Identity | <code>references/visual-identity.md</code> |</p>
+<p>| Messaging | <code>references/messaging-framework.md</code> |</p>
+<p>| Consistency | <code>references/consistency-checklist.md</code> |</p>
+<p>| Guidelines Template | <code>references/brand-guideline-template.md</code> |</p>
+<p>| Asset Organization | <code>references/asset-organization.md</code> |</p>
+<p>| Color Management | <code>references/color-palette-management.md</code> |</p>
+<p>| Typography | <code>references/typography-specifications.md</code> |</p>
+<p>| Logo Usage | <code>references/logo-usage-rules.md</code> |</p>
+<p>| Approval Checklist | <code>references/approval-checklist.md</code> |</p>
+<h2>Scripts</h2>
+<p>| Script | Purpose |</p>
+<p>|--------|---------|</p>
+<p>| <code>scripts/inject-brand-context.cjs</code> | Extract brand context for prompt injection |</p>
+<p>| <code>scripts/sync-brand-to-tokens.cjs</code> | Sync brand-guidelines.md → design-tokens.json/css |</p>
+<p>| <code>scripts/validate-asset.cjs</code> | Validate asset naming, size, format |</p>
+<p>| <code>scripts/extract-colors.cjs</code> | Extract and compare colors against palette |</p>
+<h2>Templates</h2>
+<p>| Template | Purpose |</p>
+<p>|----------|---------|</p>
+<p>| <code>templates/brand-guidelines-starter.md</code> | Complete starter template for new brands |</p>
+<h2>Routing</h2>
+<ol>
+<li>Parse subcommand from <code>$ARGUMENTS</code> (first word)</li>
+<li>Load corresponding <code>references/{subcommand}.md</code></li>
+<li>Execute with remaining arguments</li>
+</ol></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

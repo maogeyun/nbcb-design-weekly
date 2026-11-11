@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:"$Sreact.suspense"
+3:I[49222,["500","static/chunks/500-e2a7ab501ac40f90.js","415","static/chunks/app/m/article/%5Bid%5D/page-5aba7d40c207e840.js"],"MobileArticlePageClient"]
+4:I[90484,[],"OutletBoundary"]
+0:{"rsc":["$","$1","c",{"children":[["$","$2",null,{"children":["$","$L3",null,{"article":{"id":"art-009","title":"Building Agents for Design Operations","original_url":"https://design.google/library/design-ops-agents","source_name":"Google Design","published_at":"2026-06-03","category":"ai_frontier","introduction":"Google Design 介绍如何将 Agent 用于设计运营（Design Ops）：自动整理设计资产、同步 token 变更、生成评审摘要等。文章将 Agent 定位为「流程自动化助手」而非「替代设计师」，并讨论权限与审计要求。对大型设计团队，这是 AI 从创作层走向管理层的一次实践探索，可与内部设计资产管理需求对照阅读。","language":"en","link_status":"link_ok","status":"published","issue_id":"issue-1","sort_order":9,"intro_reviewed":true,"click_count":1},"issueId":"issue-1","issueNumber":1}]}],null,["$","$L4",null,{"children":["$","$2",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"hZQ7hwDsqTHpsAxefcyvp"}
+5:null

@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>COSS Particles · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / COSS Particles
+    </p>
+    <span class="tag tag--solution_design">方案设计</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">COSS Particles</h1>
+      <p>Index of all COSS UI particle examples. Use when implementing UI features to find copy-paste-ready component patterns built on coss primitives. Each particle has a description and a JSON URL for easy installation.</p>
+    </div>
+    
+    <div class="markdown"><h1>COSS UI Particles Index</h1>
+<p>Particles are copy-paste-ready UI patterns built on <a href="https://coss.com/ui" target="_blank" rel="noopener noreferrer">coss</a> primitives. Browse them visually at &lt;https://coss.com/ui/particles&gt;.</p>
+<h2>How to use this skill</h2>
+<ol>
+<li>Describe the UI you need (e.g. &quot;a form with validation&quot;, &quot;a dialog with a form inside&quot;, &quot;tabs with icons&quot;).</li>
+<li>Search this index for matching particles by component type and description.</li>
+<li>Fetch the JSON URL to get the full source code of the particle.</li>
+<li>Adapt the particle code to your needs.</li>
+</ol>
+<h2>JSON URL pattern</h2>
+<p>Each particle has a JSON manifest at:</p>
+<pre><code>https://coss.com/ui/r/&lt;particle-name&gt;.json</code></pre>
+<p>For example: <code>https://coss.com/ui/r/p-accordion-1.json</code></p>
+<h2>Source code</h2>
+<p>Particle source files live in this repo at <code>apps/ui/registry/default/particles/</code>.</p>
+<h2>Updating this index</h2>
+<p>Run the generator script from the coss repo root:</p>
+<pre><code>node apps/ui/scripts/generate-particle-index.cjs</code></pre>
+<p>Total: <strong>484 particles</strong> across <strong>52 component types</strong></p>
+<h2>Component types</h2>
+<ul>
+<li><a href="#accordion" target="_blank" rel="noopener noreferrer">accordion</a> (4)</li>
+<li><a href="#alert" target="_blank" rel="noopener noreferrer">alert</a> (7)</li>
+<li><a href="#alert-dialog" target="_blank" rel="noopener noreferrer">alert-dialog</a> (2)</li>
+<li><a href="#autocomplete" target="_blank" rel="noopener noreferrer">autocomplete</a> (15)</li>
+<li><a href="#avatar" target="_blank" rel="noopener noreferrer">avatar</a> (14)</li>
+<li><a href="#badge" target="_blank" rel="noopener noreferrer">badge</a> (20)</li>
+<li><a href="#breadcrumb" target="_blank" rel="noopener noreferrer">breadcrumb</a> (7)</li>
+<li><a href="#button" target="_blank" rel="noopener noreferrer">button</a> (40)</li>
+<li><a href="#calendar" target="_blank" rel="noopener noreferrer">calendar</a> (24)</li>
+<li><a href="#card" target="_blank" rel="noopener noreferrer">card</a> (11)</li>
+<li><a href="#checkbox" target="_blank" rel="noopener noreferrer">checkbox</a> (5)</li>
+<li><a href="#checkbox-group" target="_blank" rel="noopener noreferrer">checkbox-group</a> (5)</li>
+<li><a href="#collapsible" target="_blank" rel="noopener noreferrer">collapsible</a> (1)</li>
+<li><a href="#combobox" target="_blank" rel="noopener noreferrer">combobox</a> (18)</li>
+<li><a href="#command" target="_blank" rel="noopener noreferrer">command</a> (2)</li>
+<li><a href="#date-picker" target="_blank" rel="noopener noreferrer">date-picker</a> (9)</li>
+<li><a href="#dialog" target="_blank" rel="noopener noreferrer">dialog</a> (6)</li>
+<li><a href="#drawer" target="_blank" rel="noopener noreferrer">drawer</a> (14)</li>
+<li><a href="#empty" target="_blank" rel="noopener noreferrer">empty</a> (1)</li>
+<li><a href="#field" target="_blank" rel="noopener noreferrer">field</a> (18)</li>
+<li><a href="#fieldset" target="_blank" rel="noopener noreferrer">fieldset</a> (1)</li>
+<li><a href="#form" target="_blank" rel="noopener noreferrer">form</a> (2)</li>
+<li><a href="#frame" target="_blank" rel="noopener noreferrer">frame</a> (4)</li>
+<li><a href="#group" target="_blank" rel="noopener noreferrer">group</a> (22)</li>
+<li><a href="#input" target="_blank" rel="noopener noreferrer">input</a> (19)</li>
+<li><a href="#input-group" target="_blank" rel="noopener noreferrer">input-group</a> (28)</li>
+<li><a href="#kbd" target="_blank" rel="noopener noreferrer">kbd</a> (1)</li>
+<li><a href="#menu" target="_blank" rel="noopener noreferrer">menu</a> (9)</li>
+<li><a href="#meter" target="_blank" rel="noopener noreferrer">meter</a> (4)</li>
+<li><a href="#number-field" target="_blank" rel="noopener noreferrer">number-field</a> (11)</li>
+<li><a href="#otp-field" target="_blank" rel="noopener noreferrer">otp-field</a> (9)</li>
+<li><a href="#pagination" target="_blank" rel="noopener noreferrer">pagination</a> (3)</li>
+<li><a href="#popover" target="_blank" rel="noopener noreferrer">popover</a> (3)</li>
+<li><a href="#preview-card" target="_blank" rel="noopener noreferrer">preview-card</a> (1)</li>
+<li><a href="#progress" target="_blank" rel="noopener noreferrer">progress</a> (3)</li>
+<li><a href="#radio-group" target="_blank" rel="noopener noreferrer">radio-group</a> (6)</li>
+<li><a href="#scroll-area" target="_blank" rel="noopener noreferrer">scroll-area</a> (5)</li>
+<li><a href="#select" target="_blank" rel="noopener noreferrer">select</a> (23)</li>
+<li><a href="#separator" target="_blank" rel="noopener noreferrer">separator</a> (1)</li>
+<li><a href="#sheet" target="_blank" rel="noopener noreferrer">sheet</a> (3)</li>
+<li><a href="#skeleton" target="_blank" rel="noopener noreferrer">skeleton</a> (2)</li>
+<li><a href="#slider" target="_blank" rel="noopener noreferrer">slider</a> (23)</li>
+<li><a href="#spinner" target="_blank" rel="noopener noreferrer">spinner</a> (1)</li>
+<li><a href="#switch" target="_blank" rel="noopener noreferrer">switch</a> (6)</li>
+<li><a href="#table" target="_blank" rel="noopener noreferrer">table</a> (8)</li>
+<li><a href="#tabs" target="_blank" rel="noopener noreferrer">tabs</a> (13)</li>
+<li><a href="#textarea" target="_blank" rel="noopener noreferrer">textarea</a> (15)</li>
+<li><a href="#toast" target="_blank" rel="noopener noreferrer">toast</a> (13)</li>
+<li><a href="#toggle" target="_blank" rel="noopener noreferrer">toggle</a> (8)</li>
+<li><a href="#toggle-group" target="_blank" rel="noopener noreferrer">toggle-group</a> (9)</li>
+<li><a href="#toolbar" target="_blank" rel="noopener noreferrer">toolbar</a> (1)</li>
+<li><a href="#tooltip" target="_blank" rel="noopener noreferrer">tooltip</a> (4)</li>
+</ul>
+<p>---</p>
+<h3>accordion</h3>
+<ul>
+<li>Basic accordion | <a href="https://coss.com/ui/r/p-accordion-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Accordion with one panel open | <a href="https://coss.com/ui/r/p-accordion-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Accordion allowing multiple panels open | <a href="https://coss.com/ui/r/p-accordion-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Controlled accordion | <a href="https://coss.com/ui/r/p-accordion-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>alert</h3>
+<ul>
+<li>Basic alert | <a href="https://coss.com/ui/r/p-alert-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Alert with icon | <a href="https://coss.com/ui/r/p-alert-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Alert with icon and action buttons | <a href="https://coss.com/ui/r/p-alert-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Info alert | <a href="https://coss.com/ui/r/p-alert-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Success alert | <a href="https://coss.com/ui/r/p-alert-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Warning alert | <a href="https://coss.com/ui/r/p-alert-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Error alert | <a href="https://coss.com/ui/r/p-alert-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>alert-dialog</h3>
+<ul>
+<li>Alert dialog | <a href="https://coss.com/ui/r/p-alert-dialog-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Alert dialog with bare footer | <a href="https://coss.com/ui/r/p-alert-dialog-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>autocomplete</h3>
+<ul>
+<li>Basic autocomplete | <a href="https://coss.com/ui/r/p-autocomplete-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Disabled autocomplete | <a href="https://coss.com/ui/r/p-autocomplete-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Small autocomplete | <a href="https://coss.com/ui/r/p-autocomplete-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Large autocomplete | <a href="https://coss.com/ui/r/p-autocomplete-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Autocomplete with label | <a href="https://coss.com/ui/r/p-autocomplete-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Autocomplete autofilling the input with the highlighted item | <a href="https://coss.com/ui/r/p-autocomplete-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Autocomplete auto highlighting the first option | <a href="https://coss.com/ui/r/p-autocomplete-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Autocomplete with clear button | <a href="https://coss.com/ui/r/p-autocomplete-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Autocomplete with trigger and clear buttons | <a href="https://coss.com/ui/r/p-autocomplete-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Autocomplete with grouped items | <a href="https://coss.com/ui/r/p-autocomplete-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Autocomplete with limited number of results | <a href="https://coss.com/ui/r/p-autocomplete-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Autocomplete with async items loading | <a href="https://coss.com/ui/r/p-autocomplete-12.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Autocomplete form | <a href="https://coss.com/ui/r/p-autocomplete-13.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Autocomplete form | <a href="https://coss.com/ui/r/p-autocomplete-14.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Pill-shaped autocomplete | <a href="https://coss.com/ui/r/p-autocomplete-15.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>avatar</h3>
+<ul>
+<li>Avatar with image and fallback | <a href="https://coss.com/ui/r/p-avatar-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Fallback-only avatar | <a href="https://coss.com/ui/r/p-avatar-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Avatars with different sizes | <a href="https://coss.com/ui/r/p-avatar-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Avatars with different radii | <a href="https://coss.com/ui/r/p-avatar-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Overlapping avatar group | <a href="https://coss.com/ui/r/p-avatar-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Avatar with user icon fallback | <a href="https://coss.com/ui/r/p-avatar-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Avatar with emerald status dot | <a href="https://coss.com/ui/r/p-avatar-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Avatar with muted status dot | <a href="https://coss.com/ui/r/p-avatar-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Rounded avatar with top-right emerald status | <a href="https://coss.com/ui/r/p-avatar-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Avatar with notification badge | <a href="https://coss.com/ui/r/p-avatar-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Rounded avatar with notification badge | <a href="https://coss.com/ui/r/p-avatar-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Avatar with verified badge | <a href="https://coss.com/ui/r/p-avatar-12.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Small overlapping avatar group | <a href="https://coss.com/ui/r/p-avatar-13.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Large overlapping avatar group | <a href="https://coss.com/ui/r/p-avatar-14.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>badge</h3>
+<ul>
+<li>Basic badge | <a href="https://coss.com/ui/r/p-badge-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Outline badge | <a href="https://coss.com/ui/r/p-badge-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Secondary badge | <a href="https://coss.com/ui/r/p-badge-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Destructive badge | <a href="https://coss.com/ui/r/p-badge-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Info badge | <a href="https://coss.com/ui/r/p-badge-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Success badge | <a href="https://coss.com/ui/r/p-badge-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Warning badge | <a href="https://coss.com/ui/r/p-badge-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Error badge | <a href="https://coss.com/ui/r/p-badge-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Small badge | <a href="https://coss.com/ui/r/p-badge-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Large badge | <a href="https://coss.com/ui/r/p-badge-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Badge with icon | <a href="https://coss.com/ui/r/p-badge-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Badge with link | <a href="https://coss.com/ui/r/p-badge-12.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Badge with count | <a href="https://coss.com/ui/r/p-badge-13.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Full rounded badge (pill) | <a href="https://coss.com/ui/r/p-badge-14.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Badge with number after text | <a href="https://coss.com/ui/r/p-badge-15.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Status badge - Paid | <a href="https://coss.com/ui/r/p-badge-16.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Status badge - Pending | <a href="https://coss.com/ui/r/p-badge-17.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Status badge - Failed | <a href="https://coss.com/ui/r/p-badge-18.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Selectable badge with checkbox | <a href="https://coss.com/ui/r/p-badge-19.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Removable badge | <a href="https://coss.com/ui/r/p-badge-20.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>breadcrumb</h3>
+<ul>
+<li>Breadcrumb with menu example | <a href="https://coss.com/ui/r/p-breadcrumb-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Breadcrumb with custom separator | <a href="https://coss.com/ui/r/p-breadcrumb-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Breadcrumb with home icon for home link only | <a href="https://coss.com/ui/r/p-breadcrumb-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Breadcrumb with folders icon menu | <a href="https://coss.com/ui/r/p-breadcrumb-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Breadcrumb with icons before text | <a href="https://coss.com/ui/r/p-breadcrumb-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Breadcrumb with dot separators | <a href="https://coss.com/ui/r/p-breadcrumb-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Breadcrumb with select dropdown | <a href="https://coss.com/ui/r/p-breadcrumb-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>button</h3>
+<ul>
+<li>Default button | <a href="https://coss.com/ui/r/p-button-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Outline button | <a href="https://coss.com/ui/r/p-button-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Secondary button | <a href="https://coss.com/ui/r/p-button-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Destructive button | <a href="https://coss.com/ui/r/p-button-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Destructive outline button | <a href="https://coss.com/ui/r/p-button-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Ghost button | <a href="https://coss.com/ui/r/p-button-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Link button | <a href="https://coss.com/ui/r/p-button-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Extra-small button | <a href="https://coss.com/ui/r/p-button-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Small button | <a href="https://coss.com/ui/r/p-button-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Large button | <a href="https://coss.com/ui/r/p-button-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Extra-large button | <a href="https://coss.com/ui/r/p-button-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Disabled button | <a href="https://coss.com/ui/r/p-button-12.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Icon button | <a href="https://coss.com/ui/r/p-button-13.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Small icon button | <a href="https://coss.com/ui/r/p-button-14.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Large icon button | <a href="https://coss.com/ui/r/p-button-15.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Button with icon | <a href="https://coss.com/ui/r/p-button-16.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Link rendered as button | <a href="https://coss.com/ui/r/p-button-17.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Button using the built-in loading prop | <a href="https://coss.com/ui/r/p-button-41.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Custom loading button with manual Spinner | <a href="https://coss.com/ui/r/p-button-18.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Expandable show more/less toggle button | <a href="https://coss.com/ui/r/p-button-19.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Back link button with chevron | <a href="https://coss.com/ui/r/p-button-20.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Card-style button with heading and description | <a href="https://coss.com/ui/r/p-button-21.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Directional pad control buttons | <a href="https://coss.com/ui/r/p-button-22.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Outline like button with count | <a href="https://coss.com/ui/r/p-button-23.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Social login icon buttons | <a href="https://coss.com/ui/r/p-button-24.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Star button with count badge | <a href="https://coss.com/ui/r/p-button-26.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Button group with QR code icon and sign in | <a href="https://coss.com/ui/r/p-button-27.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Button with avatar | <a href="https://coss.com/ui/r/p-button-28.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Pill-shaped button with rounded-full styling | <a href="https://coss.com/ui/r/p-button-29.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Button with animated arrow on hover | <a href="https://coss.com/ui/r/p-button-30.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Button with keyboard shortcut indicator | <a href="https://coss.com/ui/r/p-button-31.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Button with notification badge | <a href="https://coss.com/ui/r/p-button-32.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Paired buttons (Cancel/Save) | <a href="https://coss.com/ui/r/p-button-33.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Button with animated status dot | <a href="https://coss.com/ui/r/p-button-34.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Icon-only copy button with feedback | <a href="https://coss.com/ui/r/p-button-35.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Copy button with feedback | <a href="https://coss.com/ui/r/p-button-36.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Rotating icon button (FAB-style toggle) | <a href="https://coss.com/ui/r/p-button-37.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Hamburger menu button with animated icon | <a href="https://coss.com/ui/r/p-button-39.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Download button with progress and cancel action | <a href="https://coss.com/ui/r/p-button-40.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Social login buttons (Google, X, GitHub) | <a href="https://coss.com/ui/r/p-button-38.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>calendar</h3>
+<ul>
+<li>Basic calendar | <a href="https://coss.com/ui/r/p-calendar-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with date range selection | <a href="https://coss.com/ui/r/p-calendar-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with month/year dropdown navigation | <a href="https://coss.com/ui/r/p-calendar-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with custom Select dropdown for month/year | <a href="https://coss.com/ui/r/p-calendar-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with Combobox dropdown for month/year | <a href="https://coss.com/ui/r/p-calendar-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with disabled dates | <a href="https://coss.com/ui/r/p-calendar-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with multiple date selection | <a href="https://coss.com/ui/r/p-calendar-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with custom cell size | <a href="https://coss.com/ui/r/p-calendar-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with rounded day buttons | <a href="https://coss.com/ui/r/p-calendar-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with rounded range selection style | <a href="https://coss.com/ui/r/p-calendar-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with right-aligned navigation | <a href="https://coss.com/ui/r/p-calendar-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with week numbers | <a href="https://coss.com/ui/r/p-calendar-12.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with year-only combobox dropdown | <a href="https://coss.com/ui/r/p-calendar-13.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar without arrow navigation (dropdown only) | <a href="https://coss.com/ui/r/p-calendar-14.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with current month button | <a href="https://coss.com/ui/r/p-calendar-15.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with today button | <a href="https://coss.com/ui/r/p-calendar-16.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with date input | <a href="https://coss.com/ui/r/p-calendar-17.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with time input | <a href="https://coss.com/ui/r/p-calendar-18.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with time slots (appointment picker) | <a href="https://coss.com/ui/r/p-calendar-19.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Calendar with date presets | <a href="https://coss.com/ui/r/p-calendar-20.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Range calendar with date presets | <a href="https://coss.com/ui/r/p-calendar-21.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Two months calendar | <a href="https://coss.com/ui/r/p-calendar-22.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Three months calendar | <a href="https://coss.com/ui/r/p-calendar-23.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Pricing calendar with custom day buttons | <a href="https://coss.com/ui/r/p-calendar-24.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>card</h3>
+<ul>
+<li>A basic card with header and footer | <a href="https://coss.com/ui/r/p-card-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Authentication card with actions | <a href="https://coss.com/ui/r/p-card-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Authentication card with separators | <a href="https://coss.com/ui/r/p-card-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Framed card with footer | <a href="https://coss.com/ui/r/p-card-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Framed card with header | <a href="https://coss.com/ui/r/p-card-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Framed card with header and footer | <a href="https://coss.com/ui/r/p-card-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Framed card with no rounded bottom | <a href="https://coss.com/ui/r/p-card-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Card within a frame and footer | <a href="https://coss.com/ui/r/p-card-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Card within a frame and footer | <a href="https://coss.com/ui/r/p-card-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Card within a frame with header and footer | <a href="https://coss.com/ui/r/p-card-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>CardFrame with header action | <a href="https://coss.com/ui/r/p-card-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>checkbox</h3>
+<ul>
+<li>Basic checkbox | <a href="https://coss.com/ui/r/p-checkbox-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Disabled checkbox | <a href="https://coss.com/ui/r/p-checkbox-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Checkbox with description | <a href="https://coss.com/ui/r/p-checkbox-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Card-style checkbox | <a href="https://coss.com/ui/r/p-checkbox-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Checkbox form | <a href="https://coss.com/ui/r/p-checkbox-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>checkbox-group</h3>
+<ul>
+<li>Basic checkbox group | <a href="https://coss.com/ui/r/p-checkbox-group-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Checkbox group with disabled items | <a href="https://coss.com/ui/r/p-checkbox-group-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Checkbox group with parent checkbox | <a href="https://coss.com/ui/r/p-checkbox-group-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Nested checkbox group with parent | <a href="https://coss.com/ui/r/p-checkbox-group-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Checkbox group form | <a href="https://coss.com/ui/r/p-checkbox-group-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>collapsible</h3>
+<ul>
+<li>Basic collapsible | <a href="https://coss.com/ui/r/p-collapsible-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>combobox</h3>
+<ul>
+<li>Basic combobox | <a href="https://coss.com/ui/r/p-combobox-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Disabled combobox | <a href="https://coss.com/ui/r/p-combobox-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Small combobox | <a href="https://coss.com/ui/r/p-combobox-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Large combobox | <a href="https://coss.com/ui/r/p-combobox-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Combobox with label | <a href="https://coss.com/ui/r/p-combobox-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Combobox auto highlighting the first option | <a href="https://coss.com/ui/r/p-combobox-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Combobox with clear button | <a href="https://coss.com/ui/r/p-combobox-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Combobox with grouped items | <a href="https://coss.com/ui/r/p-combobox-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Combobox with multiple selection | <a href="https://coss.com/ui/r/p-combobox-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Combobox with input inside popup | <a href="https://coss.com/ui/r/p-combobox-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Combobox form | <a href="https://coss.com/ui/r/p-combobox-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Combobox multiple form | <a href="https://coss.com/ui/r/p-combobox-12.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Combobox with start addon | <a href="https://coss.com/ui/r/p-combobox-13.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Combobox multiple with start addon | <a href="https://coss.com/ui/r/p-combobox-14.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Pill-shaped combobox | <a href="https://coss.com/ui/r/p-combobox-15.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Timezone combobox | <a href="https://coss.com/ui/r/p-combobox-16.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Timezone combobox with search input | <a href="https://coss.com/ui/r/p-combobox-17.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Combobox with select trigger | <a href="https://coss.com/ui/r/p-combobox-18.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>command</h3>
+<ul>
+<li>Command palette with dialog | <a href="https://coss.com/ui/r/p-command-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Command palette with AI assistant | <a href="https://coss.com/ui/r/p-command-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>date-picker</h3>
+<ul>
+<li>Basic date picker | <a href="https://coss.com/ui/r/p-date-picker-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Date range picker | <a href="https://coss.com/ui/r/p-date-picker-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Two months calendar with range date | <a href="https://coss.com/ui/r/p-date-picker-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Date picker with field and dropdown navigation | <a href="https://coss.com/ui/r/p-date-picker-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Date picker with presets | <a href="https://coss.com/ui/r/p-date-picker-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Date picker with input | <a href="https://coss.com/ui/r/p-date-picker-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Date picker that closes on select | <a href="https://coss.com/ui/r/p-date-picker-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Multiple dates picker | <a href="https://coss.com/ui/r/p-date-picker-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Date picker with select-like trigger | <a href="https://coss.com/ui/r/p-date-picker-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>dialog</h3>
+<ul>
+<li>Dialog with form | <a href="https://coss.com/ui/r/p-dialog-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Dialog with bare footer | <a href="https://coss.com/ui/r/p-dialog-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Dialog opened from menu | <a href="https://coss.com/ui/r/p-dialog-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Nested dialogs | <a href="https://coss.com/ui/r/p-dialog-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Dialog with close confirmation | <a href="https://coss.com/ui/r/p-dialog-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Dialog with long content | <a href="https://coss.com/ui/r/p-dialog-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>drawer</h3>
+<ul>
+<li>Simple bottom drawer with close button | <a href="https://coss.com/ui/r/p-drawer-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Bottom drawer without drag bar | <a href="https://coss.com/ui/r/p-drawer-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Drawer with close button | <a href="https://coss.com/ui/r/p-drawer-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Inset variant drawers for all four positions | <a href="https://coss.com/ui/r/p-drawer-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Straight variant drawers for all four positions | <a href="https://coss.com/ui/r/p-drawer-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Scrollable content with terms and conditions | <a href="https://coss.com/ui/r/p-drawer-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Nested bottom drawers with centered content | <a href="https://coss.com/ui/r/p-drawer-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Nested right drawers with inset variant | <a href="https://coss.com/ui/r/p-drawer-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Bottom drawer with snap points | <a href="https://coss.com/ui/r/p-drawer-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Edit profile form with default and bare footer variants | <a href="https://coss.com/ui/r/p-drawer-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Mobile menu drawer from the left | <a href="https://coss.com/ui/r/p-drawer-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Responsive edit profile: dialog on desktop, drawer on mobile | <a href="https://coss.com/ui/r/p-drawer-12.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Responsive actions menu: menu on desktop, drawer on mobile | <a href="https://coss.com/ui/r/p-drawer-13.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Left drawer with swipe area | <a href="https://coss.com/ui/r/p-drawer-14.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>empty</h3>
+<ul>
+<li>Empty state with icon and actions | <a href="https://coss.com/ui/r/p-empty-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>field</h3>
+<ul>
+<li>Field with description | <a href="https://coss.com/ui/r/p-field-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Field with required indicator | <a href="https://coss.com/ui/r/p-field-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Field in disabled state | <a href="https://coss.com/ui/r/p-field-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Field showing validation error | <a href="https://coss.com/ui/r/p-field-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Show field validity state | <a href="https://coss.com/ui/r/p-field-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with field | <a href="https://coss.com/ui/r/p-field-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Field with autocomplete | <a href="https://coss.com/ui/r/p-field-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Field with combobox | <a href="https://coss.com/ui/r/p-field-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Field with multiple selection combobox | <a href="https://coss.com/ui/r/p-field-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Field with textarea | <a href="https://coss.com/ui/r/p-field-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Field with select | <a href="https://coss.com/ui/r/p-field-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Field with checkbox | <a href="https://coss.com/ui/r/p-field-12.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Field with checkbox group | <a href="https://coss.com/ui/r/p-field-13.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Field with radio group | <a href="https://coss.com/ui/r/p-field-14.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Field with toggle switch | <a href="https://coss.com/ui/r/p-field-15.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Field with slider | <a href="https://coss.com/ui/r/p-field-16.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Field with number field | <a href="https://coss.com/ui/r/p-field-17.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Complete form built with field | <a href="https://coss.com/ui/r/p-field-18.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>fieldset</h3>
+<ul>
+<li>Fieldset with multiple fields | <a href="https://coss.com/ui/r/p-fieldset-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>form</h3>
+<ul>
+<li>Input in a form | <a href="https://coss.com/ui/r/p-form-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Form with zod validation | <a href="https://coss.com/ui/r/p-form-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>frame</h3>
+<ul>
+<li>Basic frame | <a href="https://coss.com/ui/r/p-frame-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Frame with multiple separated panels | <a href="https://coss.com/ui/r/p-frame-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Frame with multiple stacked panels | <a href="https://coss.com/ui/r/p-frame-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Frame with collapsible content and delete button | <a href="https://coss.com/ui/r/p-frame-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>group</h3>
+<ul>
+<li>Basic group | <a href="https://coss.com/ui/r/p-group-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with input | <a href="https://coss.com/ui/r/p-group-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Small group | <a href="https://coss.com/ui/r/p-group-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Large group | <a href="https://coss.com/ui/r/p-group-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with disabled button | <a href="https://coss.com/ui/r/p-group-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with default button | <a href="https://coss.com/ui/r/p-group-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with start text | <a href="https://coss.com/ui/r/p-group-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with end text | <a href="https://coss.com/ui/r/p-group-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Vertical group | <a href="https://coss.com/ui/r/p-group-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Nested groups | <a href="https://coss.com/ui/r/p-group-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with popup | <a href="https://coss.com/ui/r/p-group-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with input group | <a href="https://coss.com/ui/r/p-group-12.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with menu | <a href="https://coss.com/ui/r/p-group-13.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with select | <a href="https://coss.com/ui/r/p-group-14.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with search | <a href="https://coss.com/ui/r/p-group-15.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with add button and input | <a href="https://coss.com/ui/r/p-group-16.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with input and currency text | <a href="https://coss.com/ui/r/p-group-17.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with select and input | <a href="https://coss.com/ui/r/p-group-18.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with input and select | <a href="https://coss.com/ui/r/p-group-19.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with input and text button | <a href="https://coss.com/ui/r/p-group-20.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with two number inputs for range | <a href="https://coss.com/ui/r/p-group-22.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Group with filter label, combobox multi-select, and remove button | <a href="https://coss.com/ui/r/p-group-23.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>input</h3>
+<ul>
+<li>Basic input | <a href="https://coss.com/ui/r/p-input-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Small input | <a href="https://coss.com/ui/r/p-input-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Large input | <a href="https://coss.com/ui/r/p-input-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Disabled input | <a href="https://coss.com/ui/r/p-input-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>File input | <a href="https://coss.com/ui/r/p-input-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input with label | <a href="https://coss.com/ui/r/p-input-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input with button using Group | <a href="https://coss.com/ui/r/p-input-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input with start text and end tooltip | <a href="https://coss.com/ui/r/p-input-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Password input with toggle visibility | <a href="https://coss.com/ui/r/p-input-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group mimicking a URL bar | <a href="https://coss.com/ui/r/p-input-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with keyboard shortcut | <a href="https://coss.com/ui/r/p-input-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with start loading spinner | <a href="https://coss.com/ui/r/p-input-12.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input with label and required indicator | <a href="https://coss.com/ui/r/p-input-13.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input with optional label | <a href="https://coss.com/ui/r/p-input-14.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input with custom border and background | <a href="https://coss.com/ui/r/p-input-15.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with end loading spinner | <a href="https://coss.com/ui/r/p-input-16.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Read-only input | <a href="https://coss.com/ui/r/p-input-17.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input with characters remaining counter | <a href="https://coss.com/ui/r/p-input-18.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Pill-shaped input | <a href="https://coss.com/ui/r/p-input-19.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>input-group</h3>
+<ul>
+<li>Basic input group | <a href="https://coss.com/ui/r/p-input-group-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with end icon | <a href="https://coss.com/ui/r/p-input-group-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with start text | <a href="https://coss.com/ui/r/p-input-group-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with end text | <a href="https://coss.com/ui/r/p-input-group-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with start and end text | <a href="https://coss.com/ui/r/p-input-group-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with number field | <a href="https://coss.com/ui/r/p-input-group-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with end tooltip | <a href="https://coss.com/ui/r/p-input-group-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with icon button | <a href="https://coss.com/ui/r/p-input-group-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with button | <a href="https://coss.com/ui/r/p-input-group-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with badge | <a href="https://coss.com/ui/r/p-input-group-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with keyboard shortcut | <a href="https://coss.com/ui/r/p-input-group-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with inner label | <a href="https://coss.com/ui/r/p-input-group-12.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Small input group | <a href="https://coss.com/ui/r/p-input-group-13.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Large input group | <a href="https://coss.com/ui/r/p-input-group-14.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Disabled input group | <a href="https://coss.com/ui/r/p-input-group-15.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with loading spinner | <a href="https://coss.com/ui/r/p-input-group-16.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with textarea | <a href="https://coss.com/ui/r/p-input-group-17.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with badge and menu | <a href="https://coss.com/ui/r/p-input-group-18.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Mini editor built with input group and toggle | <a href="https://coss.com/ui/r/p-input-group-19.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with search icon | <a href="https://coss.com/ui/r/p-input-group-20.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with start tooltip | <a href="https://coss.com/ui/r/p-input-group-21.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with clear button | <a href="https://coss.com/ui/r/p-input-group-22.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Search input group with loader and voice button | <a href="https://coss.com/ui/r/p-input-group-23.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Input group with character counter | <a href="https://coss.com/ui/r/p-input-group-24.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Password input with strength indicator | <a href="https://coss.com/ui/r/p-input-group-26.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Code snippet input with language selector | <a href="https://coss.com/ui/r/p-input-group-27.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Message composer with attachment buttons | <a href="https://coss.com/ui/r/p-input-group-28.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Chat input with voice and send buttons | <a href="https://coss.com/ui/r/p-input-group-29.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>kbd</h3>
+<ul>
+<li>Keyboard shortcuts display | <a href="https://coss.com/ui/r/p-kbd-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>menu</h3>
+<ul>
+<li>Basic menu | <a href="https://coss.com/ui/r/p-menu-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Menu with hover | <a href="https://coss.com/ui/r/p-menu-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Menu with checkbox | <a href="https://coss.com/ui/r/p-menu-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Menu with checkbox items as switches | <a href="https://coss.com/ui/r/p-menu-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Menu with radio group | <a href="https://coss.com/ui/r/p-menu-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Menu with link | <a href="https://coss.com/ui/r/p-menu-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Menu with group labels | <a href="https://coss.com/ui/r/p-menu-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Nested menu | <a href="https://coss.com/ui/r/p-menu-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Menu close on click | <a href="https://coss.com/ui/r/p-menu-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>meter</h3>
+<ul>
+<li>Basic meter | <a href="https://coss.com/ui/r/p-meter-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Simple meter | <a href="https://coss.com/ui/r/p-meter-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Meter with formatted value | <a href="https://coss.com/ui/r/p-meter-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Meter with range | <a href="https://coss.com/ui/r/p-meter-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>number-field</h3>
+<ul>
+<li>Basic number field | <a href="https://coss.com/ui/r/p-number-field-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Small number field | <a href="https://coss.com/ui/r/p-number-field-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Large number field | <a href="https://coss.com/ui/r/p-number-field-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Disabled number field | <a href="https://coss.com/ui/r/p-number-field-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Number field with label | <a href="https://coss.com/ui/r/p-number-field-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Number field with scrub | <a href="https://coss.com/ui/r/p-number-field-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Number field with range | <a href="https://coss.com/ui/r/p-number-field-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Number field with formatted value | <a href="https://coss.com/ui/r/p-number-field-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Number field with step | <a href="https://coss.com/ui/r/p-number-field-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Number field in form | <a href="https://coss.com/ui/r/p-number-field-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Pill-shaped number field | <a href="https://coss.com/ui/r/p-number-field-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>otp-field</h3>
+<ul>
+<li>Basic OTP field | <a href="https://coss.com/ui/r/p-otp-field-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Large OTP field | <a href="https://coss.com/ui/r/p-otp-field-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>OTP field with separator | <a href="https://coss.com/ui/r/p-otp-field-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>OTP field with label | <a href="https://coss.com/ui/r/p-otp-field-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>OTP field with custom sanitization | <a href="https://coss.com/ui/r/p-otp-field-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>OTP field with auto validation | <a href="https://coss.com/ui/r/p-otp-field-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Alphanumeric OTP field | <a href="https://coss.com/ui/r/p-otp-field-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>OTP field with placeholder hints | <a href="https://coss.com/ui/r/p-otp-field-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Masked OTP field | <a href="https://coss.com/ui/r/p-otp-field-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>pagination</h3>
+<ul>
+<li>Pagination example | <a href="https://coss.com/ui/r/p-pagination-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Pagination with previous and next buttons only | <a href="https://coss.com/ui/r/p-pagination-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Pagination with select, and previous and next buttons | <a href="https://coss.com/ui/r/p-pagination-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>popover</h3>
+<ul>
+<li>Popover with a form | <a href="https://coss.com/ui/r/p-popover-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Popover with close button | <a href="https://coss.com/ui/r/p-popover-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Animated popovers | <a href="https://coss.com/ui/r/p-popover-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>preview-card</h3>
+<ul>
+<li>Preview card with popup | <a href="https://coss.com/ui/r/p-preview-card-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>progress</h3>
+<ul>
+<li>Basic progress bar | <a href="https://coss.com/ui/r/p-progress-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Progress with label and value | <a href="https://coss.com/ui/r/p-progress-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Progress with formatted value | <a href="https://coss.com/ui/r/p-progress-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>radio-group</h3>
+<ul>
+<li>Basic radio group | <a href="https://coss.com/ui/r/p-radio-group-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Disabled radio group | <a href="https://coss.com/ui/r/p-radio-group-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Radio group with description | <a href="https://coss.com/ui/r/p-radio-group-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Radio group card | <a href="https://coss.com/ui/r/p-radio-group-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Radio group in form | <a href="https://coss.com/ui/r/p-radio-group-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Theme selector with image cards | <a href="https://coss.com/ui/r/p-radio-group-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>scroll-area</h3>
+<ul>
+<li>Basic scroll area | <a href="https://coss.com/ui/r/p-scroll-area-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Horizontal scroll area | <a href="https://coss.com/ui/r/p-scroll-area-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Scroll area with both directions | <a href="https://coss.com/ui/r/p-scroll-area-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Scroll area with fading edges | <a href="https://coss.com/ui/r/p-scroll-area-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Horizontal scroll area with scrollbar gutter | <a href="https://coss.com/ui/r/p-scroll-area-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>select</h3>
+<ul>
+<li>Basic select | <a href="https://coss.com/ui/r/p-select-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Small select | <a href="https://coss.com/ui/r/p-select-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Large select | <a href="https://coss.com/ui/r/p-select-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Disabled select | <a href="https://coss.com/ui/r/p-select-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Select without item alignment | <a href="https://coss.com/ui/r/p-select-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Select with groups | <a href="https://coss.com/ui/r/p-select-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Multiple select | <a href="https://coss.com/ui/r/p-select-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Select with icon | <a href="https://coss.com/ui/r/p-select-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Select options with icon | <a href="https://coss.com/ui/r/p-select-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Select with object values | <a href="https://coss.com/ui/r/p-select-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Select with disabled items | <a href="https://coss.com/ui/r/p-select-12.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Timezone select | <a href="https://coss.com/ui/r/p-select-13.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Status select with colored dot | <a href="https://coss.com/ui/r/p-select-14.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Pill-shaped select trigger | <a href="https://coss.com/ui/r/p-select-15.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Select with left text label | <a href="https://coss.com/ui/r/p-select-16.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Select with country flags | <a href="https://coss.com/ui/r/p-select-17.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Select with description in options only | <a href="https://coss.com/ui/r/p-select-18.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Select with avatars | <a href="https://coss.com/ui/r/p-select-19.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Rich select with avatars and usernames | <a href="https://coss.com/ui/r/p-select-20.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Auto width select | <a href="https://coss.com/ui/r/p-select-21.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Select with custom border and background | <a href="https://coss.com/ui/r/p-select-22.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Select with label | <a href="https://coss.com/ui/r/p-select-23.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Select in form | <a href="https://coss.com/ui/r/p-select-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>separator</h3>
+<ul>
+<li>Separator with horizontal and vertical orientations | <a href="https://coss.com/ui/r/p-separator-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>sheet</h3>
+<ul>
+<li>Basic sheet | <a href="https://coss.com/ui/r/p-sheet-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Sheet inset | <a href="https://coss.com/ui/r/p-sheet-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Sheet position | <a href="https://coss.com/ui/r/p-sheet-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>skeleton</h3>
+<ul>
+<li>Basic skeleton | <a href="https://coss.com/ui/r/p-skeleton-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Skeleton only | <a href="https://coss.com/ui/r/p-skeleton-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>slider</h3>
+<ul>
+<li>Basic slider | <a href="https://coss.com/ui/r/p-slider-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Slider with label and value | <a href="https://coss.com/ui/r/p-slider-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Disabled slider | <a href="https://coss.com/ui/r/p-slider-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Slider with reference labels | <a href="https://coss.com/ui/r/p-slider-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Slider with ticks | <a href="https://coss.com/ui/r/p-slider-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Slider with labels above | <a href="https://coss.com/ui/r/p-slider-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Range slider | <a href="https://coss.com/ui/r/p-slider-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Slider with 3 thumbs | <a href="https://coss.com/ui/r/p-slider-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Range slider with collision behavior none | <a href="https://coss.com/ui/r/p-slider-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Range slider with collision behavior swap | <a href="https://coss.com/ui/r/p-slider-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Slider with icons | <a href="https://coss.com/ui/r/p-slider-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Slider with input | <a href="https://coss.com/ui/r/p-slider-12.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Range slider with inputs | <a href="https://coss.com/ui/r/p-slider-13.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Slider with increment and decrement buttons | <a href="https://coss.com/ui/r/p-slider-14.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Price range slider | <a href="https://coss.com/ui/r/p-slider-15.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Emoji rating slider | <a href="https://coss.com/ui/r/p-slider-16.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Vertical slider | <a href="https://coss.com/ui/r/p-slider-17.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Vertical range slider | <a href="https://coss.com/ui/r/p-slider-18.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Vertical slider with input | <a href="https://coss.com/ui/r/p-slider-19.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Equalizer with vertical sliders | <a href="https://coss.com/ui/r/p-slider-20.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Object position sliders with reset | <a href="https://coss.com/ui/r/p-slider-21.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Price slider with histogram | <a href="https://coss.com/ui/r/p-slider-22.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Slider in form | <a href="https://coss.com/ui/r/p-slider-23.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>spinner</h3>
+<ul>
+<li>Basic spinner | <a href="https://coss.com/ui/r/p-spinner-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>switch</h3>
+<ul>
+<li>Basic switch | <a href="https://coss.com/ui/r/p-switch-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Disabled switch | <a href="https://coss.com/ui/r/p-switch-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Switch with description | <a href="https://coss.com/ui/r/p-switch-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Switch card | <a href="https://coss.com/ui/r/p-switch-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Switch in form | <a href="https://coss.com/ui/r/p-switch-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Custom size switch | <a href="https://coss.com/ui/r/p-switch-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>table</h3>
+<ul>
+<li>Basic table | <a href="https://coss.com/ui/r/p-table-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Frame with card-style table | <a href="https://coss.com/ui/r/p-table-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Table with TanStack Table and checkboxes | <a href="https://coss.com/ui/r/p-table-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Table with TanStack Table, sorting, and pagination | <a href="https://coss.com/ui/r/p-table-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Card-style table variant | <a href="https://coss.com/ui/r/p-table-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>CardFrame with card-style table | <a href="https://coss.com/ui/r/p-table-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>CardFrame with TanStack Table and checkboxes | <a href="https://coss.com/ui/r/p-table-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>CardFrame with TanStack Table, sorting, and pagination | <a href="https://coss.com/ui/r/p-table-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>tabs</h3>
+<ul>
+<li>Basic tabs | <a href="https://coss.com/ui/r/p-tabs-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Tabs with underline | <a href="https://coss.com/ui/r/p-tabs-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Vertical tabs | <a href="https://coss.com/ui/r/p-tabs-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Vertical tabs with underline | <a href="https://coss.com/ui/r/p-tabs-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Tabs with full rounded triggers | <a href="https://coss.com/ui/r/p-tabs-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Tabs with icon before name | <a href="https://coss.com/ui/r/p-tabs-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Tabs with icon before name and underline | <a href="https://coss.com/ui/r/p-tabs-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Tabs with icon only | <a href="https://coss.com/ui/r/p-tabs-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Tabs with underline and icon on top | <a href="https://coss.com/ui/r/p-tabs-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Tabs with count badge | <a href="https://coss.com/ui/r/p-tabs-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Vertical tabs with underline and icon before name | <a href="https://coss.com/ui/r/p-tabs-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Tabs with icon only and count badge | <a href="https://coss.com/ui/r/p-tabs-12.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Tabs with icon only and grouped tooltips | <a href="https://coss.com/ui/r/p-tabs-13.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>textarea</h3>
+<ul>
+<li>Basic textarea | <a href="https://coss.com/ui/r/p-textarea-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Small textarea | <a href="https://coss.com/ui/r/p-textarea-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Large textarea | <a href="https://coss.com/ui/r/p-textarea-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Disabled textarea | <a href="https://coss.com/ui/r/p-textarea-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Textarea with label | <a href="https://coss.com/ui/r/p-textarea-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Textarea in form | <a href="https://coss.com/ui/r/p-textarea-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Textarea with label and required indicator | <a href="https://coss.com/ui/r/p-textarea-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Textarea with optional label | <a href="https://coss.com/ui/r/p-textarea-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Textarea with custom border and background | <a href="https://coss.com/ui/r/p-textarea-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Read-only textarea | <a href="https://coss.com/ui/r/p-textarea-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Textarea with characters remaining counter | <a href="https://coss.com/ui/r/p-textarea-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Textarea field with required indicator | <a href="https://coss.com/ui/r/p-textarea-12.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Shorter textarea with fixed height | <a href="https://coss.com/ui/r/p-textarea-13.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Textarea with button aligned right | <a href="https://coss.com/ui/r/p-textarea-14.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Textarea with button aligned left | <a href="https://coss.com/ui/r/p-textarea-15.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>toast</h3>
+<ul>
+<li>Default stacked toast with title and description | <a href="https://coss.com/ui/r/p-toast-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Stacked toasts by semantic type (success, error, info, warning) | <a href="https://coss.com/ui/r/p-toast-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Loading-state stacked toast | <a href="https://coss.com/ui/r/p-toast-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Stacked toast with primary action (undo) | <a href="https://coss.com/ui/r/p-toast-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Promise-based stacked toast | <a href="https://coss.com/ui/r/p-toast-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Stacked toasts with varying content height | <a href="https://coss.com/ui/r/p-toast-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Anchored tooltip-style toast after copy | <a href="https://coss.com/ui/r/p-toast-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Anchored error toast after async failure | <a href="https://coss.com/ui/r/p-toast-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Long-running promise toast with cancel | <a href="https://coss.com/ui/r/p-toast-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Deduplicated success toast | <a href="https://coss.com/ui/r/p-toast-10.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Deduplicated error toast | <a href="https://coss.com/ui/r/p-toast-11.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Anchored deduplicated success toast | <a href="https://coss.com/ui/r/p-toast-12.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Anchored deduplicated error toast | <a href="https://coss.com/ui/r/p-toast-13.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>toggle</h3>
+<ul>
+<li>Basic toggle | <a href="https://coss.com/ui/r/p-toggle-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Toggle with outline | <a href="https://coss.com/ui/r/p-toggle-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Toggle with icon | <a href="https://coss.com/ui/r/p-toggle-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Small toggle | <a href="https://coss.com/ui/r/p-toggle-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Large toggle | <a href="https://coss.com/ui/r/p-toggle-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Disabled toggle | <a href="https://coss.com/ui/r/p-toggle-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Toggle icon group | <a href="https://coss.com/ui/r/p-toggle-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Bookmark toggle with tooltip and success toast | <a href="https://coss.com/ui/r/p-toggle-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>toggle-group</h3>
+<ul>
+<li>Basic toggle group | <a href="https://coss.com/ui/r/p-toggle-group-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Small toggle group | <a href="https://coss.com/ui/r/p-toggle-group-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Large toggle group | <a href="https://coss.com/ui/r/p-toggle-group-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Toggle group with outline | <a href="https://coss.com/ui/r/p-toggle-group-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Vertical toggle group with outline | <a href="https://coss.com/ui/r/p-toggle-group-5.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Disabled toggle group | <a href="https://coss.com/ui/r/p-toggle-group-6.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Toggle group with disabled item | <a href="https://coss.com/ui/r/p-toggle-group-7.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Multiple selection toggle group | <a href="https://coss.com/ui/r/p-toggle-group-8.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Toggle group with tooltips | <a href="https://coss.com/ui/r/p-toggle-group-9.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>toolbar</h3>
+<ul>
+<li>Toolbar with toggles, buttons, and select | <a href="https://coss.com/ui/r/p-toolbar-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul>
+<h3>tooltip</h3>
+<ul>
+<li>Basic tooltip | <a href="https://coss.com/ui/r/p-tooltip-1.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Grouped tooltips | <a href="https://coss.com/ui/r/p-tooltip-2.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Toggle group animated tooltip | <a href="https://coss.com/ui/r/p-tooltip-3.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+<li>Vertical group with animated tooltip | <a href="https://coss.com/ui/r/p-tooltip-4.json" target="_blank" rel="noopener noreferrer">JSON</a></li>
+</ul></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

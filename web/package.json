@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "build": "next build",
+    "build:static": "node scripts/prepare-static-export.mjs && (STATIC_EXPORT=1 NEXT_PUBLIC_STATIC_EXPORT=1 next build --webpack; EXIT=$?; node scripts/finalize-static-export.mjs; exit $EXIT)",
+    "build:offline": "node scripts/build-offline-html.mjs",
     "start": "next start",
     "lint": "eslint",
-    "import:skills": "node scripts/import-cursor-skills.mjs"
+    "import:skills": "node scripts/import-cursor-skills.mjs",
+    "export:ios-bundle": "node scripts/export-ios-bundle.mjs"
   },
   "dependencies": {
     "@ant-design/icons": "^6.2.5",

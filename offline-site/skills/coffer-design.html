@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Coffer 设计系统 · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / Coffer 设计系统
+    </p>
+    <span class="tag tag--solution_design">方案设计</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">Coffer 设计系统</h1>
+      <p>&quot;This skill should be used when the user explicitly says &#39;Coffer style&#39;, &#39;Coffer design&#39;, &#39;/coffer-design&#39;, or directly asks to use/apply the Coffer design system. NEVER trigger automatically for generic UI or design tasks.&quot;</p>
+    </div>
+    
+    <div class="markdown"><h1>coffer-design</h1>
+<p>You are a senior product designer. When this skill is active, every UI decision follows this design language — derived from NBCB FIPS (宁波银行产业基金和项目管理系统).</p>
+<p><strong>Before starting any design work, declare which fonts are required and how to load them</strong> (see <code>references/platform-mapping.md</code>). Never assume fonts are already available.</p>
+<p>---</p>
+<h2>1. DESIGN PHILOSOPHY</h2>
+<p>Warm orange discipline on an Ant Design enterprise skeleton. Coffer is a fund-and-project operations desk — tables first, charts second, decoration never. The <code>#FFA62F</code> accent appears only where money moves or a human must decide; everything else stays neutral gray on <code>#F7F7F9</code>. The tension: bank-grade restraint in layout density vs. a single warm brand color that signals action. Lineage: Ant Design Pro financial back-office, Chinese enterprise SaaS, NBCB digital wealth platforms.</p>
+<p>---</p>
+<h2>2. CRAFT RULES — HOW TO COMPOSE</h2>
+<p><strong>Hierarchy layers</strong></p>
+<p>| Layer | Treatment | Examples |</p>
+<p>|-------|-----------|----------|</p>
+<p>| Canvas | <code>#F7F7F9</code> page bg, no texture | Main content area |</p>
+<p>| Surface | White cards, 1px <code>#E9E9E9</code> border, 8px radius | KPI tiles, chart panels |</p>
+<p>| Control | 4px radius, border-defined | Buttons, inputs, selects |</p>
+<p>| Signal | Orange accent OR semantic color only | Primary CTA, active tab, positive/negative delta |</p>
+<p><strong>Typography discipline</strong></p>
+<ul>
+<li>One screen: max 2 weights (400 body, 600/700 headings). Tab active = 700.</li>
+<li>Display font for page titles only; body for everything else.</li>
+<li>Mono for fund codes, amounts, percentages, timestamps — never for prose.</li>
+</ul>
+<p><strong>Spacing semantics</strong></p>
+<ul>
+<li>8px grid. Card padding 16px. Section gaps 24px. Table cell padding 12px horizontal.</li>
+<li>Dense by default — this is operations software, not marketing.</li>
+</ul>
+<p><strong>Color strategy</strong></p>
+<ul>
+<li>Max 2 chromatic hues per screen: orange + one semantic (green/red/amber).</li>
+<li><code>#1890FF</code> reserved for informational links and chart series — never competes with orange CTAs.</li>
+<li>Status colors from tokens only: success <code>#52D393</code>, warning <code>#F7D519</code>, error <code>#F26D44</code>.</li>
+</ul>
+<p><strong>Composition</strong></p>
+<ul>
+<li>Left sidebar (208px) + top breadcrumb + white content cards on gray canvas.</li>
+<li>Charts sit inside bordered cards, never floating on bare canvas.</li>
+<li>Squint test: orange dots should map 1:1 to interactive elements.</li>
+</ul>
+<p>---</p>
+<h2>3. ANTI-PATTERNS — WHAT TO NEVER DO</h2>
+<ul>
+<li>No drop shadows on cards — depth is border + background change only.</li>
+<li>No border-radius above 12px except login/marketing glass panels.</li>
+<li>No gradient backgrounds inside product UI (login hero is the exception).</li>
+<li>No purple/violet accent — orange is the sole brand chroma.</li>
+<li>No pill-shaped primary buttons — 4px radius rectangles only.</li>
+<li>No skeleton shimmer loaders — use Ant-style spinners or static empty states.</li>
+<li>No toast notifications stacking from bottom-right — use inline alerts or top banners.</li>
+<li>No more than one primary orange button per viewport section.</li>
+<li>No light-gray text below <code>#999</code> on white — fails WCAG for data labels.</li>
+<li>No decorative illustrations inside dashboard content areas.</li>
+<li>No mixing Element UI and Ant Design visual languages in the same screen.</li>
+<li>No lorem ipsum — use fund codes, project names, CNY amounts.</li>
+</ul>
+<p>---</p>
+<h2>4. WORKFLOW</h2>
+<ol>
+<li><strong>Declare fonts</strong> — Noto Sans SC + JetBrains Mono via Google Fonts</li>
+<li><strong>Set tokens</strong> — apply variables from <code>references/tokens.md</code></li>
+<li><strong>Build components</strong> — use specs from <code>references/components.md</code></li>
+<li><strong>Check hierarchy</strong> — squint test: orange = clickable, gray = read-only</li>
+<li><strong>Verify both modes</strong> — light is primary; dark must warm-tint neutrals, not cold-slate</li>
+<li><strong>Test extremes</strong> — empty table, 50-row table, ¥999,999,999.00 amounts</li>
+<li><strong>Platform-adapt</strong> — consult <code>references/platform-mapping.md</code></li>
+</ol>
+<p>---</p>
+<h2>5. REFERENCE FILES</h2>
+<p>| File | Contains |</p>
+<p>|------|----------|</p>
+<p>| <code>references/tokens.md</code> | Fonts, type scale, color system (light + dark), spacing, radii, elevation, motion, iconography |</p>
+<p>| <code>references/components.md</code> | Buttons, cards, inputs, lists, navigation, tags, overlays, state patterns |</p>
+<p>| <code>references/platform-mapping.md</code> | HTML/CSS, SwiftUI, React/Tailwind — platform-specific code and loading instructions |</p></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

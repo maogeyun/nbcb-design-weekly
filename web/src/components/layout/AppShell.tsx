@@ -18,6 +18,7 @@ import { SiteBrandLogo } from './SiteBrandLogo';
 import { BreadcrumbBar } from './BreadcrumbBar';
 import { BreadcrumbProvider } from './BreadcrumbProvider';
 import { brandTokens } from '@/lib/tokens';
+import { fetchLatestIssueId } from '@/lib/public-data-client';
 
 const { Header, Content } = Layout;
 
@@ -64,11 +65,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
 
   useEffect(() => {
     let cancelled = false;
-    fetch('/api/issues/latest')
-      .then((r) => r.json())
-      .then((json) => {
+    fetchLatestIssueId()
+      .then((id) => {
         if (cancelled) return;
-        const id = json?.data?.id;
         if (id && typeof id === 'string') {
           setLatestIssueId(id);
           try {

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>设计系统提取 · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / 设计系统提取
+    </p>
+    <span class="tag tag--solution_design">方案设计</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">设计系统提取</h1>
+      <p>Extract and consolidate reusable components, design tokens, and patterns into your design system. Identifies opportunities for systematic reuse and enriches your component library.</p>
+    </div>
+    
+    <div class="markdown"><p>Identify reusable patterns, components, and design tokens, then extract and consolidate them into the design system for systematic reuse.</p>
+<h2>Discover</h2>
+<p>Analyze the target area to identify extraction opportunities:</p>
+<ol>
+<li><strong>Find the design system</strong>: Locate your design system, component library, or shared UI directory (grep for &quot;design system&quot;, &quot;ui&quot;, &quot;components&quot;, etc.). Understand its structure:</li>
+</ol>
+<p>   - Component organization and naming conventions</p>
+<p>   - Design token structure (if any)</p>
+<p>   - Documentation patterns</p>
+<p>   - Import/export conventions</p>
+<p>   <strong>CRITICAL</strong>: If no design system exists, ask before creating one. Understand the preferred location and structure first.</p>
+<ol>
+<li><strong>Identify patterns</strong>: Look for:</li>
+</ol>
+<p>   - <strong>Repeated components</strong>: Similar UI patterns used multiple times (buttons, cards, inputs, etc.)</p>
+<p>   - <strong>Hard-coded values</strong>: Colors, spacing, typography, shadows that should be tokens</p>
+<p>   - <strong>Inconsistent variations</strong>: Multiple implementations of the same concept (3 different button styles)</p>
+<p>   - <strong>Reusable patterns</strong>: Layout patterns, composition patterns, interaction patterns worth systematizing</p>
+<ol>
+<li><strong>Assess value</strong>: Not everything should be extracted. Consider:</li>
+</ol>
+<p>   - Is this used 3+ times, or likely to be reused?</p>
+<p>   - Would systematizing this improve consistency?</p>
+<p>   - Is this a general pattern or context-specific?</p>
+<p>   - What&#39;s the maintenance cost vs benefit?</p>
+<h2>Plan Extraction</h2>
+<p>Create a systematic extraction plan:</p>
+<ul>
+<li><strong>Components to extract</strong>: Which UI elements become reusable components?</li>
+<li><strong>Tokens to create</strong>: Which hard-coded values become design tokens?</li>
+<li><strong>Variants to support</strong>: What variations does each component need?</li>
+<li><strong>Naming conventions</strong>: Component names, token names, prop names that match existing patterns</li>
+<li><strong>Migration path</strong>: How to refactor existing uses to consume the new shared versions</li>
+</ul>
+<p><strong>IMPORTANT</strong>: Design systems grow incrementally. Extract what&#39;s clearly reusable now, not everything that might someday be reusable.</p>
+<h2>Extract &amp; Enrich</h2>
+<p>Build improved, reusable versions:</p>
+<ul>
+<li><strong>Components</strong>: Create well-designed components with:</li>
+</ul>
+<p>  - Clear props API with sensible defaults</p>
+<p>  - Proper variants for different use cases</p>
+<p>  - Accessibility built in (ARIA, keyboard navigation, focus management)</p>
+<p>  - Documentation and usage examples</p>
+<ul>
+<li><strong>Design tokens</strong>: Create tokens with:</li>
+</ul>
+<p>  - Clear naming (primitive vs semantic)</p>
+<p>  - Proper hierarchy and organization</p>
+<p>  - Documentation of when to use each token</p>
+<ul>
+<li><strong>Patterns</strong>: Document patterns with:</li>
+</ul>
+<p>  - When to use this pattern</p>
+<p>  - Code examples</p>
+<p>  - Variations and combinations</p>
+<p><strong>NEVER</strong>:</p>
+<ul>
+<li>Extract one-off, context-specific implementations without generalization</li>
+<li>Create components so generic they&#39;re useless</li>
+<li>Extract without considering existing design system conventions</li>
+<li>Skip proper TypeScript types or prop documentation</li>
+<li>Create tokens for every single value (tokens should have semantic meaning)</li>
+</ul>
+<h2>Migrate</h2>
+<p>Replace existing uses with the new shared versions:</p>
+<ul>
+<li><strong>Find all instances</strong>: Search for the patterns you&#39;ve extracted</li>
+<li><strong>Replace systematically</strong>: Update each use to consume the shared version</li>
+<li><strong>Test thoroughly</strong>: Ensure visual and functional parity</li>
+<li><strong>Delete dead code</strong>: Remove the old implementations</li>
+</ul>
+<h2>Document</h2>
+<p>Update design system documentation:</p>
+<ul>
+<li>Add new components to the component library</li>
+<li>Document token usage and values</li>
+<li>Add examples and guidelines</li>
+<li>Update any Storybook or component catalog</li>
+</ul>
+<p>Remember: A good design system is a living system. Extract patterns as they emerge, enrich them thoughtfully, and maintain them consistently.</p></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

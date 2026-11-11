@@ -1,0 +1,18 @@
+{
+  "data": {
+    "id": "art-c133",
+    "title": "Designing A Better Lou: Reducing Cognitive Load Through Design, Content, and Systems",
+    "original_url": "https://tympanus.net/codrops/2026/06/16/designing-a-better-lou-reducing-cognitive-load-through-design-content-and-systems",
+    "source_name": "Codrops",
+    "published_at": "2026-06-16",
+    "category": "ui_design",
+    "introduction": "当你打开一家医疗保健网站，却被层层堆叠的治疗说明、服务列表、保险问答和多重 CTA 淹没时，你大概率会和大多数访客一样——还没读完就关掉。这篇文章以「A Better Lou」男士健康网站为例，拆解了如何在不牺牲专业可信度的前提下，用清晰的视觉层级、生活化摄影、围绕「成果而非疗程」的内容结构，以及可复用的 Webflow 系统，显著降低认知负荷。它提醒设计师：真正的简洁不是删减内容，而是建立一套能随内容增长而扩展的规则，让用户在最短时间内找到与自己问题相关的答案。对任何需要平衡信息密度与用户耐心的项目而言，这篇案例都是极具参考价值的实战手册。",
+    "language": "en",
+    "link_status": "link_unknown",
+    "status": "published",
+    "intro_reviewed": true,
+    "click_count": 0,
+    "issue_id": "issue-3",
+    "sort_order": 3
+  }
+}

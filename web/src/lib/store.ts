@@ -120,6 +120,24 @@ export function getPublishedIssues(): IssueSummary[] {
     });
 }
 
+export function getPublishedIssueIds(): { id: string }[] {
+  return data.issues
+    .filter((i) => i.status === 'published')
+    .map((i) => ({ id: i.id }));
+}
+
+export function getPublishedArticleIds(): { id: string }[] {
+  const ids: string[] = [];
+  for (const issue of data.issues.filter((i) => i.status === 'published')) {
+    for (const article of getIssueArticles(issue)) {
+      if (article.status === 'published') {
+        ids.push(article.id);
+      }
+    }
+  }
+  return ids.map((id) => ({ id }));
+}
+
 export function getIssueById(id: string): IssueDetail | null {
   const issue = data.issues.find((i) => i.id === id);
   if (!issue) return null;
@@ -367,6 +385,32 @@ export function reorderIssueArticles(
   });
   persist();
   return true;
+}
+
+export function deleteIssue(
+  id: string,
+): { ok: true } | { ok: false; error: string } {
+  const issueIndex = data.issues.findIndex((i) => i.id === id);
+  if (issueIndex === -1) {
+    return { ok: false, error: '周刊不存在' };
+  }
+
+  const issue = data.issues[issueIndex];
+  if (issue.status === 'published') {
+    return { ok: false, error: '已发布的周刊不能删除' };
+  }
+
+  for (const articleId of issue.article_ids) {
+    const article = data.articles.find((a) => a.id === articleId);
+    if (!article || article.status !== 'selected') continue;
+    article.status = 'candidate';
+    delete article.issue_id;
+    delete article.sort_order;
+  }
+
+  data.issues.splice(issueIndex, 1);
+  persist();
+  return { ok: true };
 }
 
 export function rejectCandidate(articleId: string): boolean {

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>需求到设计 · 宁波银行设计周刊</title>
+  <meta name="description" content="每周精选 UI 设计、设计经验与 AI 前沿" />
+  <link rel="stylesheet" href="../assets/style.css" />
+  
+</head>
+<body>
+  <div class="layout">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a href="../index.html" aria-label="宁波银行设计周刊">
+          <img class="site-brand-logo" src="../assets/nbcb-brand-logo.png" alt="宁波银行 UED" />
+        </a>
+        <nav class="desktop-nav" aria-label="主导航"><a class="nav-link" href="../index.html">最新周刊</a>
+<a class="nav-link" href="../archive.html">归档</a>
+<a class="nav-link" href="../search.html">搜索</a>
+<a class="nav-link nav-link--active" href="../skills.html">技能</a>
+<a class="nav-link" href="../about.html">关于</a></nav>
+      </div>
+    </header>
+    <main class="site-main"><div class="page-wrap">
+    <p class="breadcrumb">
+      <a href="../skills.html">技能库</a> / 需求到设计
+    </p>
+    <span class="tag tag--solution_design">方案设计</span>
+    <div class="page-header">
+      <h1 style="font-size:24px;line-height:32px">需求到设计</h1>
+      <p>把模糊需求一路收敛成可落地、可验证的设计方案，走通「需求 → 设计目标 → 设计策略 → 设计方案」四跳，并将分析结果导出为 MD 或 PDF 交付文件。当用户给出一段需求/诉求/问题，要求做需求分析、定设计目标、出设计策略、产出交互或视觉方案、写设计说明、或导出设计方案文档时使用。也适用于评审现有方案是否「目标-策略-方案」自洽。</p>
+    </div>
+    
+    <div class="markdown"><h1>需求到设计方案（四跳体系）</h1>
+<p>这是一套「不靠感觉拍脑袋」的设计推导能力，把模糊诉求逐层收敛：</p>
+<ul>
+<li><strong>需求</strong> → 要解决什么真实问题</li>
+<li><strong>设计目标</strong> → 做到什么程度算赢（可衡量）</li>
+<li><strong>设计策略</strong> → 用哪几类手段赢</li>
+<li><strong>设计方案</strong> → 具体长什么样、怎么跑</li>
+</ul>
+<p>核心原则：每一跳都不能跳层，下一层必须能追溯回上一层；最终方案必须能回答「它如何兑现最初的可衡量指标」。</p>
+<h2>工作流程</h2>
+<p>收到需求后，按顺序走完四跳。每跳产出后立即用对应自检清单卡控，未通过不要进入下一跳。</p>
+<pre><code>任务进度：
+- [ ] 跳 1：需求 → 设计目标（写出可衡量目标，过自检）
+- [ ] 跳 2：设计目标 → 设计策略（每个目标有策略支撑，过自检）
+- [ ] 跳 3：设计策略 → 设计方案（分层落地，覆盖 4 种状态，过自检）
+- [ ] 收尾：用「完整案例」格式串起来，确认方案可回溯目标
+- [ ] 交付：将结果导出为 MD 或 PDF 文件（见「交付产出」）</code></pre>
+<p>信息不足时，优先就「为谁 / 什么场景 / 现状痛点 / 成功长什么样」向用户追问，而不是直接臆造目标。</p>
+<p>---</p>
+<h2>跳 1：需求 → 设计目标</h2>
+<p><strong>别把「功能」当「目标」。</strong> 设计目标 = 用户收益 + 业务收益 + 可衡量标准。</p>
+<ul>
+<li>❌ 「设计一个智能客服入口」（这是功能）</li>
+<li>✅ 「降低人工客服成本 20%，同时让 80% 常见问题在 3 步内解决」</li>
+</ul>
+<h3>实用公式</h3>
+<p>&gt; 面向 [某类用户]，在 [某场景] 下，通过 [设计干预]，实现 [可衡量的结果]。</p>
+<p>示例：面向<strong>新用户</strong>，在<strong>首次下单场景</strong>中，通过<strong>简化填写流程 + 智能填充</strong>，实现<strong>转化率提升 15%</strong>。</p>
+<h3>推导方法（按需选用）</h3>
+<ul>
+<li><strong>双钻 Discover→Define</strong>：先发散收集问题（访谈/数据/竞品），再收敛成 1–3 个最关键目标。</li>
+<li><strong>OKR 式写法</strong>：一个目标 O 配 1–2 个可量化 KR。</li>
+</ul>
+<p>| 目标 O | 关键结果 KR |</p>
+<p>| --- | --- |</p>
+<p>| 降低新用户上手门槛 | KR1 首屏任务完成率 ≥ 70%；KR2 平均完成时间 ≤ 90s |</p>
+<p>| 提高关键操作效率 | KR1 高频操作步数 ≤ 3 步；KR2 误操作率下降 30% |</p>
+<ul>
+<li><strong>用户目标 × 业务目标对齐表</strong>：确保两侧都被满足，再推出设计目标。</li>
+</ul>
+<p>| 用户目标 | 业务目标 | 设计目标 |</p>
+<p>| --- | --- | --- |</p>
+<p>| 快速找到商品 | 提升 GMV | 搜索结果相关性 ≥ 90% |</p>
+<p>| 少填信息 | 提高注册转化 | 注册字段减少 40% |</p>
+<h3>自检清单（跳 1）</h3>
+<ul>
+<li>[ ] 目标是否同时覆盖用户价值和业务价值？</li>
+<li>[ ] 是否有明确的可衡量指标（数据或可用性测试可验证）？</li>
+<li>[ ] 是否排除了「伪目标」（如「更好用」「看起来更高级」）？</li>
+</ul>
+<p>---</p>
+<h2>跳 2：设计目标 → 设计策略</h2>
+<p><strong>策略不是「风格」，而是「打法」</strong>：用什么样的结构、路径、规则来实现目标。</p>
+<p>示例（目标：降低下单流失率）→ 策略：① 减少决策干扰（精简信息层级）② 缩短操作路径（合并步骤）③ 增强安全感（信任背书、退款保障展示）。</p>
+<h3>三类必选策略（通用框架）</h3>
+<ul>
+<li><strong>A. 信息架构策略</strong>：导航扁平 vs 层级？页面按任务流/对象/角色分组？关键入口放首屏/Tab/悬浮？</li>
+<li><strong>B. 交互策略</strong>：操作路径（步数、跳转、返回）；反馈（加载/成功/失败/空态）；容错（撤销、二次确认、自动保存）。</li>
+<li><strong>C. 视觉与认知策略</strong>：优先级（F 型/Z 型布局）；强调方式（颜色、字号、留白、动效）；情感化（插画、文案语气、微文案）。</li>
+</ul>
+<h3>策略选择工具（快速版）</h3>
+<p>| 设计目标 | 推荐策略方向 |</p>
+<p>| --- | --- |</p>
+<p>| 提升效率 | 默认值 / 批量操作 / 快捷键 / 自动化 |</p>
+<p>| 降低焦虑 | 进度提示 / 预估时间 / 明确后果 |</p>
+<p>| 促进探索 | 推荐算法 / 相关入口 / 游戏化 |</p>
+<p>| 提高转化 | 减少步骤 / 强化主操作 / 信任背书 |</p>
+<h3>自检清单（跳 2）</h3>
+<ul>
+<li>[ ] 每个目标是否都有对应策略支撑？</li>
+<li>[ ] 策略之间是否冲突（如「强引导主操作」与「给足探索自由」需有优先级取舍）？</li>
+<li>[ ] 是否考虑了非功能约束（性能、可达性、平台差异、合规）？这些往往是高风险场景的胜负手。</li>
+</ul>
+<p>---</p>
+<h2>跳 3：设计策略 → 设计方案</h2>
+<h3>从抽象到具体的落地逻辑</h3>
+<pre><code>策略：减少操作步骤
+ ↓
+方案：将「地址填写页」合并进「下单页」
+ ↓
+细节：表单字段数量 / 校验规则 / 错误提示位置 / 键盘类型 / 一键回填逻辑</code></pre>
+<h3>分层法（避免一上来就画 UI）</h3>
+<p>| 层级 | 关注点 | 工具 |</p>
+<p>| --- | --- | --- |</p>
+<p>| 任务层 | 用户要完成的任务流 | 流程图 / 泳道图 |</p>
+<p>| 结构层 | 页面结构、布局 | 低保真线框图 |</p>
+<p>| 表现层 | 颜色、字体、间距、图标 | 高保真 UI |</p>
+<p>| 规则层 | 状态、异常、边界 | 设计说明 / 交互说明 |</p>
+<h3>方案必须覆盖的 4 种状态</h3>
+<ul>
+<li>✅ <strong>正常态</strong>：理想路径</li>
+<li>⚠️ <strong>异常态</strong>：网络错误、失败、超时</li>
+<li>🕳 <strong>空态</strong>：无数据、未授权</li>
+<li>♻ <strong>循环态</strong>：重复操作、撤销、回退</li>
+</ul>
+<h3>自检清单（跳 3）</h3>
+<ul>
+<li>[ ] 所有关键场景是否都被覆盖？</li>
+<li>[ ] 异常态、空态、边界态、权限态是否补齐？</li>
+<li>[ ] 开发/测试能否根据方案直接实现？</li>
+<li>[ ] 方案能否说清如何兑现跳 1 的可衡量指标？</li>
+</ul>
+<p>---</p>
+<h2>输出格式：用「完整案例」串起来</h2>
+<p>最终交付按以下结构组织，保证四跳可追溯：</p>
+<pre><code>## 原始需求
+[一句话还原诉求]
+
+## 设计目标
+面向 [用户]，在 [场景] 下，通过 [干预]，实现 [可衡量结果]。
+
+## 设计策略
+1. 架构策略：……
+2. 交互策略：……
+3. 视觉策略：……
+
+## 设计方案
+- 页面：……
+- 组件：……
+- 异常/空/循环态：……
+- 关键规则与默认值：……</code></pre>
+<p>参考示例（商家后台配置活动太复杂）：</p>
+<ul>
+<li><strong>需求</strong>：商家反馈后台配置活动太复杂，很多不会用。</li>
+<li><strong>目标</strong>：面向中小商家，首次配置活动场景，简化流程，使首次配置成功率 ≥ 85%，平均配置时间 ≤ 3 分钟。</li>
+<li><strong>策略</strong>：① 三步向导式结构（选模板→填参数→预览）② 智能默认值 + 实时校验 + 一键应用 ③ 突出主操作、弱化高级设置。</li>
+<li><strong>方案</strong>：3 个步骤页 + 1 个预览页；模板卡片 / 参数滑块 / 实时预览区；参数非法即时提示、断网自动保存草稿；默认推荐「同类商家高转化模板」。</li>
+</ul>
+<p>---</p>
+<h2>交付产出（生成 MD / PDF 文件）</h2>
+<p>四跳走完后，<strong>必须把结果落地成文件</strong>，而不仅停留在对话里。</p>
+<h3>1. 选择格式</h3>
+<ul>
+<li>用户已指定 MD 或 PDF → 直接生成。</li>
+<li>未指定 → 默认生成 <strong>MD</strong>（轻量、可二次编辑、版本可控）；若用户需要正式交付/评审稿，再生成 PDF。</li>
+<li>同时要两种时，先生成 MD，再由 MD 转 PDF（保持内容一致）。</li>
+</ul>
+<h3>2. 文件内容与命名</h3>
+<ul>
+<li>内容用上文「输出格式」的完整结构（原始需求 / 设计目标 / 设计策略 / 设计方案），并在末尾附上三段自检清单的勾选结果，证明四跳自洽。</li>
+<li>命名：<code>设计方案-&lt;主题&gt;-&lt;YYYYMMDD&gt;.md</code>（或 <code>.pdf</code>）。</li>
+<li>写入位置：当前项目根目录下的 <code>output/</code>（不存在则创建）；纯 home 环境下写到用户指定目录或 <code>~/Desktop/</code>。</li>
+</ul>
+<h3>3. 生成 MD</h3>
+<p>用 Write 工具直接写文件，无需依赖。这是默认、最可靠的交付方式。</p>
+<h3>4. 生成 PDF</h3>
+<p>内容为中文，PDF 必须用支持 CJK 的方式生成，遵循 <code>pdf</code> skill（<code>/Users/hz-mb-0020/.codex/skills/pdf/SKILL.md</code>）的规范。推荐两条路径，按环境择一：</p>
+<ul>
+<li><strong>路径 A（推荐，免外部字体）</strong>：用 <code>reportlab</code> 内置 CJK 字体直接渲染。</li>
+</ul>
+<pre><code>from reportlab.lib.pagesizes import A4
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.cidfonts import UnicodeCIDFont
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+
+pdfmetrics.registerFont(UnicodeCIDFont(&quot;STSong-Light&quot;))  # 内置中文字体
+styles = getSampleStyleSheet()
+for s in styles.byName.values():
+    s.fontName = &quot;STSong-Light&quot;
+# 用 SimpleDocTemplate 把各段落 Paragraph 顺序写入即可</code></pre>
+<ul>
+<li><strong>路径 B（已装 pandoc 时）</strong>：<code>pandoc 设计方案.md -o 设计方案.pdf --pdf-engine=xelatex -V CJKmainfont=&quot;PingFang SC&quot;</code>（需 xelatex + 中文字体）。</li>
+</ul>
+<p>依赖缺失时按 <code>pdf</code> skill 指引安装（<code>uv pip install reportlab</code> 等）；装不上就告知用户缺哪个依赖，并先交付 MD 兜底。</p>
+<h3>5. 生成后校验</h3>
+<ul>
+<li>PDF：渲染首页为 PNG 检查（<code>pdftoppm -png file.pdf out</code>），确认中文无乱码/方块、排版无截断。</li>
+<li>向用户给出文件路径，并用 <code>![](绝对路径)</code> 内联预览（PDF 预览首页 PNG）。</li>
+</ul>
+<p>---</p>
+<h2>常见误区与反模式</h2>
+<p><strong>需求 → 目标</strong></p>
+<ul>
+<li>把功能当目标；只有业务目标没有用户收益（用户被诱导，留存崩）；指标不可衡量。</li>
+</ul>
+<p><strong>目标 → 策略</strong></p>
+<ul>
+<li>把「更简洁的视觉」当策略（它只是表现层手段之一）；策略相互打架却无优先级；忽略非功能约束。</li>
+</ul>
+<p><strong>策略 → 方案</strong></p>
+<ul>
+<li>跳过任务层直接画 UI（后期大量返工）；只画正常态（异常/空/循环/权限态缺失）；方案无法验证目标。</li>
+</ul></div>
+  </div></main>
+    <footer class="site-footer">
+      <a href="../about.html">关于</a>
+      · 本文由 AI 辅助摘要，请访问原文获取完整内容
+      · © 宁波银行 UED
+    </footer>
+  </div>
+  
+</body>
+</html>

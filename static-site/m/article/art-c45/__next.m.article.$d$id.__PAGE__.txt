@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:"$Sreact.suspense"
+3:I[49222,["500","static/chunks/500-e2a7ab501ac40f90.js","415","static/chunks/app/m/article/%5Bid%5D/page-5aba7d40c207e840.js"],"MobileArticlePageClient"]
+4:I[90484,[],"OutletBoundary"]
+0:{"rsc":["$","$1","c",{"children":[["$","$2",null,{"children":["$","$L3",null,{"article":{"id":"art-c45","title":"从 BANG!CASE 到 AI Display：我为什么想给 AI 在桌面留一个位置","original_url":"https://sspai.com/post/110984","source_name":"少数派","published_at":"2026-06-15","category":"ai_frontier","introduction":"和 Codex、Claude Code 协作时，你很多时候不是在\"对话\"，而是在\"等待\"——等它跑完、等它卡住、等它问你要不要继续。于是你不停切窗口、瞥终端，注意力被一次次拽走。这暴露了一个被忽视的空白：桌面上缺一层介于\"主屏\"与\"通知\"之间的信息层。这篇文章记录了一次产品思考——能否做一块专门留给 AI 的\"第三块屏幕\"，让它的状态被余光感知、轻量操作触手可及。当 AI 从\"被打开的软件\"变成\"长期在线的伙伴\"，我们的界面范式，是不是也该换了？","language":"zh","link_status":"link_unknown","status":"published","intro_reviewed":true,"click_count":1,"issue_id":"issue-2","sort_order":4},"issueId":"issue-2","issueNumber":2}]}],null,["$","$L4",null,{"children":["$","$2",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"hZQ7hwDsqTHpsAxefcyvp"}
+5:null
