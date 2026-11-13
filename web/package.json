@@ -10,7 +10,8 @@
     "start": "next start",
     "lint": "eslint",
     "import:skills": "node scripts/import-cursor-skills.mjs",
-    "export:ios-bundle": "node scripts/export-ios-bundle.mjs"
+    "export:ios-bundle": "node scripts/export-ios-bundle.mjs",
+    "verify:pages": "node ../scripts/verify-pages-publish.mjs"
   },
   "dependencies": {
     "@ant-design/icons": "^6.2.5",

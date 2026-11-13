@@ -44,8 +44,13 @@ ADMIN_PASSWORD=nbcb2026
 
 ```
 docs/           需求与设计文档
-web/            Next.js 16 应用
+web/            Next.js 16 应用与本地后台
+static-site/    已发布静态快照，Cloudflare 只发布这个目录
 ```
+
+## 静态发布
+
+公开站以 `static-site/` 为准。更新内容时，在持有最新已发布数据的电脑上运行 `cd web && npm run build:static`，再在仓库根运行 `node scripts/verify-pages-publish.mjs`。不要用 Git 里含未发布稿的 `web/data/store.json` 在 CI 中重新生成站点。正式站仍是现有的 Direct Upload 项目；GitHub Actions 只上传 `static-site`。首次合并不会自动发生产，预览验收后的切换见 [静态发布](docs/静态发布.md)。
 
 ## 文档
 

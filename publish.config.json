@@ -1,0 +1,15 @@
+{
+  "publishDirectory": "static-site",
+  "projectName": "nbcb-design-weekly",
+  "productionBranch": "main",
+  "productionOnMainPush": false,
+  "cloudflarePages": {
+    "mode": "direct-upload",
+    "gitIntegration": false,
+    "workflow": ".github/workflows/pages-deploy.yml",
+    "buildCommand": "node scripts/verify-pages-publish.mjs",
+    "buildDirectory": "static-site",
+    "wranglerAction": "cloudflare/wrangler-action@953926a2e2182532811c01a25e53647d93bf07c0",
+    "wranglerVersion": "4.161.0"
+  }
+}
