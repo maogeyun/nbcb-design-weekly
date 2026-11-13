@@ -16,5 +16,5 @@ web/next-env.d.ts
 web/data/
 web/public/uploads/
 web/public/static-data/
-/static-site/
+# static-site/ 是已发布快照，必须提交。生成和校验见 docs/静态发布.md。
 /offline-site/

@@ -1,0 +1,143 @@
+# 保留现有 Direct Upload 项目。只上传 static-site，不把 Cloudflare 改成原生 Git 构建。
+# 没有 pull_request 触发器，因此 fork PR 不会运行本 workflow，也不会取到 secrets。
+# productionOnMainPush 默认为 false：合并到 main 会进入 production-gate，但不会上传。
+
+name: pages-deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: preview 发布到所选非 main 分支；production 才更新正式站
+        required: true
+        type: choice
+        options:
+          - preview
+          - production
+      confirm:
+        description: 仅 production 填写 publish-production
+        required: false
+        type: string
+        default: ""
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages-deploy-${{ github.event_name }}-${{ github.ref_name }}-${{ inputs.target }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 20
+      - run: node scripts/verify-pages-publish.mjs --self-test
+      - run: node scripts/verify-pages-publish.mjs --dir static-site
+      - run: node scripts/check-pages-workflows.mjs
+
+  preview:
+    needs: verify
+    if: github.event_name == 'workflow_dispatch' && inputs.target == 'preview'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Resolve preview alias
+        id: branch
+        run: |
+          alias="${GITHUB_REF_NAME//\//-}"
+          if [ "$alias" = "main" ] || ! printf '%s' "$alias" | grep -Eq '^[A-Za-z0-9._-]{1,60}$'; then
+            echo "预览必须从非 main 分支运行，且分支名只能包含字母、数字、点、下划线和连字符。"
+            exit 1
+          fi
+          echo "alias=$alias" >> "$GITHUB_OUTPUT"
+      - name: Require Cloudflare credentials
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID || secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "缺少 secret CLOUDFLARE_API_TOKEN，或变量/secret CLOUDFLARE_ACCOUNT_ID。值不会打印。"
+            exit 1
+          fi
+          echo "凭据已注入，不打印取值。"
+      - name: Upload static-site preview
+        id: deploy
+        uses: cloudflare/wrangler-action@953926a2e2182532811c01a25e53647d93bf07c0 # v4.1.3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID || secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "4.161.0"
+          packageManager: npm
+          command: pages deploy static-site --project-name=nbcb-design-weekly --branch=${{ steps.branch.outputs.alias }}
+      - name: Print preview URL
+        run: |
+          echo "preview_alias=${{ steps.branch.outputs.alias }}"
+          echo "deployment_url=${{ steps.deploy.outputs.deployment-url }}"
+          echo "alias_url=${{ steps.deploy.outputs.pages-deployment-alias-url }}"
+
+  production-gate:
+    needs: verify
+    if: >
+      (github.event_name == 'workflow_dispatch' && inputs.target == 'production') ||
+      (github.event_name == 'push' && github.ref == 'refs/heads/main')
+    runs-on: ubuntu-latest
+    outputs:
+      deploy: ${{ steps.plan.outputs.deploy }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Decide whether production upload is enabled
+        id: plan
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          CONFIRM: ${{ inputs.confirm }}
+        run: |
+          enabled="$(node -e 'const fs=require("fs"); const cfg=JSON.parse(fs.readFileSync("publish.config.json","utf8")); process.stdout.write(cfg.productionOnMainPush===true?"true":"false")')"
+          if [ "$GITHUB_REF_NAME" != "main" ]; then
+            echo "生产只接受 main。当前分支是 ${GITHUB_REF_NAME}。"
+            exit 1
+          fi
+          if [ "$EVENT_NAME" = "push" ] && [ "$enabled" != "true" ]; then
+            echo "deploy=skip" >> "$GITHUB_OUTPUT"
+            echo "main push 自动生产未启用。本次合并不会上传。预览验收后，手动运行 production，或另开 PR 把 productionOnMainPush 改为 true。"
+            exit 0
+          fi
+          if [ "$EVENT_NAME" = "workflow_dispatch" ] && [ "$CONFIRM" != "publish-production" ]; then
+            echo "手动生产需要 confirm=publish-production。"
+            exit 1
+          fi
+          echo "deploy=yes" >> "$GITHUB_OUTPUT"
+
+  production-upload:
+    needs: production-gate
+    if: needs.production-gate.outputs.deploy == 'yes'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Require Cloudflare credentials
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID || secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ] || [ -z "$CLOUDFLARE_ACCOUNT_ID" ]; then
+            echo "缺少 secret CLOUDFLARE_API_TOKEN，或变量/secret CLOUDFLARE_ACCOUNT_ID。值不会打印。"
+            exit 1
+          fi
+          echo "凭据已注入，不打印取值。"
+      - name: Upload static-site production
+        id: deploy
+        uses: cloudflare/wrangler-action@953926a2e2182532811c01a25e53647d93bf07c0 # v4.1.3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID || secrets.CLOUDFLARE_ACCOUNT_ID }}
+          wranglerVersion: "4.161.0"
+          packageManager: npm
+          command: pages deploy static-site --project-name=nbcb-design-weekly --branch=main
+      - name: Print production URL
+        run: echo "deployment_url=${{ steps.deploy.outputs.deployment-url }}"

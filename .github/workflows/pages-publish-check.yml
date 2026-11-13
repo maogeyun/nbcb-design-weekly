@@ -1,0 +1,28 @@
+# 只做静态校验。不读取 Cloudflare secret，也不部署。
+# pull_request 来自 fork 时，GitHub 不会把本仓库 secrets 注入此 workflow。
+
+name: pages-publish-check
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  verify-static-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: 20
+      - name: Reject repository root, drafts, and workflow secret leaks
+        run: node scripts/verify-pages-publish.mjs --self-test
+      - name: Verify the committed static snapshot
+        run: node scripts/verify-pages-publish.mjs --dir static-site
+      - name: Check deploy workflow cannot run on fork pull requests
+        run: node scripts/check-pages-workflows.mjs

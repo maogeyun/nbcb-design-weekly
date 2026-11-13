@@ -1,0 +1,6 @@
+1:"$Sreact.fragment"
+2:"$Sreact.suspense"
+3:I[49222,["500","static/chunks/500-e2a7ab501ac40f90.js","415","static/chunks/app/m/article/%5Bid%5D/page-5aba7d40c207e840.js"],"MobileArticlePageClient"]
+4:I[90484,[],"OutletBoundary"]
+0:{"rsc":["$","$1","c",{"children":[["$","$2",null,{"children":["$","$L3",null,{"article":{"id":"art-c463","title":"AI 记忆不是提示词技巧，而是产品状态​","original_url":"https://medium.com/@woshiliyana/ai-memory-is-not-a-prompt-trick-8a21b52efecd?source=rss------product_design-5","source_name":"Medium · Product Design","published_at":"2026-06-30","category":"ai_frontier","introduction":"当 AI 产品开始记住用户的梦境、情绪模式和私密心事时，\"记忆\"就不再是一个简单的技术功能，而是关乎信任边界的产品设计问题。作者在打造一款荣格式自我探索应用的过程中总结出一套原则：记忆应该是可被用户检视、审批、暂停和删除的\"产品状态\"，而不是悄悄塞进提示词里的黑箱数据。文章提出了会话摘要优于原始对话记录、检索结果需要\"凭证\"而非\"感觉\"等具体设计思路，并给出一份实用的记忆功能自查清单。对于任何正在设计带记忆功能的 AI 产品的人来说,这是一份关于隐私、透明度与用户主权的极佳参考。","language":"en","link_status":"link_unknown","status":"published","intro_reviewed":true,"click_count":0,"issue_id":"issue-5","sort_order":2},"issueId":"issue-5","issueNumber":5}]}],null,["$","$L4",null,{"children":["$","$2",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"8tXH-ZxAgWbAke8GUrRiy"}
+5:null
