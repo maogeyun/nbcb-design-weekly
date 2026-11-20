@@ -1,5 +1,5 @@
 import type { ParsedBreadcrumbContext } from '@/lib/app-link';
-import { buildAppHref, parseBreadcrumbContext } from '@/lib/app-link';
+import { buildAppHref, normalizePathname, parseBreadcrumbContext } from '@/lib/app-link';
 import {
   ARCHIVE_CRUMB,
   HOME_CRUMB,
@@ -68,33 +68,35 @@ export function resolveBreadcrumbs({
   searchParams,
   pageData,
 }: ResolveBreadcrumbsInput): BreadcrumbItem[] | null {
-  if (pathname === '/' || pathname.startsWith('/admin')) {
+  const path = normalizePathname(pathname);
+
+  if (path === '/' || path.startsWith('/admin')) {
     return null;
   }
 
-  if (pathname === '/archive') {
+  if (path === '/archive') {
     return [HOME_CRUMB, { label: '归档' }];
   }
-  if (pathname === '/search') {
+  if (path === '/search') {
     return [HOME_CRUMB, { label: '搜索' }];
   }
-  if (pathname === '/skills') {
+  if (path === '/skills') {
     return [HOME_CRUMB, { label: '设计技能库' }];
   }
-  if (pathname === '/about') {
+  if (path === '/about') {
     return [HOME_CRUMB, { label: '关于设计周刊' }];
   }
 
   const ctx = parseBreadcrumbContext(searchParams);
 
-  const weeklyMatch = pathname.match(/^\/weekly\/([^/]+)$/);
+  const weeklyMatch = path.match(/^\/weekly\/([^/]+)$/);
   if (weeklyMatch) {
     const issueNumber = pageData?.issueNumber;
     if (issueNumber == null) return null;
     return resolveWeeklyBreadcrumbs(ctx.from, issueNumber);
   }
 
-  const articleMatch = pathname.match(/^\/article\/([^/]+)$/);
+  const articleMatch = path.match(/^\/article\/([^/]+)$/);
   if (articleMatch) {
     const issueNumber = pageData?.issueNumber ?? ctx.issueNumber;
     const issueId = pageData?.issueId ?? ctx.issueId;

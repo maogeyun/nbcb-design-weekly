@@ -7,9 +7,9 @@ export interface BreadcrumbItem {
 
 export const HOME_CRUMB: BreadcrumbItem = { label: '首页', href: '/' };
 
-export const ARCHIVE_CRUMB: BreadcrumbItem = { label: '归档', href: '/archive' };
+export const ARCHIVE_CRUMB: BreadcrumbItem = { label: '归档', href: '/archive/' };
 
-export const SEARCH_CRUMB: BreadcrumbItem = { label: '搜索', href: '/search' };
+export const SEARCH_CRUMB: BreadcrumbItem = { label: '搜索', href: '/search/' };
 
 const BREADCRUMB_LABEL_MAX = 30;
 
