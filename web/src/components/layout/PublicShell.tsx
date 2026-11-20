@@ -1,19 +1,30 @@
 'use client';
 
+import { Suspense } from 'react';
 import { usePathname } from 'next/navigation';
 import { AppShell } from './AppShell';
 import { IOSAppShell } from '@/components/ios/IOSAppShell';
+import { StaticMobileEntry } from './StaticMobileEntry';
+import { normalizePathname } from '@/lib/app-link';
 
 export function PublicShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
+  const path = normalizePathname(pathname);
 
-  if (pathname.startsWith('/admin')) {
+  if (path.startsWith('/admin')) {
     return <>{children}</>;
   }
 
-  if (pathname.startsWith('/m')) {
-    return <IOSAppShell>{children}</IOSAppShell>;
-  }
-
-  return <AppShell>{children}</AppShell>;
+  return (
+    <>
+      <Suspense fallback={null}>
+        <StaticMobileEntry />
+      </Suspense>
+      {path === '/m' || path.startsWith('/m/') ? (
+        <IOSAppShell>{children}</IOSAppShell>
+      ) : (
+        <AppShell>{children}</AppShell>
+      )}
+    </>
+  );
 }

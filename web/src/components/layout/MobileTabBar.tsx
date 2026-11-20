@@ -10,6 +10,7 @@ import {
   ThunderboltOutlined,
 } from '@ant-design/icons';
 import { brandTokens } from '@/lib/tokens';
+import { normalizePathname, withTrailingSlash } from '@/lib/app-link';
 
 const { Text } = Typography;
 
@@ -24,19 +25,28 @@ const TABS = [
 export function MobileTabBar({ latestIssueId }: { latestIssueId?: string | null }) {
   const pathname = usePathname();
   const router = useRouter();
+  const path = normalizePathname(pathname);
 
   const isActive = (key: string) => {
     if (key === '/weekly/current') {
-      if (pathname === '/' || pathname === '/weekly/current') {
+      if (path === '/' || path === '/weekly/current') {
         return true;
       }
-      const weeklyMatch = pathname.match(/^\/weekly\/([^/?#]+)/);
+      const weeklyMatch = path.match(/^\/weekly\/([^/?#]+)$/);
       if (weeklyMatch && latestIssueId && weeklyMatch[1] === latestIssueId) {
         return true;
       }
       return false;
     }
-    return pathname === key || pathname.startsWith(key);
+    if (key === '/archive') {
+      if (path === '/archive' || path.startsWith('/archive/')) return true;
+      const weeklyMatch = path.match(/^\/weekly\/([^/?#]+)$/);
+      if (weeklyMatch && (!latestIssueId || weeklyMatch[1] !== latestIssueId)) {
+        return true;
+      }
+      return false;
+    }
+    return path === key || path.startsWith(`${key}/`);
   };
 
   return (
@@ -68,10 +78,10 @@ export function MobileTabBar({ latestIssueId }: { latestIssueId?: string | null 
               flex={1}
               onClick={() => {
                 if (tab.key === '/weekly/current') {
-                  router.push('/');
+                  router.push(withTrailingSlash('/weekly/current'));
                   return;
                 }
-                router.push(tab.key);
+                router.push(withTrailingSlash(tab.key));
               }}
               style={{ cursor: 'pointer' }}
             >

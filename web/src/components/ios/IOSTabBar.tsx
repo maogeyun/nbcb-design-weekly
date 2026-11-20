@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter, usePathname } from 'next/navigation';
+import { normalizePathname } from '@/lib/app-link';
 
 const SEARCH_TAB = {
   key: '/m/search',
@@ -57,15 +58,25 @@ export function IOSTabBar({ latestIssueId }: { latestIssueId?: string | null }) 
   const router = useRouter();
 
   const isActive = (key: string) => {
+    const path = normalizePathname(pathname);
+
     if (key === '/m') {
-      if (pathname === '/m' || pathname === '/m/') return true;
-      const weeklyMatch = pathname.match(/^\/m\/weekly\/([^/?#]+)/);
+      if (path === '/m') return true;
+      const weeklyMatch = path.match(/^\/m\/weekly\/([^/?#]+)$/);
       if (weeklyMatch && latestIssueId && weeklyMatch[1] === latestIssueId) {
         return true;
       }
       return false;
     }
-    return pathname === key || pathname.startsWith(`${key}/`);
+    if (key === '/m/archive') {
+      if (path === '/m/archive' || path.startsWith('/m/archive/')) return true;
+      const weeklyMatch = path.match(/^\/m\/weekly\/([^/?#]+)$/);
+      if (weeklyMatch && (!latestIssueId || weeklyMatch[1] !== latestIssueId)) {
+        return true;
+      }
+      return false;
+    }
+    return path === key || path.startsWith(`${key}/`);
   };
 
   const searchActive = isActive(SEARCH_TAB.key);

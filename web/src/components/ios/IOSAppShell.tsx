@@ -4,13 +4,16 @@ import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { IOSTabBar } from './IOSTabBar';
 import { fetchLatestIssueId } from '@/lib/public-data-client';
+import { LATEST_PUBLISHED_ISSUE_ID } from '@/lib/generated-site-meta';
 import '@/app/ios-mobile.css';
 
 const HIDE_TAB_PATHS = ['/m/article/', '/m/weekly/'];
 
 export function IOSAppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const [latestIssueId, setLatestIssueId] = useState<string | null>(null);
+  const [latestIssueId, setLatestIssueId] = useState<string | null>(
+    LATEST_PUBLISHED_ISSUE_ID,
+  );
 
   const hideTabBar = HIDE_TAB_PATHS.some((p) => pathname.startsWith(p));
 

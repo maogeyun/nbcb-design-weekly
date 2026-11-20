@@ -19,6 +19,8 @@ import { BreadcrumbBar } from './BreadcrumbBar';
 import { BreadcrumbProvider } from './BreadcrumbProvider';
 import { brandTokens } from '@/lib/tokens';
 import { fetchLatestIssueId } from '@/lib/public-data-client';
+import { normalizePathname, withTrailingSlash } from '@/lib/app-link';
+import { LATEST_PUBLISHED_ISSUE_ID } from '@/lib/generated-site-meta';
 
 const { Header, Content } = Layout;
 
@@ -30,21 +32,29 @@ const NAV_ITEMS = [
   { key: '/about', label: '关于', icon: <InfoCircleOutlined /> },
 ];
 
-function resolveSelectedKey(pathname: string, latestIssueId: string | null): string {
-  if (pathname === '/' || pathname === '/weekly/current') {
+/** Resolve desktop nav selection; historical issues map to 归档. */
+export function resolveSelectedKey(
+  pathname: string,
+  latestIssueId: string | null,
+): string {
+  const path = normalizePathname(pathname);
+  if (path === '/' || path === '/weekly/current') {
     return '/weekly/current';
   }
-  const weeklyMatch = pathname.match(/^\/weekly\/([^/?#]+)/);
+  const weeklyMatch = path.match(/^\/weekly\/([^/?#]+)$/);
   if (weeklyMatch) {
     const id = weeklyMatch[1];
     if (latestIssueId && id === latestIssueId) {
       return '/weekly/current';
     }
-    return '';
+    // Older published issues live under 归档.
+    return '/archive';
   }
-  if (pathname.startsWith('/search')) return '/search';
-  if (pathname.startsWith('/skills')) return '/skills';
-  return NAV_ITEMS.find((item) => pathname === item.key)?.key ?? '';
+  if (path === '/search' || path.startsWith('/search/')) return '/search';
+  if (path === '/skills' || path.startsWith('/skills/')) return '/skills';
+  if (path === '/archive' || path.startsWith('/archive/')) return '/archive';
+  if (path === '/about' || path.startsWith('/about/')) return '/about';
+  return '';
 }
 
 export function AppShell({ children }: { children: React.ReactNode }) {
@@ -52,7 +62,9 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   const prefersReducedMotion = useReducedMotion();
   const isAdmin = pathname.startsWith('/admin');
 
-  const [latestIssueId, setLatestIssueId] = useState<string | null>(null);
+  const [latestIssueId, setLatestIssueId] = useState<string | null>(
+    LATEST_PUBLISHED_ISSUE_ID,
+  );
 
   // Read any cached latestIssueId only on the client after hydration to avoid
   // server/client mismatch from the useState initializer (typeof window branch).
@@ -88,7 +100,7 @@ export function AppShell({ children }: { children: React.ReactNode }) {
   }
 
   const selectedKey = resolveSelectedKey(pathname, latestIssueId);
-  const isHome = pathname === '/';
+  const isHome = normalizePathname(pathname) === '/';
 
   return (
     <BreadcrumbProvider>
@@ -136,7 +148,10 @@ export function AppShell({ children }: { children: React.ReactNode }) {
             <Flex align="center" gap={28}>
               {NAV_ITEMS.map((item) => {
                 const isActive = item.key === selectedKey;
-                const href = item.key === '/weekly/current' ? '/' : item.key;
+                const href =
+                  item.key === '/weekly/current'
+                    ? withTrailingSlash('/weekly/current')
+                    : withTrailingSlash(item.key);
                 return (
                   <Link
                     key={item.key}
