@@ -38,6 +38,14 @@ export function MobileTabBar({ latestIssueId }: { latestIssueId?: string | null 
       }
       return false;
     }
+    if (key === '/archive') {
+      if (path === '/archive' || path.startsWith('/archive/')) return true;
+      const weeklyMatch = path.match(/^\/weekly\/([^/?#]+)$/);
+      if (weeklyMatch && (!latestIssueId || weeklyMatch[1] !== latestIssueId)) {
+        return true;
+      }
+      return false;
+    }
     return path === key || path.startsWith(`${key}/`);
   };
 
